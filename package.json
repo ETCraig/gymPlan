@@ -20,6 +20,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:4315",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:4315"
+    },
+    "/auth/callback": {
+      "target": "http://localhost:4315"
+    }
+  },
   "main": "Server/Index.js"
 }
