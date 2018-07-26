@@ -1,0 +1,1 @@
+SELECT * FROM gymPlan_users WHERE auth_id = $1;
