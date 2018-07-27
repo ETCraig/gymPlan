@@ -54,6 +54,13 @@ app.get('/auth/callback', async (req, res) => {
     }
 });
 
+
+const ctrl = require('./Controller');
+const checkLoggedIn = require('./Middleware')
+
+app.get('/api/checkLoggedIn', checkLoggedIn);
+app.get('/api/getUserInfo', ctrl.getUserInfo);
+
 const port = 4315;
 
 app.listen(port, () => {console.log(`Listening and operating on Port ${port}`)});

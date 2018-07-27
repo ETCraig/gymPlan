@@ -10,12 +10,17 @@
     height: 80%;
     background-color: #ce1717;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-content: center;
     align-items: center;
     padding: 6px;
-    color: black;
+    color: white;
     margin-left: 500px;
     margin-top: -650px;
+}
+.Title {
+    font-size: 40px;
+    font-style: italic;
+}
+.Goals-Content {
+    
 }

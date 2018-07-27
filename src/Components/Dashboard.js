@@ -1,9 +1,27 @@
 import React, {Component} from 'react';
 import './Styles/Dashboard.css';
 
+import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            user: []
+        }
+    }
+    componentDidMount() {
+        axios.get('/api/checkLoggedIn').then().catch(res => {
+            console.log('error');
+            this.props.history.push('/');
+        });
+        this.getUserInfo();
+    }
+    getUserInfo() {
+        axios.get('/api/getUserInfo').then(res => this.setState({user: res.data}));
+    }
     render() {
         return(
             <div className='Dash-App'>
@@ -14,11 +32,11 @@ class Dashboard extends Component {
 
                 <div className='Dash-Profile'>
                     <div className='Profile-Img-Content'>
-                        <img src='http://icreatived.com/wp-content/uploads/2014/10/Interesting-Creative-Facebook-Profile-Picture-Ideas-16.jpg' alt='Profile' className='Profile-Img' />
+                        <img src={this.state.user.profile_picture} alt='Profile' className='Profile-Img' />
                     </div>
                     <div className='Profile-Info-Content'>
-                        <span className='Profile-Name'>Ethan</span>
-                        <span className='Profile-Name'>Craig</span>
+                        <span className='Profile-Name'>{this.state.user.first_name}</span>
+                        <span className='Profile-Name'>{this.state.user.last_name}</span>
                     </div>
                 </div>
 
@@ -28,6 +46,7 @@ class Dashboard extends Component {
                         <Link to='/Stats'><li>Body Stats</li></Link>
                         <Link to='/Routines'><li>Routines</li></Link>
                         <Link to='/Account'><li>Manage Account</li></Link>
+                        <Link to='/Step1'><li>Create Routine</li></Link>
                     </ul>
                 </div>
             </div>
