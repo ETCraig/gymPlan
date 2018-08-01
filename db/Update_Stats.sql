@@ -1,0 +1,1 @@
+UPDATE gymPlan_users SET user_id = $1, auth_id = $2, heigh_t = $3, weight = $4, bmi = $5, body_fat = $6, neck = $7, shoulders = $8, arms = $9, chest = $10, waist = $11, thighs = $12, calves = $13, bench = $14, squat = $15, d_lift = $16, row = $17;

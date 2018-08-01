@@ -1,6 +1,6 @@
-INSERT INTO gymPlan_users(
-    auth_id SERIAL PRIMARY KEY,
-    user_id TEXT,
+INSERT INTO gymplan_users(
+    user_id SERIAL PRIMARY KEY,
+    auth_id TEXT,
     first_name VARCHAR(20),
     last_name VARCHAR(20),
     profile_picture TEXT,
@@ -22,18 +22,36 @@ INSERT INTO gymPlan_users(
     row DECIMAL
 );
 
--- INSERT INTO gymPlan_goals(
---     authid INT,
---     goal_id SERIAL PRIMARY KEY,
---     desc VARCHAR(50), 
---     foreign key (authid) references gymPlan_users (auth_id)
--- );
+INSERT INTO gymPlan_goals(
+    goal_id SERIAL PRIMARY KEY,
+    user_id INT,
+    content VARCHAR(200), 
+    foreign key (user_id) references gymPlan_users (user_id)
+);
 
--- INSERT INTO gymPlan_Routines(
---     authid INT,
---     routine_id SERIAL PRIMARY KEY,
---     foreign key (authid) refereces gymPlan_users (auth_id)
--- );
+INSERT INTO gymplan_Routines(
+    routine_id SERIAL PRIMARY KEY,
+    user_id INT,
+    type Text,
+    diff TEXT,
+    desc VARCHAR(100),
+    foreign key (user_id) references gymPlan_users (user_id)
+);
 
+INSERT INTO gymplan_days(
+    day_id SERIAL PRIMARY KEY,
+    uroutine_id INT,
+    type VARCHAR(20),
+    muscle VARCHAR(10),
+    length DECIMAL,
+    exercises TEXT[],
+    foreign key (routine_id) references gymplan_Routines (routine_id)
+);
 
-
+INSERT INTO gymplan_exercises(
+    muscle_group TEXT PRIMARY KEY,
+    name VARCHAR(20),
+    picture TEXT,
+    equip VARCHAR(20),
+    desc VARCHAR(150),
+);

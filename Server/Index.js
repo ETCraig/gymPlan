@@ -60,6 +60,9 @@ const checkLoggedIn = require('./Middleware')
 
 app.get('/api/checkLoggedIn', checkLoggedIn);
 app.get('/api/getUserInfo', ctrl.getUserInfo);
+app.put('/api/updateUserStats', ctrl.updateUserStats);
+app.put('/api/updateUserAccount', ctrl.updateUserAccount);
+app.delete('/api/deleteUserAccount', ctrl.deleteUserAccount);
 
 const port = 4315;
 

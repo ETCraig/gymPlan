@@ -21,6 +21,9 @@
     font-size: 40px;
     font-style: italic;
 }
+Input {
+    width: 400px;
+}
 .Goals-Content {
     
 }

@@ -9,9 +9,25 @@ export default function Login() {
     }
     return(
         <div className='Login-App'>
-            <div className='Login-Content'>
-                <h1>gymPlan</h1>
+            <div className='Intro-Content'>
+                <h2>'Fitness is not about being better than someone else... it's about being better than you used to be.'</h2>
+            </div>
+            <br />
+            <div className='Btn-Content'>
                 <button className='Login-Btn' onClick={login}>Login / Register</button>
+            </div>
+            <div className='Features-List'>
+                <div className='Goals-Box'>
+                    
+                </div>
+                <br />
+                <div className='Stats-Box'>
+
+                </div>
+                <br />
+                <div className='Routines-Box'>
+
+                </div>
             </div>
         </div>
     );

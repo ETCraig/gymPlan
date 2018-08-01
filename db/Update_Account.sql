@@ -1,0 +1,1 @@
+UPDATE gymPlan_users SET user_id = $1, auth_id = $2, first_name = $3, last_name = $4, profile_picture = $5, gender = $6;

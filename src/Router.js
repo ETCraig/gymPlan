@@ -8,6 +8,7 @@ import Login from './Components/Login';
 import Routine from './Components/Routine';
 import Routines from './Components/Routines';
 import Stats from './Components/Stats';
+// import Contact from './Components/Contact';
 
 import Step1 from './Components/Create/Step1';
 import Step2 from './Components/Create/Step2';
@@ -19,6 +20,7 @@ export default (
         <Route component={Goals} path='/Goals' />
         <Route component={Stats} path='/Stats' />
         <Route component={Account} path='/Account' />
+        {/* <Route component={Contact} path='/Contact-us' /> */}
         <Route component={Routines} path='/Routines' />
         <Route component={Routine} path='/Routine' />
         <Route component={Step1} path='/Step1' />

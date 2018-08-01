@@ -19,22 +19,19 @@ class Goals extends Component {
         this.handleGoalInput = this.handleGoalInput.bind(this);
     }
     componentDidMount() {
-        axios.get('/api/checkLoggedIn').then().catch(res => {
-            console.log('error');
-            this.props.history.push('/');
-        })
-        // this.getUserInfo();
+        axios.get('/api/checkLoggedIn').then()
+        this.getUserInfo();
     }
     getUserInfo() {
         axios.get('/api/getUserInfo').then(res => this.setState({user: res.data}));
+    }
+    createGoal() {
+
     }
     goalPatch() {
 
     }
     deleteGoal() {
-
-    }
-    createGoal() {
 
     }
     handleGoalInput(val) {
@@ -47,7 +44,7 @@ class Goals extends Component {
                 <div className='Goals-Body'>
                     <h1 className='Title'>My Goals</h1>
                     <div className='Goals-Content'>
-                        <h4>This is my first goal</h4>
+                        <input type='text' value={this.state.handleGoalInput} placeholder='Enter New Goal' className='Goal-Input'/>
                         <img src={checkbox} className='Goal-Checkbox' alt='Checkbox' />
                         <img src={Delete} className='Goal-Delete' alt='Delete' />
                         <img src={Edit} className='Goal-Edit' alt='Edit' />
