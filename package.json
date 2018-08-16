@@ -13,11 +13,9 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-native-check-box": "^2.1.0",
-    "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0",
     "restify": "^7.2.1",
     "restify-cors-middleware": "^1.1.1",
     "wallop": "^2.4.1"

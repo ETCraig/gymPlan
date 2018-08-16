@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+app.use( express.static( `${__dirname}/../build` ) );
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const massive = require('massive');
@@ -8,7 +9,7 @@ const nodemailer = require('nodemailer');
 const session = require('express-session');
 const router = express.Router();
 
-const {SERVER_PORT, REACT_APP_CLIENT_ID, CLIENT_SECRET, REACT_APP_DOMAIN, CONNECTION_STRING, SESSION_SECRET, USER, PASS} = process.env;
+const {SERVER_PORT, GOALS, REACT_APP_CLIENT_ID, CLIENT_SECRET, REACT_APP_DOMAIN, CONNECTION_STRING, SESSION_SECRET, USER, PASS} = process.env;
 
 app.use(bodyParser.json());
 
@@ -45,13 +46,13 @@ app.get('/auth/callback', async (req, res) => {
     console.log('userExists');
     if(userExists[0]) {
         req.session.user = userExists[0];
-        res.redirect('http://localhost:3000/#/Goals');
+        res.redirect(GOALS);
     } else {
         console.log('newUser');
         // let pic = picture;
         db.Create_User([sub, pic, first, last]).then(createdUser => {
             req.session.user = createdUser[0];
-            res.redirect('http://localhost:3000/#/Goals');
+            res.redirect(GOALS);
         });
     }
 });
@@ -59,8 +60,8 @@ app.get('/auth/callback', async (req, res) => {
 var transport = {
     host: 'smtp.gmail.com',
     auth: {
-        user: 'devethancraig@gmail.com',
-        pass: 'QAZwsxEDC1!'
+        user: USER,
+        pass: PASS
     }
 }
 

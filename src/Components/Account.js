@@ -118,7 +118,7 @@ class Account extends Component {
                 <div className='Account-Dash-App'>
                 <div className='Account-Dash-Header'>
                     <h1 className='Account-Title'>gymPlan</h1>
-                    <button className='Account-Logout'><a href="http://localhost:3000/auth/logout">Logout</a></button>
+                    <button className='Account-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 
                 <div className='Account-Dash-Profile'>

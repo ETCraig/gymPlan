@@ -242,7 +242,7 @@ export default class Stats extends Component {
                 <div className='Stats-Dash-App'>
                 <div className='Stats-Dash-Header'>
                     <h1 className='Title'>gymPlan</h1>
-                    <button className='Stats-Logout'><a href="http://localhost:3000/auth/logout">Logout</a></button>
+                    <button className='Stats-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 
                 <div className='Stats-Dash-Profile'>

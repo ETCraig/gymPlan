@@ -29,7 +29,7 @@ export default class Contact extends Component {
         const message = document.getElementById('message').value;
         axios({
             method: "POST", 
-            url:"http://localhost:3000/send", 
+            url: process.env.SEND, 
             data: {
                 name: name,   
                 email: email,  
@@ -54,7 +54,7 @@ export default class Contact extends Component {
                 <div className='Contact-Dash-App'>
                 <div className='Contact-Dash-Header'>
                     <h1 className='Contact-Title'>gymPlan</h1>
-                    <button className='Contact-Logout'><a href="http://localhost:3000/auth/logout">Logout</a></button>
+                    <button className='Contact-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 
                 <div className='Contact-Dash-Profile'>

@@ -49,7 +49,7 @@ class Step2 extends Component {
                 
                 <div className='Dash-Header'>
                     <h1 className='Title'>gymPlan</h1>
-                    <button className='Logout'><a href="http://localhost:3000/auth/logout">Logout</a></button>
+                    <button className='Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 
                 <div className='Routine-Info'>
