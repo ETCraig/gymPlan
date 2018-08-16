@@ -1,0 +1,1 @@
+SELECT * FROM gymplan_routines WHERE routine_id = $1; 

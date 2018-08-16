@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Styles/Account.css';
 
 import axios from 'axios';
-import Dashboard from './Dashboard';
+import {Link} from 'react-router-dom';
 
 class Account extends Component {
     constructor() {
@@ -41,7 +41,7 @@ class Account extends Component {
                 "gender": this.state.gender ? this.state.gender : this.state.user.gender,
             };
             console.log(newInfo);
-            axios.put('/api/updateUserAccount', newInfo).then(res => {
+            axios.patch('/api/updateUserAccount', newInfo).then(res => {
                 this.setState({user: res.data});
             });
         }
@@ -60,7 +60,7 @@ class Account extends Component {
     handleFeilds() {
         if(this.state.bool === false) {
             return(
-                <div className='Edit'>
+                <div className='Account-Edit'>
                     <button onClick={() => this.setState({bool: true})}>UPDATE</button>
                     <span>First Name</span>
                     <br />
@@ -74,17 +74,15 @@ class Account extends Component {
                     <br />
                     <input type='text' value={this.state.user.profile_picture} readOnly placeholder='You!' />
                     <br />
-                    <span>Gender</span>
+                    {/* <img src={this.state.profile_picture} alt='Profile Pic' /> */}
                     <br />
-                    <select id='inlineFormCustomSelect' value={this.state.user.gender} readOnly>
-                    <option>{this.state.user.gender}</option>
-                    </select> 
+                    <div className='Gender'><span>Gender</span><select id='inlineFormCustomSelect' value={this.state.user.gender} readOnly><option>{this.state.user.gender}</option></select></div>
                 </div>
             );
         }
         else if(this.state.bool === true) {
             return(
-                <div className='Edit'>
+                <div className='Account-Edit'>
                     <button onClick={() => this.setState({bool: false, first_name: '', last_name: '', profile_picture: '', gender: ''})}>Cancel</button>
                     <span>First Name</span>
                     <br />
@@ -98,12 +96,12 @@ class Account extends Component {
                     <br />
                     <input onChange={(e) => this.setState({profile_picture: e.target.value})} />
                     <br />
+                    {/* <img src={this.state.profile_picture} alt='Profile Pic' /> */}
+                    <br />
                     <span>Gender</span>
                     <br />
-                    <select id='inlineFormCustomSelect' onChange={(e) => this.setState({gender: e.target.value})}>
-                        <option value='Female'>Female</option>
-                        <option value='Male'>Male</option>
-                    </select>
+                    <div className='Gender'><select id='inlineFormCustomSelect' onChange={(e) => this.setState({gender: e.target.value})}><option value='Female'>Female</option><option value='Male'>Male</option></select></div>
+                    {/* <br /> */}
                     <button onClick={() => this.handleAccountChange()} className='Save'>Save</button>
                 </div>
             );
@@ -112,17 +110,43 @@ class Account extends Component {
     handleAccountDelete(user_id) {
         axios.delete('/api/deleteUserAccount').then(res => {
             this.props.history.push('/');
-        })
+        });
     }
     render() {
         return(
             <div className='Account-App'>
-                <Dashboard />
+                <div className='Account-Dash-App'>
+                <div className='Account-Dash-Header'>
+                    <h1 className='Account-Title'>gymPlan</h1>
+                    <button className='Account-Logout'><a href="http://localhost:3000/auth/logout">Logout</a></button>
+                </div>
+
+                <div className='Account-Dash-Profile'>
+                    <div className='Account-Profile-Img-Content'>
+                        <img src={this.state.user.profile_picture} alt='Profile' className='Profile-Img' />
+                    </div>
+                    <div className='Account-Profile-Info-Content'>
+                        <span className='Account-Profile-Name'>{this.state.user.first_name}</span>
+                        <span className='Account-Profile-Name'>{this.state.user.last_name}</span>
+                    </div>
+                </div>
+
+                <div className='Account-Dash-Navbar'>
+                    <ul>
+                        <Link to='/Goals'><li>My Goals</li></Link>
+                        <Link to='/Stats'><li>Body Stats</li></Link>
+                        <Link to='/Routines'><li>My Routines</li></Link>
+                        <Link to='/Account'><li>Manage Account</li></Link>
+                        <Link to='/Contact-Us'><li>Contact Us</li></Link>
+                    </ul>
+                </div>
+            </div>
+
                 <div className='Account-Body'>
-                    <h1>Account Component</h1>
                     {this.handleFeilds()}
                     <br />
-                    <button onClick={(e) => this.handleAccountDelete(e.target.value)}>Delete Account</button>
+                    <br />
+                    <button onClick={(e) => this.handleAccountDelete(e.target.value)} className='Delete-Btn'>Delete Account</button>
                 </div>
             </div>
         );

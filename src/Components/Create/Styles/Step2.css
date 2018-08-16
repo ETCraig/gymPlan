@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+.Step2-App {
+    /* width: 100%;
+    height: 100vh; */
+    /* display: flex;
+    flex-direction: column; */
+    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+}
+.Step2-Body {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 6px;
+    color: black;
+    margin-left: 500px;
+    margin-top: 0px;
+}
+.Routine-List {
+    padding: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    font-family: 'Audiowide', cursive;
+}
+.Routine-List > h2 {
+    padding: 0px;
+    /* height: 140px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    background: grey; */
+}
+.Routine-List>img {
+    width: 350px;
+    height: 235px;
+}
+.Step2-Return-Btn {
+    display: flex;
+    float: left;
+    padding: 6px;
+    margin-top: 625px;
+    margin-left: -200px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.Step2-Return-Btn:hover {
+    cursor: pointer;
+}

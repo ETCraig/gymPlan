@@ -4,9 +4,11 @@ const app = express();
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const massive = require('massive');
+const nodemailer = require('nodemailer');
 const session = require('express-session');
+const router = express.Router();
 
-const {SERVER_PORT, REACT_APP_CLIENT_ID, CLIENT_SECRET, REACT_APP_DOMAIN, CONNECTION_STRING, SESSION_SECRET} = process.env;
+const {SERVER_PORT, REACT_APP_CLIENT_ID, CLIENT_SECRET, REACT_APP_DOMAIN, CONNECTION_STRING, SESSION_SECRET, USER, PASS} = process.env;
 
 app.use(bodyParser.json());
 
@@ -54,15 +56,83 @@ app.get('/auth/callback', async (req, res) => {
     }
 });
 
+var transport = {
+    host: 'smtp.gmail.com',
+    auth: {
+        user: 'devethancraig@gmail.com',
+        pass: 'QAZwsxEDC1!'
+    }
+}
+
+var transporter = nodemailer.createTransport(transport)
+
+transporter.verify((error, success) => {
+    if(error) {
+        console.log(error);
+    } else {
+        console.log('Server is ready to take messages');
+    }
+});
+
+router.post('/send', (req, res, next) => {
+    var name = req.body.name
+    var email = req.body.email
+    var message = req.body.message
+    var content = `name: ${name} \n email: ${email} \n message: ${content}`
+
+    var mail = {
+        from: name,
+        to: 'ethantcraig@yahoo.com',
+        subject: 'New Message from Contact Form',
+        text: content
+    }
+    transporter.sendMail(mail, (err, data) => {
+        if (err) {
+            res.json({
+                msg: 'fail'
+            })
+        } else {
+            res.json({
+                msg: 'success'
+            })
+        }
+    })
+})
 
 const ctrl = require('./Controller');
 const checkLoggedIn = require('./Middleware')
 
 app.get('/api/checkLoggedIn', checkLoggedIn);
 app.get('/api/getUserInfo', ctrl.getUserInfo);
-app.put('/api/updateUserStats', ctrl.updateUserStats);
-app.put('/api/updateUserAccount', ctrl.updateUserAccount);
+// Stats
+app.patch('/api/updateUserStats', ctrl.updateUserStats);
+// Account
+app.patch('/api/updateUserAccount', ctrl.updateUserAccount);
 app.delete('/api/deleteUserAccount', ctrl.deleteUserAccount);
+// Goals
+app.get('/api/getUserGoals', ctrl.getUserGoals);
+app.post('/api/createUserGoal', ctrl.createUserGoal);
+app.delete('/api/deleteUserGoal/:goal_id', ctrl.deleteUserGoal);
+app.patch('/api/editUserGoal', ctrl.editUserGoal);
+// Routines
+app.get('/api/getUserRoutines', ctrl.getUserRoutines);
+app.post('/api/createUserRoutine', ctrl.createUserRoutine);
+//Exercises
+app.get('/api/getUserRoutine/:routine_id', ctrl.getUserRoutine);
+//Routine
+app.delete('/api/deleteUserRoutine/:routine_id', ctrl.deleteUserRoutine);
+app.get('/api/getRoutineExercises/:routine_id', ctrl.getRoutineExercises);
+//Step1
+app.get('/api/getExercises', ctrl.getExercises);
+//Step2
+app.get('/api/getExercise/:muscle_group', ctrl.getExercise);
+//Step3
+app.get('/api/getUserExercise/:exercise_id/:routine_id', ctrl.getUserExercise);
+app.post('/api/addUserExercise', ctrl.addUserExercise);
+app.delete('/api/removeUserExercise/:exercise_id/:routine_id', ctrl.removeUserExercise);
+//Step4
+app.get('/api/getAllExercises', ctrl.getAllExercises);
+app.get('/api/getUserSearch/:searchParameter/:searchInput/:routine_id', ctrl.getUserSearch);
 
 const port = 4315;
 

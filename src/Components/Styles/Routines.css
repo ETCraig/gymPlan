@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Changa');
+
 .Routines-App {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #f2f2f2;
+    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
 }
 .Routines-Body {
     width: 50%;
     height: 80%;
-    background-color: #ce1717;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -17,4 +18,210 @@
     color: black;
     margin-left: 500px;
     margin-top: -650px;
+}
+
+.Routine-List > h2 {
+    padding: 0px;
+    /* height: 140px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    background: grey; */
+}
+.Routine-List .Routine-Btn-Container {
+    color: white;
+    background: #000000;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    padding: 12px;
+    border-radius: 10px;
+    left: 20%;
+    top: 16%;
+    width: 800px;
+    height: 50px;
+    font-size: 40px;
+    left: 0%;
+    font-family: 'Audiowide', cursive;
+    margin-top: 10px;
+}
+.Routine-List .Routine-Btn-Container:hover {
+    background: white;
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+}
+.binsTitle {
+    position: absolute;
+    left: 310px; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 500px;
+    color: white;
+    top: -52px;
+    text-decoration: none;
+}
+.binsTitle h1 {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+
+
+.Routine-List>day {
+
+}
+.Routine-List>name {
+
+}
+.Routine-List>muscle {
+
+}
+.Routine-List>type {
+
+}
+.Routine-List>diff {
+
+}
+.Routine-List>desc {
+
+}
+
+
+.Routines-Dash-App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: white;
+  }
+a:hover {
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+  }
+/* Header  */
+.Routines-Dash-Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-image: linear-gradient(97deg, #ffffff, #000000);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    position: absolute;
+}
+.Routines-Title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Changa', sans-serif;
+    font-size: 30px;
+}
+.Routines-Logout {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    justify-content: right;
+    float: right;
+    font-family: 'Changa', sans-serif;
+}
+.Routines-Logout:hover {
+    cursor: pointer;
+    box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.26);
+}
+/* Profile Img  */
+.Routines-Dash-Profile {
+    height: 250px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: left;
+    padding: 6px;
+    margin-top: 70px;
+}
+.Routines-Profile-Img-Content {
+
+}
+.Routines-Profile-Img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    border: 5px solid #ffffff;
+}
+.Routines-Profile-Info-Content {
+
+}
+.Routines-Profile-Name {
+    font-size: 35px;
+    padding: 5px;
+    font-family: 'Audiowide', cursive;
+    color: white;
+}
+/* Nav column */
+.Routines-Dash-Navbar {
+    height: 250px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    float: left;
+    padding: 6px;
+    margin-top: 70px;
+}
+.Routines-Dash-Navbar>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 35px;
+}
+li {
+    padding: 15px;
+    background-color: black;
+    border-radius: 2px;
+    font-family: 'Audiowide', cursive;
+}
+li:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+
+
+
+@media only screen and (max-width: 376px) {
+    .Routines-App {
+        width: 375px;
+        height: 672px;
+    }
+    .Routines-Dash-Header {
+        height: 25px;
+    }
+    .Routines-Logout {
+        font-size: 18px;
+    }
+    .Routines-Title {
+        font-size: 25px;
+    }
+    .Routines-Profile-Img {
+        
+    }
 }

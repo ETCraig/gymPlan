@@ -1,0 +1,48 @@
+.Routines-Create {
+    background-color: grey;
+    height: 140px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.Routines-Name {
+    width: 200px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.Routines-Day {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+}
+.Routines-Diff {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+}
+.Routines-Muscle {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+}
+.Routines-Type {
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+}
+.Routines-Desc {
+    margin-left: 220px;
+    margin-bottom: 5px;
+    width: 380px;
+    height: 100px;
+}
+.Create-Routine-Btn {
+    width: 150px;
+    height: 70px;;
+}

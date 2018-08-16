@@ -1,0 +1,74 @@
+.Step4-App {
+
+}
+.Step4-Body {
+    padding-top: 80px;
+    background-image: url('http://wishsalonspa.com/wp-content/uploads/revslider/homeslider/bg3.jpg');
+}
+.Search-Input {
+
+}
+.Custom-Select {
+
+}
+.Search-Btn {
+
+}
+.Reset-Btn {
+
+}
+.All-Exercises>.Both-Sidez {
+    margin-top: 80px;
+}
+.All-Exercises:after {
+    content: '';
+    clear: both;
+    display: inline-table;
+}
+/* .All-Exercises>img:hover {
+    cursor: pointer;
+} */
+.Both-Sidez {
+    float: right;
+    width: 32.00%;
+    padding: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    margin: 5px;
+}
+.Both-Sidez>img {
+    width: 218px;
+    height: 175px;
+}
+.Both-Sidez {
+    color: black;
+    font-family: 'Changa', sans-serif;
+    background: url('http://bootstrap.sadaqatclinic.com/wp-content/uploads/2016/07/bg.jpg');
+}
+.Dash-Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50px;
+    background-image: linear-gradient(97deg, #ffffff, #000000);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    color: black;
+    position: absolute;
+}
+.Title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.Logout {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    justify-content: right;
+    float: right;
+}
+.Logout:hover {
+    cursor: pointer;
+}

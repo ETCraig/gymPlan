@@ -26,32 +26,37 @@ INSERT INTO gymPlan_goals(
     goal_id SERIAL PRIMARY KEY,
     user_id INT,
     content VARCHAR(200), 
-    foreign key (user_id) references gymPlan_users (user_id)
+    foreign key (user_id) references gymplan_users (user_id)
 );
 
-INSERT INTO gymplan_Routines(
+INSERT INTO gymplan_routines(
     routine_id SERIAL PRIMARY KEY,
     user_id INT,
-    type Text,
-    diff TEXT,
-    desc VARCHAR(100),
+    day  VARCHAR(10),
+    name VARCHAR(20),
+    type VARCHAR(14),
+    muscle VARCHAR(10),
+    diff VARCHAR(20),
+    description VARCHAR(150),
     foreign key (user_id) references gymPlan_users (user_id)
 );
 
-INSERT INTO gymplan_days(
-    day_id SERIAL PRIMARY KEY,
-    uroutine_id INT,
-    type VARCHAR(20),
-    muscle VARCHAR(10),
-    length DECIMAL,
-    exercises TEXT[],
-    foreign key (routine_id) references gymplan_Routines (routine_id)
+INSERT INTO routine-exercises(
+    routineExercise_id SERIAL PRIMARY KEY,
+    routine_id INT,
+    exercise_id INT,
+    reps INT,
+    weight DECIMAL,
+    foreign key (routine_id) references gymplan_Routines (routine_id),
+    foreign key (exercise_id) references gymplan_exercises (exercise_id)
 );
 
 INSERT INTO gymplan_exercises(
-    muscle_group TEXT PRIMARY KEY,
-    name VARCHAR(20),
+    exercise_id SERIAL PRIMARY KEY,
+    muscle_group VARCHAR(10),
+    name VARCHAR(30),
     picture TEXT,
     equip VARCHAR(20),
     desc VARCHAR(150),
+    defaultReps VARCHAR(4)
 );

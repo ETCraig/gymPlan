@@ -1,0 +1,1 @@
+DELETE FROM routine_exercises WHERE exercise_id = $1 AND routine_id = $2; 

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Styles/Stats.css';
 
 import axios from 'axios';
-import Dashboard from './Dashboard';
+import {Link} from 'react-router-dom';
 
 export default class Stats extends Component { 
     constructor() {
@@ -64,7 +64,7 @@ export default class Stats extends Component {
                 "row": this.state.row ? this.state.row : this.state.user.row
             };
             console.log(newStats);
-            axios.put('/api/updateUserStats', newStats).then(res => {
+            axios.patch('/api/updateUserStats', newStats).then(res => {
                 this.setState({user: res.data});
             });
         }
@@ -239,9 +239,34 @@ export default class Stats extends Component {
     render() {
         return(
             <div className='Stats-App'>
-                <Dashboard />
+                <div className='Stats-Dash-App'>
+                <div className='Stats-Dash-Header'>
+                    <h1 className='Title'>gymPlan</h1>
+                    <button className='Stats-Logout'><a href="http://localhost:3000/auth/logout">Logout</a></button>
+                </div>
+
+                <div className='Stats-Dash-Profile'>
+                    <div className='Stats-Profile-Img-Content'>
+                        <img src={this.state.user.profile_picture} alt='Stats-Profile' className='Profile-Img' />
+                    </div>
+                    <div className='Stats-Profile-Info-Content'>
+                        <span className='Stats-Profile-Name'>{this.state.user.first_name}</span>
+                        <span className='Stats-Profile-Name'>{this.state.user.last_name}</span>
+                    </div>
+                </div>
+
+                <div className='Stats-Dash-Navbar'>
+                    <ul>
+                        <Link to='/Goals'><li>My Goals</li></Link>
+                        <Link to='/Stats'><li>Body Stats</li></Link>
+                        <Link to='/Routines'><li>My Routines</li></Link>
+                        <Link to='/Account'><li>Manage Account</li></Link>
+                        <Link to='/Contact-Us'><li>Contact Us</li></Link>
+                    </ul>
+                </div>
+            </div>
+
                 <div className='Stats-Body'>
-                    <h1 className='title'>Body Stats Component</h1>
                     <div className='Stats-Content'>
                         {this.handleFields()}
                     </div>

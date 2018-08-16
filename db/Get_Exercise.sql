@@ -1,0 +1,1 @@
+SELECT * FROM gymplan_exercises WHERE muscle_group = $1;

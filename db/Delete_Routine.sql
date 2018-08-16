@@ -1,0 +1,1 @@
+UPDATE gymplan_routines SET name = null, type = null, muscle = null, diff = null, description = null WHERE routine_id = $1;

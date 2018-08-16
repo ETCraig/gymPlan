@@ -46,7 +46,6 @@ class Dashboard extends Component {
                         <Link to='/Stats'><li>Body Stats</li></Link>
                         <Link to='/Routines'><li>Routines</li></Link>
                         <Link to='/Account'><li>Manage Account</li></Link>
-                        <Link to='/Step1'><li>Create Routine</li></Link>
                         <Link to='/Contact-Us'><li>Contact Us</li></Link>
                     </ul>
                 </div>

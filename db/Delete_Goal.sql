@@ -1,0 +1,1 @@
+DELETE FROM gymplan_goals WHERE goal_id = $1;

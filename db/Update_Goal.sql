@@ -1,0 +1,1 @@
+UPDATE gymplan_goals SET goal_id = $1, user_id = $2, content = $3;

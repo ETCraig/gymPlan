@@ -1,14 +1,16 @@
-.Goals-App {
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Changa');
+@import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo');
+
+.Goals-Appp {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #f2f2f2;
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
 }
-.Goals-Body {
+.Goals-Bodyy {
     width: 50%;
     height: 80%;
-    background-color: #ce1717;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,13 +19,258 @@
     margin-left: 500px;
     margin-top: -650px;
 }
+.Goals-Content {
+    
+}
+.Goals-Dash-App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: white;
+  }
+a:hover {
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+  }
+/* Header  */
+.Goals-Dash-Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-image: linear-gradient(97deg, #ffffff, #000000);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    position: absolute;
+}
+.Goals-Title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Changa', sans-serif;
+    font-size: 30px;
+}
+.Goals-Logout {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    justify-content: right;
+    float: right;
+    font-family: 'Changa', sans-serif;
+}
+.Goals-Logout:hover {
+    cursor: pointer;
+    box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.26);
+}
+/* Profile Img  */
+.Goals-Dash-Profile {
+    height: 250px;
+    width: 20%;
+    /* background-color: rgb(0, 0, 0); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: left;
+    padding: 6px;
+    margin-top: 70px;
+    border-radius: 5px;
+}
+.Goals-Profile-Img-Content {
+
+}
+.Goals-Profile-Img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    border: 5px solid #ffffff;
+}
+.Goals-Profile-Info-Content {
+
+}
+.Goals-Profile-Name {
+    font-size: 35px;
+    padding: 5px;
+    font-family: 'Audiowide', cursive;
+    color: white;
+}
+/* Nav column */
+.Goals-Dash-Navbar {
+    height: 250px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    float: left;
+    padding: 6px;
+    margin-top: 70px;
+}
+.Goals-Dash-Navbar>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 35px;
+}
+li {
+    padding: 15px;
+    background-color: black;
+    border-radius: 2px;
+    font-family: 'Audiowide', cursive;
+}
+li:hover {
+    background-color: #ffffff;
+    color: black;
+}
 .Title {
     font-size: 40px;
     font-style: italic;
+    font-family: 'Audiowide', cursive;
 }
 Input {
     width: 400px;
 }
-.Goals-Content {
+.Goal-Btn {
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'Changa', sans-serif;
+}
+.Goal-Btn:hover {
+    cursor: pointer;
+}.Goals-List {
+    font-size: 30px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Goals-Listings {
+    height: 140px;
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    font-family: 'East Sea Dokdo', cursive;
+    border-radius: 20px;
+    background-image: url('http://i.imgur.com/pHNDtQg.jpg');
+}
+.Goal-Delete-Icon {
+    margin-top: 5px;
+    text-align: right;
+    height: 20px;
+    margin-right: 6px;
+    width: 20px;
+}
+.Goal-Delete-Icon:hover {
+    background: red;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.Goal-Edit-Icon {
+    margin-top: 5px;
+    text-align: right;
+    height: 20px;
+    margin-right: 6px;
+    width: 20px;
+}
+.Goal-Edit-Icon:hover {
+    background: lightblue;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.Goals-Icons {
     
+}
+
+
+
+
+
+
+@media only screen and (max-width: 376px) {
+    .Goals-Appp {
+        width: 375px;
+        height: 672px;
+    }
+    .Goals-Dash-Header {
+        height: 25px;
+    }
+    .Goals-Logout {
+        font-size: 18px;
+    }
+    .Goals-Title {
+        font-size: 25px;
+    }
+    .Goals-Profile-Img {
+        height: 110%;
+        width: 110%;
+        margin-top: -40px;
+    }
+    .Goals-Profile-Info-Content {
+        padding-top: -80px;
+        height: 80%;;
+    }
+    .Goals-Profile-Name {
+        font-size: 12.5px;
+    }
+    .Goals-Dash-Profile {
+        padding: 2px;
+    }
+    .Goals-Dash-Navbar {
+        height: 50px;
+        width: 33%;
+        margin-top: -50px;
+    }
+    .Goals-Dash-Navbar>ul {
+        font-size: 10px;
+    }
+    li {
+        padding: 5px;
+    } 
+    .Goals-Bodyy {
+        width: 50%;
+        height: 80%;
+    }
+    .Title {
+        font-size: 15px;
+        margin-right: 700px;
+        margin-top: 10px;
+        width: 250px;
+    }
+    .Goal-Input {
+        width: 250px;
+        margin-top: 30px;
+        margin-right: 730px;
+    }
+    .Goals-List {
+        font-size: 10px;
+        max-height: 500px;
+        width: 270px;
+        margin-top: -5px;
+        padding: 0px;
+    }
+    .Goal-Btn {
+        margin-right: 730px;
+        margin-top: 5px;
+    }
 }
