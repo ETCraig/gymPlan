@@ -110,7 +110,6 @@ a:hover {
     font-size: 30px;
     padding: 5px;
     font-family: 'Audiowide', cursive;
-    background: #000000;
     color: white;
 }
 /* Nav column */
@@ -143,4 +142,63 @@ li {
 li:hover {
     background-color: #ffffff;
     color: black;
+}
+
+
+
+
+@media only screen and (max-width: 376px) {
+    .Contact-App {
+        width: 375px;
+        height: 672px;
+    }
+    .Contact-Dash-Header {
+        height: 25px;
+    }
+    .Contact-Logout {
+        font-size: 18px;
+    }
+    .Contact-Title {
+        font-size: 25px;
+    }
+    .Contact-Profile-Img {
+        height: 110%;
+        width: 110%;
+        margin-top: -40px;
+    }
+    .Contact-Profile-Info-Content {
+        padding-top: -80px;
+        height: 80px;
+    }
+    .Contact-Profile-Name {
+        font-size: 12.5px;
+    }
+    .Contact-Dash-Profile {
+        padding: 2px;
+    }
+    .Contact-Dash-Navbar {
+        height: 50px;
+        width: 33%;
+        margin-top: 5px;
+    }
+    .Contact-Dash-Navbar>ul {
+        font-size: 10px;
+    }
+    li {
+        padding: 5px;
+    }
+    .Contact-Body {
+        margin-top: 50%;
+        height: 80%;
+    }
+    #contact-form {
+        margin-right: 900px;
+        margin-top: -300px;
+    }
+    .form-control {
+        width: 400%
+    }
+    .form-group>label {
+        width: 200%;
+    }
 }

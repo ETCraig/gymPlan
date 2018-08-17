@@ -1,4 +1,4 @@
-.Dash-Header {
+.Routine-Dash-Header {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -9,12 +9,12 @@
     color: white;
     position: absolute;
 }
-.Title {
+.Routine-Title {
     display: flex;
     justify-content: left;
     align-items: center;
 }
-.Logout {
+.Routine-Logout {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -23,20 +23,20 @@
     justify-content: right;
     float: right;
 }
-.Logout:hover {
+.Routine-Logout:hover {
     cursor: pointer;
 }
 .Routine-Routine-Info {
-    color: #ffffff;
     height: 250px;
     width: 20%;
-    background-color: rgb(192, 107, 107);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     float: left;
     padding: 6px;
     margin-top: 70px;
+    color: #ffffff;
 }
 .Routine-Routine-Details {
     display: flex;
@@ -96,16 +96,60 @@
     float: left;
     max-width: 218px;
 }
-/* .Routine-Img>img {
-    max-width: 250px;
-    max-height: 215px;
-    float: left;
+
+@media only screen and (max-width: 376px) {
+    .Routine-App {
+        width: 375px;
+        height: auto;
+    }
+    .Routine-Dash-Header {
+        height: 25px;
+    }
+    .Routine-Logout {
+        font-size: 18px;
+    }
+    .Routine-Title {
+        font-size: 25px;
+        margin-top: -5px;
+    }
+    .Routine-Routine-Info {
+        width: 100px;
+        height: 100px;
+    }
+    .Routine-Routine-Details {
+        margin-top: 200px;
+        margin-left: -111px;
+        width: 100px;
+        height: 300px;
+    }
+    .Routine-Exercises {
+        justify-content: center;
+        min-height: 650px;
+        margin-top: -50px;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    .List-Container {
+        margin-left: -270px;
+        margin-top: -100px;
+        width: 400px;
+    }
+    .Routine-Exercises>img {
+        max-width: 218px;
+        max-height: 200px;
+        float: none;
+    }
+    .Routine-Text {
+        margin-top: -100px;
+    }
+    .Routine-Text>h2 {
+        margin-top: 100px;
+        width: 180px;
+        float: none;
+        color: #000000;
+    }
+    .Routine-Exercises>.Routine-Btn>button {
+        float: none;
+        max-width: 218px;
+    }
 }
-.Routine-Btn>button {
-    width: 200px;
-}
-.Routine-Text>h2 {
-    float: right;
-    height: 100px;
-    width: 300px;
-} */

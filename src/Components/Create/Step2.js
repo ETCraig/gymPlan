@@ -47,20 +47,20 @@ class Step2 extends Component {
         return(
             <div className='Step2-App'>
                 
-                <div className='Dash-Header'>
-                    <h1 className='Title'>gymPlan</h1>
-                    <button className='Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
+                <div className='Step2-Dash-Header'>
+                    <h1 className='Step2-Title'>gymPlan</h1>
+                    <button className='Step2-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 
-                <div className='Routine-Info'>
-                    <div className='Routine-Details1'>
+                <div className='Step2-Routine-Info'>
+                    <div className='Step2-Routine-Details1'>
                         <span>{this.state.user.first_name} {this.state.user.last_name}</span>
                         <span>{this.state.routine.name}</span>
                         <span>{this.state.routine.day}</span>
                     </div>
                 </div>
 
-                <div className='Routine-Details2'>
+                <div className='Step2-Routine-Details'>
                     <span>{this.state.routine.muscle}</span>
                     <span>{this.state.routine.type}</span>
                     <span>{this.state.routine.diff}</span>
@@ -75,7 +75,7 @@ class Step2 extends Component {
 
                 {displayExercises.map((exercises, i) => {
                     return(
-                        <div className='Routine-List' key={i}>
+                        <div className='Step2-Routine-List' key={i}>
                             <Link to={`/Step3/${this.state.routine.routine_id}/${exercises.exercise_id}`}><h2>{exercises.name}</h2></Link>
                             <img src={exercises.picture} alt='Motion Pic' />
                         </div>

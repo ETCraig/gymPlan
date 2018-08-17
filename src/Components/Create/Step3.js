@@ -183,9 +183,9 @@ class Step3 extends Component {
         });
         return(
             <div className='Step3-App'>
-                <div className='Dash-Header'>
-                    <h1 className='Title'>gymPlan</h1>
-                    <button className='Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
+                <div className='Step3-Dash-Header'>
+                    <h1 className='Step3-Title'>gymPlan</h1>
+                    <button className='Step3-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
                 <div className='Step3-Body'>
                     <div className='Exercise-Detail'>

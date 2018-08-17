@@ -79,7 +79,7 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     float: left;
-    padding: 6px;
+    /* padding: 6px; */
     margin-top: 70px;
     border-radius: 5px;
 }
@@ -228,7 +228,7 @@ Input {
     }
     .Goals-Profile-Info-Content {
         padding-top: -80px;
-        height: 80%;;
+        height: 80%;
     }
     .Goals-Profile-Name {
         font-size: 12.5px;
@@ -239,7 +239,7 @@ Input {
     .Goals-Dash-Navbar {
         height: 50px;
         width: 33%;
-        margin-top: -50px;
+        margin-top: -90px;
     }
     .Goals-Dash-Navbar>ul {
         font-size: 10px;

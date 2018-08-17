@@ -241,7 +241,7 @@ export default class Stats extends Component {
             <div className='Stats-App'>
                 <div className='Stats-Dash-App'>
                 <div className='Stats-Dash-Header'>
-                    <h1 className='Title'>gymPlan</h1>
+                    <h1 className='Stats-Title'>gymPlan</h1>
                     <button className='Stats-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 

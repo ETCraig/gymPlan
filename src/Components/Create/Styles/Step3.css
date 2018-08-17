@@ -58,7 +58,7 @@ h3 {
 
 
 
-.Dash-Header {
+.Step3-Dash-Header {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -69,12 +69,13 @@ h3 {
     color: black;
     position: absolute;
 }
-.Title {
+.Step3-Title {
     display: flex;
     justify-content: left;
     align-items: center;
+    color: white;
 }
-.Logout {
+.Step3-Logout {
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -83,6 +84,28 @@ h3 {
     justify-content: right;
     float: right;
 }
-.Logout:hover {
+.Step3-Logout:hover {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 376px) {
+    .Step3-App {
+        width: 375px;
+        height: 672px;
+    }
+    .Step3-Dash-Header {
+        min-height: 25px;
+    }
+    .Step3-Logout {
+        font-size: 18px;
+    }
+    .Step3-Title {
+        font-size: 25px;
+        margin-top: -5px;
+    }
+    .Exercise-Desc>img {
+        height: 300px;
+        width: 350px;
+        float: left;
+    }
 }

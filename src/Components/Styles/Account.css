@@ -102,7 +102,6 @@ a:hover {
     font-size: 30px;
     padding: 5px;
     font-family: 'Audiowide', cursive;
-    background: #000000;
     color: white;
 }
 /* Nav column */
@@ -236,4 +235,63 @@ li:hover {
 .Delete-Btn:hover {
     cursor: pointer;
     background-color: red;
+}
+@media only screen and (max-width: 376px) {
+    .Account-App {
+        width: 375px;
+        height: 672px;
+    }
+    .Account-Dash-Header {
+        height: 25px;
+    }
+    .Stats-Logout {
+        font-size: 18px;
+    }
+    .Account-Title {
+        font-size: 25px;
+    }
+    .Profile-Img {
+        height: 110%;
+        width: 110%;
+        margin-top: -40px;
+    }
+    .Account-Profile-Info-Content {
+        padding-top: -80px;
+        height: 80px;
+    }
+    .Account-Profile-Name {
+        font-size: 12.5px;
+    }
+    .Account-Dash-Profile {
+        padding: 2px;
+    }
+    .Account-Dash-Navbar {
+        height: 50px;
+        width: 33%;
+        margin-top: -50px;
+    }
+    .Account-Dash-Navbar>ul {
+        font-size: 10px;
+    }
+    li {
+        padding: 5px;
+    }
+    .Account-Body {
+        width: 50%;
+        height: 80%;
+    }
+    .Account-Edit {
+        margin-top: 50px;
+        margin-right: 650px;
+    }
+    .Account-Edit input {
+        max-width: 35%;
+        max-height: 5%;
+        margin-right: 70px;
+    }
+    .Delete-Btn {
+        margin-right: 650px;
+        margin-bottom: -70px;
+        height: 80px;
+    }
 }

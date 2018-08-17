@@ -72,9 +72,9 @@ class Step4 extends Component {
         displayExercises = this.state.exercises;
         return(
             <div className='Step4-App'>
-                <div className='Dash-Header'>
-                    <h1 className='Title'>gymPlan</h1>
-                    <button className='Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
+                <div className='Step4-Dash-Header'>
+                    <h1 className='Step4-Title'>gymPlan</h1>
+                    <button className='Step4-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 
                 <div className='Step4-Body'>

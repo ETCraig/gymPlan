@@ -61,7 +61,7 @@ class Routines extends Component {
             <div className='Routines-App'>
                 <div className='Routines-Dash-App'>
                 <div className='Routines-Dash-Header'>
-                    <h1 className='Title'>gymPlan</h1>
+                    <h1 className='Routines-Title'>gymPlan</h1>
                     <button className='Routines-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 
@@ -75,13 +75,15 @@ class Routines extends Component {
                     </div>
                 </div>
 
-                <div className='Routines-Dash-Navbar'>
+                <div className='Routines-Dash-Navbar1'>
                     <ul>
+                        <div className='Routines-li'>
                         <Link to='/Goals'><li>My Goals</li></Link>
                         <Link to='/Stats'><li>Body Stats</li></Link>
                         <Link to='/Routines'><li>My Routines</li></Link>
                         <Link to='/Account'><li>Manage Account</li></Link>
                         <Link to='/Contact-Us'><li>Contact Us</li></Link>
+                        </div>
                     </ul>
                 </div>
             </div>

@@ -18,18 +18,18 @@
 .Exersise-List>img:hover {
     cursor: pointer;
 }
-.Both-Sides {
+.Step1-Both-Sides {
     float: right;
     width: 33.33%;
     padding: 5px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     margin: 5px;
 }
-.Both-Sides>img {
+.Step1-Both-Sides>img {
     width: 218px;
     height: 175px;
 }
-.Both-Sides {
+.Step1-Both-Sides {
     color: white;
     font-family: 'Changa', sans-serif;
 }
@@ -38,7 +38,7 @@
 
 
 
-.Dash-Header {
+.Step1-Dash-Header {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -49,12 +49,12 @@
     color: white;
     position: absolute;
 }
-.Title {
+.Step1-Title {
     display: flex;
     justify-content: left;
     align-items: center;
 }
-.Logout {
+.Step1-Logout {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -63,10 +63,10 @@
     justify-content: right;
     float: right;
 }
-.Logout:hover {
+.Step1-Logout:hover {
     cursor: pointer;
 }
-.Routine-Info {
+.Step1-Routine-Info {
     height: 250px;
     width: 20%;
     background-color: rgb(0, 0, 0);
@@ -78,14 +78,14 @@
     margin-top: 70px;
     color: #f2f2f2;
 }
-.Routine-Details1 {
+.Step1-Routine-Details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 6px;
     color: #f2f2f2
 }
-.Routine-Details2 {
+.Step1-Routine-Details {
     height: 200px;
     width: 20%;
     background-color: rgb(0, 0, 0);
@@ -127,4 +127,66 @@
     cursor: pointer;
     color: white;
     background: black;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 376px) {
+    .Step1-App {
+        width: 375px;
+        height: auto;
+    }
+    .Step1-Dash-Header {
+        height: 25px;
+    }
+    .Step1-Logout {
+        font-size: 18px;
+    }
+    .Step1-Title {
+        font-size: 25px;
+        margin-top: -5px;
+    }
+    .Step1-Routine-Info {
+        height: 150px;
+        width: 10%;
+    }
+    .Step1-Routine-Details {
+        height: 150px;
+        width: 10%;
+    }
+    .Search_Btn {
+        margin-top: 30px;
+    }
+    .Exersise-List {
+        margin-left: -80px;
+        flex-direction: column;
+        width: 430px;
+    }
+    .Exersise-List:after {
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    img {
+        width: 135px;
+        height: 120px;
+    }
+    .Step1-Routine-Details {
+        width: 0px;
+        height: 0px;
+    }
+    .Step1-Routine-Info {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+    .Return-Btn {
+        margin-left: 10px;
+        margin-top: 30px;
+    }
 }

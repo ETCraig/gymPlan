@@ -151,20 +151,23 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     float: left;
-    padding: 6px;
+    /* padding: 6px; */
     margin-top: 70px;
 }
 .Routines-Profile-Img-Content {
-
+    
 }
 .Routines-Profile-Img {
+    
+}
+.Profile-Img {
     width: 200px;
     height: 200px;
     border-radius: 5px;
     border: 5px solid #ffffff;
 }
 .Routines-Profile-Info-Content {
-
+    
 }
 .Routines-Profile-Name {
     font-size: 35px;
@@ -173,7 +176,7 @@ a:hover {
     color: white;
 }
 /* Nav column */
-.Routines-Dash-Navbar {
+.Routines-Dash-Navbar1 {
     height: 250px;
     width: 20%;
     display: flex;
@@ -184,7 +187,7 @@ a:hover {
     padding: 6px;
     margin-top: 70px;
 }
-.Routines-Dash-Navbar>ul {
+.Routines-Dash-Navbar1>ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,6 +197,7 @@ a:hover {
     margin-right: 35px;
 }
 li {
+    margin-top: 10px;
     padding: 15px;
     background-color: black;
     border-radius: 2px;
@@ -221,7 +225,54 @@ li:hover {
     .Routines-Title {
         font-size: 25px;
     }
-    .Routines-Profile-Img {
-        
+    .Profile-Img {
+        height: 110%;
+        width: 110%;
+        margin-top: -40px;
+    }
+    .Routines-Profile-Info-Content {
+        padding-top: -80px;
+        height: 80%;
+        /* padding-top: -80px;
+        height: 80%; */
+    }
+    .Routines-Profile-Name {
+        font-size: 12.5px;
+    }
+    .Routines-Dash-Profile {
+        padding: 2px;
+    }
+    .Routines-Dash-Navbar1 {
+        height: 50px;
+        width: 33%;
+        margin-top: -110px;
+    }
+    .Routines-Dash-Navbar1>ul {
+        font-size: 10px;
+    }
+    li {
+        padding: 5px;
+    }
+    .Routines-Body {
+        width: 50%;
+        height: 80%;
+    }
+    .Routine-List .Routine-Btn-Container {
+        color: white;
+        background: #000000;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid rgb(255, 255, 255);
+        position: relative;
+        padding: 12px;
+        border-radius: 10px;
+        left: 20%;
+        top: 16%;
+        width: 200px;
+        height: 50px;
+        font-size: 25px;
+        left: -160%;
+        font-family: 'Audiowide', cursive;
+        margin-top: 10px;
     }
 }

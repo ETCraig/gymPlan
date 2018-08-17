@@ -56,13 +56,13 @@ class Routine extends Component {
         displayRoutineExercises = this.state.exercises;
         return(
             <div className='Routine-App'>
-                <div className='Dash-Header'>
-                    <h1 className='Title'>gymPlan</h1>
-                    <button className='Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
+                <div className='Routine-Dash-Header'>
+                    <h1 className='Routine-Title'>gymPlan</h1>
+                    <button className='Routine-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div>
 
                 <div className='Routine-Routine-Info'>
-                    <div className='Routine-Routine-Details'>
+                    <div className='Routine-Routine-Details3'>
                         <span>Name: {this.state.user.first_name} {this.state.user.last_name}</span>
                         <span>Routine Name: {this.state.routine.name}</span>
                         <span>Routine Day: {this.state.routine.day}</span>
@@ -82,7 +82,7 @@ class Routine extends Component {
                 <button className='Return-Btn' onClick={() => this.deleteRoutine()}>Delete Routine</button>
                 <br />
                 <Link to={`/Step1/${this.state.routine.routine_id}`}><button>Add Exercises</button></Link>
-                <div>
+                <div className='List-Container'>
                     {displayRoutineExercises.map((exercise, i) => {
                         return(
                             <div key={i} className='Routine-Exercises'>
