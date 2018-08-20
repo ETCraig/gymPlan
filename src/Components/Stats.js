@@ -274,7 +274,7 @@ export default class Stats extends Component {
 
             </div>
 
-                <div className='Stats-Body'>
+                <div className='Stats-Body' style={{color: 'black'}}>
                     <div className='Stats-Content'>
                         {this.handleFields()}
                     </div>

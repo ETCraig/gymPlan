@@ -139,7 +139,7 @@ class Account extends Component {
 
             </div>
 
-                <div className='Account-Body'>
+                <div className='Account-Body' style={{color: 'black'}}>
                     {this.handleFeilds()}
                     <br />
                     <br />

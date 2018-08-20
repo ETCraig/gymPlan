@@ -82,7 +82,7 @@ class Routines extends Component {
 
             </div>
 
-                <div className='Routines-Body'>
+                <div className='Routines-Body' style={{color: 'black'}}>
                     {/* <Link to='/Create'><button>Create New Routine</button></Link> */}
                     <div className = 'binsTitle'>
                         {/* <Link to = {`/Exercises/${this.props.match.params.id}`}><h1>Routine! {this.props.match.params.id}</h1></Link> */}

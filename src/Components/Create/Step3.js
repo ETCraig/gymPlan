@@ -189,7 +189,7 @@ class Step3 extends Component {
                     <h1 className='Step3-Title'>gymPlan</h1>
                     <button className='Step3-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div> */}
-                <div className='Step3-Body'>
+                <div className='Step3-Body' style={{color: 'black'}}>
                     <div className='Exercise-Detail'>
                         {displayExercises}               
                     </div>     

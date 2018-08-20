@@ -53,7 +53,7 @@ class Step2 extends Component {
                 </div> */}
 
                 <div className='Step2-Routine-Info'>
-                    <div className='Step2-Routine-Details2'>
+                    <div className='Step2-Routine-Details2' style={{color: '#f2f2f2'}}>
                     <span><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
                         <span><strong>Routine Name:</strong> {this.state.routine.name}</span>
                         <span><strong>Routine Day:</strong> {this.state.routine.day}</span>

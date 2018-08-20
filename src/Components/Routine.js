@@ -64,7 +64,7 @@ class Routine extends Component {
                 </div> */}
 
                 <div className='Routine-Routine-Info'>
-                    <div className='Routine-Routine-Details3'>
+                    <div className='Routine-Routine-Details3' style={{color: '#ffffff'}}>
                         <span><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
                         <span><strong>Routine Name:</strong> {this.state.routine.name}</span>
                         <span><strong>Routine Day:</strong> {this.state.routine.day}</span>

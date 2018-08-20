@@ -92,7 +92,7 @@ class Step4 extends Component {
                 <div className='All-Exercises'>
                 {displayExercises.map((exercise, i) => {
                     return(
-                        <div className='Both-Sidez' key={i}>
+                        <div className='Both-Sidez' key={i} style={{color: 'black'}}>
                             <img src={exercise.picture} alt='Motion Pic' />
                             <Link to={`/Step3/${this.state.routine.routine_id}/${exercise.exercise_id}`}><h2>{exercise.name}</h2></Link>
                             <h2>{exercise.muscle_group}</h2>

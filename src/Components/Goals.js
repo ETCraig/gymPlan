@@ -108,7 +108,7 @@ class Goals extends Component {
                 </div>
             </div>
 
-                <div className='Goals-Bodyy'>
+                <div className='Goals-Bodyy' style={{color: 'white'}}>
                     <h1 className='Title'>My Goals</h1>
                     <div className='Goals-Content'>
                         <input type='text'onChange={(e) => this.handleGoalInput(e.target.value)} placeholder='Enter New Goal' className='Goal-Input' value={this.state.goal} />

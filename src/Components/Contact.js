@@ -78,7 +78,7 @@ export default class Contact extends Component {
 
             </div>
 
-                <div className='Contact-Body'>
+                <div className='Contact-Body' style={{color: 'black'}}>
                     <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
