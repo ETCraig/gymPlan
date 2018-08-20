@@ -12,7 +12,7 @@ export default function Login() {
     return(
         <div className='Login-App'>
         <ul className="cb-slideshow">
-            <li><span>Image 01</span><div><h3>re·al·i·ty</h3></div></li>
+            <li><span>Image 01</span><div><h3>am·bi·tion</h3></div></li>
             <li><span>Image 02</span><div><h3>vi·sion</h3></div></li>
             <li><span>Image 03</span><div><h3>prep·a·ra·tion</h3></div></li>
             <li><span>Image 04</span><div><h3>ex·e·cu·tion</h3></div></li>
