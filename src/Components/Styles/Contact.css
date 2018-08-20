@@ -41,6 +41,7 @@
 }
 .btn {
     width: 100px;
+    border-radius: 5px;
 }
 .Title {
     font-size: 40px;
@@ -103,6 +104,18 @@ a:hover {
     padding-right: 10px;
     font-family: 'Audiowide', cursive;
     color: white;
+}
+.Social-Media {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+}
+.Social-Media img {
+    margin-left: 10px;
+}
+.Social-Media img:hover {
+    cursor: pointer;
 }
 
 

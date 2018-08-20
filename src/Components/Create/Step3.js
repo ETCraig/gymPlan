@@ -194,7 +194,7 @@ class Step3 extends Component {
                         {displayExercises}               
                     </div>     
                     <div className='Guide-Btns'>
-                        <Link to={`/Step2/${this.props.match.params.routine_id}/${this.state.exercise.muscle_group}`}><button>{this.state.exercise.muscle_group} : Exercises</button></Link>
+                        {/* <Link to={`/Step2/${this.props.match.params.routine_id}/${this.state.exercise.muscle_group}`}><button>{this.state.exercise.muscle_group} : Exercises</button></Link> */}
                         <Link to={`/Step1/${this.props.match.params.routine_id}`}><button>Muscle Groups</button></Link>
                     </div>
                 </div>

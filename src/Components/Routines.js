@@ -75,7 +75,7 @@ class Routines extends Component {
                             <div className='Desc-Content'>
                                 <img src={RoutinesIcon} alt='Goal-Icon' />
                                 <h1>Routines</h1>
-                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                                <h2>Each routine should be carefully planned to your needs and current ability, both in regards to the days that you assign to each muscle group and to the types of exercises each has.</h2>
                             </div>
                     </div>
                 </div>

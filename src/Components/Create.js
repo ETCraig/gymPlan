@@ -18,16 +18,25 @@ class Step1 extends Component {
         this.handleNewPropChange = this.handleNewPropChange.bind(this);
         this.handleCreateBtn = this.handleCreateBtn.bind(this);
     }
-    handleCreateBtn() {
-        let promise = axios.post('/api/createUserRoutine', {
-            name: this.state.newName,
-            day: this.state.newDay,
-            muscle: this.state.newMuscle,
-            type: this.state.newType,
-            diff: this.state.newDiff,
-            description: this.state.newDesc
+    componentDidMount() {
+        axios.get('/api/checkLoggedIn').then()
+        this.getUserInfo();
+    }
+    getUserInfo() {
+        axios.get('/api/getUserInfo').then(res => {
+            this.setState({user: res.data});
         });
-        promise.then(res => {
+    }
+    handleCreateBtn() {
+        let promise = {
+            'name': this.state.newName,
+            'day': this.state.newDay,
+            'muscle': this.state.newMuscle,
+            'type': this.state.newType,
+            'diff': this.state.newDiff,
+            'description': this.state.newDesc
+        };
+        axios.post(`/api/createUserRoutine/${this.props.match.params.routine_id}`, promise).then(res => {
             this.props.history.push('/Routines');
         });
     }

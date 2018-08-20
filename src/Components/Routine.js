@@ -92,10 +92,10 @@ class Routine extends Component {
                                 <img src={exercise.picture} alt='Motion Pic'/>
                                 {/* </div> */}
                                 <div className='Routine-Text'>
-                                <h2>{exercise.name}</h2>
-                                <h2>{exercise.equip}</h2>
-                                <h2>{exercise.description}</h2>
-                                <h2>{exercise.defaultreps}</h2>
+                                <h2><strong>Reps:</strong> <br />{exercise.name}</h2>
+                                <h2><strong>Equipment:</strong> <br />{exercise.equip}</h2>
+                                <h2><strong>Description:</strong> <br />{exercise.description}</h2>
+                                {/* <h2><strong>Exercise:</strong> <br />{exercise.defaultreps}</h2> */}
                                 </div>
                                 <div className='Routine-Btn'>
                                 <button onClick={() => this.removeExercise(exercise.exercise_id, this.state.routine.routine_id)}>

@@ -4,6 +4,9 @@ import './Styles/Contact.css';
 import axios from 'axios';
 import EmailIcon from '../Assets/icons8-new-post-80.png';
 import SendIcon from '../Assets/icons8-send-email-16.png';
+import TwitterIcon from '../Assets/icons8-twitter-30.png';
+import FacebookIcon from '../Assets/icons8-facebook-30.png';
+import InstagramIcon from '../Assets/icons8-instagram-30.png';
 
 export default class Contact extends Component {
     constructor() {
@@ -71,7 +74,7 @@ export default class Contact extends Component {
                             <div className='Desc-Content'>
                                 <img src={EmailIcon} alt='Goal-Icon' />
                                 <h1>Contact</h1>
-                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                                <h2>Contact us with any issues, ideas, comments, or concerns. Also follow us at any of our social media sites to get the newest updates and fitness advice.</h2>
                             </div>
                     </div>
                 </div>
@@ -95,8 +98,14 @@ export default class Contact extends Component {
                             <br />
                             <textarea className="form-control" rows="5" id="message" placeholder='Message'></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary">Submit <img src={SendIcon} /></button>
+                        <button type="submit" className="btn btn-primary">Submit <img src={SendIcon} alt='Send-Icon' /></button>
                     </form>
+                    <div className='Social-Media'>
+                        <h2>Follow us at </h2>
+                        <img src={TwitterIcon} alt='Twitter-Icon' />
+                        <img src={FacebookIcon} alt='Facebook-Icon' />
+                        <img src={InstagramIcon} alt='Instagram-Icon' />
+                    </div>
                 </div>
             </div>
         );

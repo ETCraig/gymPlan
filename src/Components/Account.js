@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './Styles/Account.css';
 
 import axios from 'axios';
-import {Link} from 'react-router-dom';
 import AccountIcon from '../Assets/icons8-customer-80.png';
 
 class Account extends Component {
@@ -132,7 +131,7 @@ class Account extends Component {
                             <div className='Desc-Content'>
                                 <img src={AccountIcon} alt='Goal-Icon' />
                                 <h1>Account</h1>
-                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                                <h2>Manage your personal account information such as your name and profile picture. Here you can also completely delete your account.</h2>
                             </div>
                     </div>
                 </div>

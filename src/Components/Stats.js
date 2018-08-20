@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './Styles/Stats.css';
 
 import axios from 'axios';
-import {Link} from 'react-router-dom';
 import StatsIcon from '../Assets/icons8-bar-chart-80.png';
 import HeightIcon from '../Assets/icons8-height-16.png';
 import WeightIcon from '../Assets/icons8-scale-16.png';
@@ -15,6 +14,10 @@ import Chesticon from '../Assets/icons8-chest-16.png';
 import WaistIcon from '../Assets/icons8-prelum-16.png';
 import LowerIcon from '../Assets/icons8-calves-48.png';
 import UpperIcon from '../Assets/icons8-hamstrings-48.png';
+import BenchIcon from '../Assets/icons8-bench-press-16.png';
+import SquatIcon from '../Assets/icons8-squats-16.png';
+import DeadLiftIcon from '../Assets/icons8-deadlift-16.png';
+import RowIcon from '../Assets/icons8-workout-16.png';
 
 export default class Stats extends Component { 
     constructor() {
@@ -156,19 +159,19 @@ export default class Stats extends Component {
                     <br />
                     <input type='text' value={this.state.user.calves} readOnly placeholder='My Calves' />
                     <br />
-                    <span>Bench Press</span>
+                    <span>Bench Press <img src={BenchIcon} alt='Bench-Icon' className='Lower-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.bench} readOnly placeholder='My Bench' />
                     <br />
-                    <span>Squat</span>
+                    <span>Squat <img src={SquatIcon} alt='Squat-Icon' className='Lower-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.squat} readOnly placeholder='My Squat' />
                     <br />
-                    <span>Dead Lift</span>
+                    <span>Dead Lift <img src={DeadLiftIcon} alt='Dead-Lift-Icon' className='Lower-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.d_lift} readOnly placeholder='My Dead Lift' />
                     <br />
-                    <span>Row</span>
+                    <span>Row <img src={RowIcon} alt='Row-Icon' className='Lower-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.row} readOnly placeholder='My Row' />
                     </div>
@@ -182,65 +185,65 @@ export default class Stats extends Component {
                     <div className='Edit-Left'>
                     <span>Height</span>
                     <br />
-                    <input onChange={(e) => this.setState({heigh_t: e.target.value})} />
+                    <input onChange={(e) => this.setState({heigh_t: e.target.value})} placeholder='Inch' />
                     <br />
                     <span>Weight</span>
                     <br />
-                    <input onChange={(e) => this.setState({weight: e.target.value})} />
+                    <input onChange={(e) => this.setState({weight: e.target.value})}  placeholder='lbs'/>
                     <br />
                     <span>BMI</span>
                     <br />
-                    <input onChange={(e) => this.setState({bmi: e.target.value})} />
+                    <input onChange={(e) => this.setState({bmi: e.target.value})} placeholder='Numeric' />
                     <br />
                     <span>Body Fat</span>
                     <br />
-                    <input onChange={(e) => this.setState({body_fat: e.target.value})} />
+                    <input onChange={(e) => this.setState({body_fat: e.target.value})} placeholder='Numeric' />
                     <br />
                     <span>Neck</span>
                     <br />
-                    <input onChange={(e) => this.setState({neck: e.target.value})} />
+                    <input onChange={(e) => this.setState({neck: e.target.value})} placeholder='Inch' />
                     <br />
                     <span>Shoulders</span>
                     <br />
-                    <input onChange={(e) => this.setState({shoulders: e.target.value})} />
+                    <input onChange={(e) => this.setState({shoulders: e.target.value})} placeholder='Inch' />
                     <br />
                     <span>Arms</span>
                     <br />
-                    <input onChange={(e) => this.setState({arms: e.target.value})} />
+                    <input onChange={(e) => this.setState({arms: e.target.value})} placeholder='Inch' />
                     <br />
                     <span>Chest</span>
                     <br />
-                    <input onChange={(e) => this.setState({chest: e.target.value})} />
+                    <input onChange={(e) => this.setState({chest: e.target.value})} placeholder='Inch'/>
                     </div>
                     <div className='Edit-Right'>
                     <br />
                     <span>Waist</span>
                     <br />
-                    <input onChange={(e) => this.setState({waist: e.target.value})} />
+                    <input onChange={(e) => this.setState({waist: e.target.value})} placeholder='Inch' />
                     <br />
                     <span>Thighs</span>
                     <br />
-                    <input onChange={(e) => this.setState({thighs: e.target.value})} />
+                    <input onChange={(e) => this.setState({thighs: e.target.value})} placeholder='Inch' />
                     <br />
                     <span>Calves</span>
                     <br />
-                    <input onChange={(e) => this.setState({calves: e.target.value})} />
+                    <input onChange={(e) => this.setState({calves: e.target.value})} placeholder='Inch' />
                     <br />
                     <span>Bench Press</span>
                     <br />
-                    <input onChange={(e) => this.setState({bench: e.target.value})} />
+                    <input onChange={(e) => this.setState({bench: e.target.value})} placeholder='lbs'/>
                     <br />
                     <span>Squat</span>
                     <br />
-                    <input onChange={(e) => this.setState({squat: e.target.value})} />
+                    <input onChange={(e) => this.setState({squat: e.target.value})} placeholder='lbs'/>
                     <br />
                     <span>Dead Lift</span>
                     <br />
-                    <input onChange={(e) => this.setState({d_lift: e.target.value})} />
+                    <input onChange={(e) => this.setState({d_lift: e.target.value})} placeholder='lbs'/>
                     <br />
                     <span>Row</span>
                     <br />
-                    <input onChange={(e) => this.setState({row: e.target.value})} />
+                    <input onChange={(e) => this.setState({row: e.target.value})} placeholder='lbs' />
                     <br />
                     </div>
                     <button onClick={() => this.handleUpdateStats()} className='Save'>Save</button>
@@ -267,7 +270,7 @@ export default class Stats extends Component {
                             <div className='Desc-Content'>
                                 <img src={StatsIcon} alt='Goal-Icon' />
                                 <h1>Stats</h1>
-                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                                <h2>Keeping track of your body and compound exercises stats helps motivate and inform you. Ensure to make a timely habit of keeping track and updating these numbers.</h2>
                             </div>
                     </div>
                 </div>

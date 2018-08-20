@@ -23,7 +23,7 @@ export default (
         <Route component={Account} path='/Account' />
         <Route component={Contact} path='/Contact-us' />
         <Route component={Routines} path='/Routines' />
-        <Route component={Create} path='/Create' />
+        <Route component={Create} path='/Create/:routine_id' />
         <Route component={Routine} path='/Routine/:routine_id' />
         <Route component={Step1} path='/Step1/:routine_id' />
         <Route component={Step2} path='/Step2/:routine_id/:muscle_group' />

@@ -1,1 +1,1 @@
-UPDATE gymPlan_users SET user_id = $1, auth_id = $2, heigh_t = $3, weight = $4, bmi = $5, body_fat = $6, neck = $7, shoulders = $8, arms = $9, chest = $10, waist = $11, thighs = $12, calves = $13, bench = $14, squat = $15, d_lift = $16, row = $17;
+UPDATE gymPlan_users SET heigh_t = $1, weight = $2, bmi = $3, body_fat = $4, neck = $5, shoulders = $6, arms = $7, chest = $8, waist = $9, thighs = $10, calves = $11, bench = $12, squat = $13, d_lift = $14, row = $15 WHERE user_id = $16 returning *;

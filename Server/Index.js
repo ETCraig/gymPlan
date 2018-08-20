@@ -94,7 +94,7 @@ app.delete('/api/deleteUserGoal/:goal_id', ctrl.deleteUserGoal);
 app.patch('/api/editUserGoal', ctrl.editUserGoal);
 // Routines
 app.get('/api/getUserRoutines', ctrl.getUserRoutines);
-app.post('/api/createUserRoutine', ctrl.createUserRoutine);
+app.post('/api/createUserRoutine/:routine_id', ctrl.createUserRoutine);
 //Exercises
 app.get('/api/getUserRoutine/:routine_id', ctrl.getUserRoutine);
 //Routine

@@ -1,6 +1,5 @@
 import React from 'react';
 import './Styles/Login.css';
-import { callbackify } from 'util';
 import GymLogo from '../Assets/icons8-barbell-64.png';
 
 export default function Login() {

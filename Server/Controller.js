@@ -14,11 +14,8 @@ module.exports = {
         console.log('Hit updateStats Back')
         const db = req.app.get('db')
         const userid = req.session.user.user_id;
-        const authid = req.session.user.auth_id;
         console.log('Achieved UserId')
         db.Update_Stats([
-            userid, 
-            authid, 
             req.body.heigh_t, 
             req.body.weight, 
             req.body.bmi, 
@@ -33,7 +30,8 @@ module.exports = {
             req.body.bench, 
             req.body.squat, 
             req.body.d_lift, 
-            req.body.row
+            req.body.row,
+            userid
         ]).then(data => {
             res.status(200).send(data);
         }).catch(err => {
@@ -45,15 +43,13 @@ module.exports = {
         console.log('Hit updateAccount Back')
         const db = req.app.get('db')
         const userid = req.session.user.user_id;
-        const authid = req.session.user.auth_id;
-        db.Update_Account([
-            userid, 
-            authid, 
+        db.Update_Account([ 
             req.body.first_name, 
             req.body.last_name, 
             req.body.profile_picture, 
-            req.body.gender
-        ]).then(res => {
+            req.body.gender,
+            userid
+        ]).then(data => {
             res.status(200).send(data);
         }).catch(err => {
             console.log(err)
@@ -143,17 +139,19 @@ module.exports = {
         const db = req.app.get('db')
         console.log('Passed DB.')
         db.Create_Routine(
-            req.session.user.user_id,
-            req.body.day,
             req.body.name,
+            req.body.day,
             req.body.type,
             req.body.muscle,
             req.body.diff,
-            req.body.description
+            req.body.description,
+            req.params.routine_id,
+            req.session.user.user_id
         ).then(data => {
             console.log('Passes DB Inplement 1.')
             res.status(200).send(data);
         }).catch(err => {
+            console.log('err', err)
             res.status(500).send(err);
         });
     },

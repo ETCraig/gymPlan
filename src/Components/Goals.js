@@ -82,7 +82,7 @@ class Goals extends Component {
                             <div className='Desc-Content'>
                                 <img src={GoalIcon} alt='Goal-Icon' />
                                 <h1>Goals</h1>
-                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                                <h2>S.M.A.R.T. is an acronym to remind you how to set a goal that maps out exactly what you need to do. These goals are Specific, Measurable, Attainable, Relevant, and Time-bound. Don't just stack up data you get from a fitness device. ... goals for yourself.</h2>
                             </div>
                     </div>
                 </div>
