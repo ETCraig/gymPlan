@@ -51,61 +51,19 @@ h3 {
     margin-top: 10px;
 }
 
-
-
-
-
-
-
-
-.Step3-Dash-Header {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 50px;
-    background-image: linear-gradient(97deg, #ffffff, #000000);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    color: black;
-    position: absolute;
-}
-.Step3-Title {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    color: white;
-}
-.Step3-Logout {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    background-color: transparent;
-    border: none;
-    justify-content: right;
-    float: right;
-}
-.Step3-Logout:hover {
-    cursor: pointer;
-}
-
 @media only screen and (max-width: 376px) {
     .Step3-App {
         width: 375px;
-        height: 672px;
-    }
-    .Step3-Dash-Header {
-        min-height: 25px;
-    }
-    .Step3-Logout {
-        font-size: 18px;
-    }
-    .Step3-Title {
-        font-size: 25px;
-        margin-top: -5px;
+        min-height: 672px;
+        height: auto;
     }
     .Exercise-Desc>img {
         height: 300px;
         width: 350px;
         float: left;
+    }
+    .Btn-Img {
+        width: 16px;
+        height: 16px;
     }
 }

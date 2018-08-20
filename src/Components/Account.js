@@ -3,6 +3,7 @@ import './Styles/Account.css';
 
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import AccountIcon from '../Assets/icons8-customer-80.png';
 
 class Account extends Component {
     constructor() {
@@ -116,10 +117,10 @@ class Account extends Component {
         return(
             <div className='Account-App'>
                 <div className='Account-Dash-App'>
-                <div className='Account-Dash-Header'>
+                {/* <div className='Account-Dash-Header'>
                     <h1 className='Account-Title'>gymPlan</h1>
                     <button className='Account-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
+                </div> */}
 
                 <div className='Account-Dash-Profile'>
                     <div className='Account-Profile-Img-Content'>
@@ -128,18 +129,14 @@ class Account extends Component {
                     <div className='Account-Profile-Info-Content'>
                         <span className='Account-Profile-Name'>{this.state.user.first_name}</span>
                         <span className='Account-Profile-Name'>{this.state.user.last_name}</span>
+                            <div className='Desc-Content'>
+                                <img src={AccountIcon} alt='Goal-Icon' />
+                                <h1>Account</h1>
+                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                            </div>
                     </div>
                 </div>
 
-                <div className='Account-Dash-Navbar'>
-                    <ul>
-                        <Link to='/Goals'><li>My Goals</li></Link>
-                        <Link to='/Stats'><li>Body Stats</li></Link>
-                        <Link to='/Routines'><li>My Routines</li></Link>
-                        <Link to='/Account'><li>Manage Account</li></Link>
-                        <Link to='/Contact-Us'><li>Contact Us</li></Link>
-                    </ul>
-                </div>
             </div>
 
                 <div className='Account-Body'>

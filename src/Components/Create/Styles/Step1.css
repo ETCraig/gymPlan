@@ -37,39 +37,10 @@
 
 
 
-
-.Step1-Dash-Header {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px;
-    background-image: linear-gradient(97deg, #ffffff, #000000);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    color: white;
-    position: absolute;
-}
-.Step1-Title {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-.Step1-Logout {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    background-color: transparent;
-    border: none;
-    justify-content: right;
-    float: right;
-}
-.Step1-Logout:hover {
-    cursor: pointer;
-}
 .Step1-Routine-Info {
-    height: 250px;
+    height: 75px;
     width: 20%;
-    background-color: rgb(0, 0, 0);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -78,7 +49,7 @@
     margin-top: 70px;
     color: #f2f2f2;
 }
-.Step1-Routine-Details {
+.Step1-Routine-Details3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,15 +57,15 @@
     color: #f2f2f2
 }
 .Step1-Routine-Details {
-    height: 200px;
+    height: 100px;
     width: 20%;
-    background-color: rgb(0, 0, 0);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     float: left;
     padding: 6px;
-    margin-top: 380px;
+    margin-top: 180px;
     margin-left: -316px;
     color: white;
 } 
@@ -140,17 +111,8 @@
 @media only screen and (max-width: 376px) {
     .Step1-App {
         width: 375px;
+        min-height: 672px;
         height: auto;
-    }
-    .Step1-Dash-Header {
-        height: 25px;
-    }
-    .Step1-Logout {
-        font-size: 18px;
-    }
-    .Step1-Title {
-        font-size: 25px;
-        margin-top: -5px;
     }
     .Step1-Routine-Info {
         height: 150px;
@@ -159,6 +121,9 @@
     .Step1-Routine-Details {
         height: 150px;
         width: 10%;
+    }
+    .Step1-Routine-Details3 {
+        color: transparent;
     }
     .Search_Btn {
         margin-top: 30px;
@@ -187,6 +152,6 @@
     }
     .Return-Btn {
         margin-left: 10px;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 }

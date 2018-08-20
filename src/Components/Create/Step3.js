@@ -3,6 +3,8 @@ import './Styles/Step3.css';
 
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import DeleteIcon from '../../Assets/icons8-delete-16.png';
+import AddIcon from '../../Assets/icons8-plus-16.png';
 
 class Step3 extends Component {
     constructor(props) {
@@ -169,11 +171,11 @@ class Step3 extends Component {
                         <div className=''>
                             {exercises.is_in_routine === true ? (
                                 <button onClick={() => this.removeExercise(exercises.exercise_id, this.state.routine.routine_id)}>
-                                    <h2>Remove {exercises.name}</h2>
+                                    <h2>Remove {exercises.name} <img src={DeleteIcon} alt='Delete-Icon' className='Btn-Img' /></h2>
                                 </button>
                             ) : (
                                 <button onClick={() => this.addExercise(exercises.exercise_id, this.state.routine.routine_id, this.state.reps, this.state.weight)}>
-                                    <h2>Add {exercises.name}</h2>
+                                    <h2>Add {exercises.name} <img src={AddIcon} alt='Add-icon' className='Btn-Img' /></h2>
                                 </button>
                              )}
                         </div>
@@ -183,10 +185,10 @@ class Step3 extends Component {
         });
         return(
             <div className='Step3-App'>
-                <div className='Step3-Dash-Header'>
+                {/* <div className='Step3-Dash-Header'>
                     <h1 className='Step3-Title'>gymPlan</h1>
                     <button className='Step3-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
+                </div> */}
                 <div className='Step3-Body'>
                     <div className='Exercise-Detail'>
                         {displayExercises}               

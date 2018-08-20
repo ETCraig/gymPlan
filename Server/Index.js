@@ -75,30 +75,7 @@ transporter.verify((error, success) => {
     }
 });
 
-router.post('/send', (req, res, next) => {
-    var name = req.body.name
-    var email = req.body.email
-    var message = req.body.message
-    var content = `name: ${name} \n email: ${email} \n message: ${content}`
 
-    var mail = {
-        from: name,
-        to: 'ethantcraig@yahoo.com',
-        subject: 'New Message from Contact Form',
-        text: content
-    }
-    transporter.sendMail(mail, (err, data) => {
-        if (err) {
-            res.json({
-                msg: 'fail'
-            })
-        } else {
-            res.json({
-                msg: 'success'
-            })
-        }
-    })
-})
 
 const ctrl = require('./Controller');
 const checkLoggedIn = require('./Middleware')
@@ -134,6 +111,33 @@ app.delete('/api/removeUserExercise/:exercise_id/:routine_id', ctrl.removeUserEx
 //Step4
 app.get('/api/getAllExercises', ctrl.getAllExercises);
 app.get('/api/getUserSearch/:searchParameter/:searchInput/:routine_id', ctrl.getUserSearch);
+
+app.post('/api/send', (req, res, next) => {
+    console.log('Hit /send.')
+    var name = req.body.name
+    var email = req.body.email
+    var message = req.body.message
+    console.log(name, email, message)
+    var content = `name: ${name} \n email: ${email} \n message: ${message}`
+    console.log('content', content)
+    var mail = {
+        from: name,
+        to: 'ethantcraig@yahoo.com',
+        subject: 'New Message from Contact Form',
+        text: content
+    }
+    transporter.sendMail(mail, (err, data) => {
+        if (err) {
+            res.json({
+                msg: 'fail'
+            })
+        } else {
+            res.json({
+                msg: 'success'
+            })
+        }
+    })
+})
 
 const port = 4315;
 

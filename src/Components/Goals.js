@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import './Styles/Goals.css';
 
 import axios from 'axios';
+import GoalIcon from '../Assets/icons8-survey-80.png';
 import deletex from '../Assets/delete-icon.png';
 import edit from '../Assets/icons8-edit-30.png';
-import {Link} from 'react-router-dom';
+import RoutineIcon from '../Assets/icons8-edit-property-80.png';
+import DataIcon from '../Assets/icons8-combo-chart-80.png'; 
+import ExIcon from '../Assets/icons8-weightlifting-80.png';
 
 class Goals extends Component {
     constructor(props) {
@@ -76,21 +79,32 @@ class Goals extends Component {
                     <div className='Goals-Profile-Info-Content'>
                         <span className='Goals-Profile-Name'>{this.state.user.first_name}</span>
                         <span className='Goals-Profile-Name'>{this.state.user.last_name}</span>
+                            <div className='Desc-Content'>
+                                <img src={GoalIcon} alt='Goal-Icon' />
+                                <h1>Goals</h1>
+                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                            </div>
                     </div>
                 </div>
+            </div>
 
-                <div className='Goals-Dash-Navbar'>
-                    <ul>
-                        <Link to='/Goals'><li>My Goals</li></Link>
-                        <br />
-                        <Link to='/Stats'><li>Body Stats</li></Link>
-                        <br />
-                        <Link to='/Routines'><li>My Routines</li></Link>
-                        <br />
-                        <Link to='/Account'><li>Manage Account</li></Link>
-                        <br />
-                        <Link to='/Contact-Us'><li>Contact Us</li></Link>
-                    </ul>
+            
+
+            <div className='Goals-Intro'>
+                <div className='Goals-Intro-List'>
+                    <img src={RoutineIcon} alt='Routine-Icon' /> 
+                    <h2>Personalized Workout Routines</h2>
+                    <p>Create personalized workout programs tailored to your needs to keep you motivated</p>
+                </div>
+                <div className='Goals-Intro-List'>
+                    <img src={ExIcon} alt='Routine-Icon' /> 
+                    <h2>Hundreds of Exercises</h2>
+                    <p>Select the exercises you want and assign them the reps and weight that fits your goals</p>
+                </div>
+                <div className='Goals-Intro-List'>
+                    <img src={DataIcon} alt='Data-Icon' /> 
+                    <h2>Analyze and Improve</h2>
+                    <p>Analyze your workout data and progress to maximize results</p>
                 </div>
             </div>
 

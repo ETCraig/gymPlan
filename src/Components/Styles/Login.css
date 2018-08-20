@@ -15,6 +15,11 @@
 .Login-App>ul>li {
     background-color: #000;
 }
+.Logo {
+    position: absolute;
+    margin-left: -520px;
+    margin-top: -375px;
+}
 .Intro-Content {
     width: 100%;
     height: 20%;
@@ -27,15 +32,16 @@
 }
 
 .Intro-Content>h2 {
-    font-size: 50px;
-    margin-left: -1600px;
-    margin-top: -210px;
+    font-size: 2.5rem;
+    margin-left: -708px;
+    margin-top: -200px;
+    font-family: 'Audiowide', cursive;
 }
 .Intro-Content>p {
     min-width: 400px;
     font-size: 20px;
-    margin-top: -93px;
-    margin-left: 160px;
+    margin-top: -63px;
+    margin-left: 200px;
 }
 .Container {
     position: absolute;
@@ -47,7 +53,7 @@
     min-width: 100px;
     border-radius: 8px;
     position: absolute;
-    margin-left: 550px;
+    margin-left: 575px;
     margin-top: -370px;
 }
 .Login-Btn {
@@ -531,14 +537,20 @@ p.codrops-demos a.current-demo:hover{
         max-width: 20px;
     }
     .Intro-Content>h2 {
-        margin-top: -169px;
-        margin-left: -638px;
+        margin-top: -150px;
+        margin-left: -180px;
         font-size: 35px;
     }
+    /* .Logo {
+        margin-left: -10px;
+        margin-top: -325px;
+        width: 50px;
+        height: 50px;
+    } */
     .Intro-Content>p {
         font-size: 20px;
         margin-top: 0px;
-        margin-left: -200px;
+        margin-left: -180px;
         max-width: 20px;
     }
     .cb-slideshow {
@@ -555,6 +567,7 @@ p.codrops-demos a.current-demo:hover{
         height: 30px;;
     }
     .cb-slideshow li div h3 {
-        font-size: 60px;
+        font-size: 65px;
+        justify-content: center;
     }
 }

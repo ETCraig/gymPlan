@@ -3,7 +3,7 @@ import './Styles/Routines.css';
 
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-// import { homedir } from 'os';
+import RoutinesIcon from '../Assets/icons8-edit-property-80.png';
 
 class Routines extends Component {
     constructor(props) {
@@ -60,10 +60,10 @@ class Routines extends Component {
         return(
             <div className='Routines-App'>
                 <div className='Routines-Dash-App'>
-                <div className='Routines-Dash-Header'>
+                {/* <div className='Routines-Dash-Header'>
                     <h1 className='Routines-Title'>gymPlan</h1>
                     <button className='Routines-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
+                </div> */}
 
                 <div className='Routines-Dash-Profile'>
                     <div className='Routines-Profile-Img-Content'>
@@ -72,24 +72,18 @@ class Routines extends Component {
                     <div className='Routines-Profile-Info-Content'>
                         <span className='Routines-Profile-Name'>{this.state.user.first_name}</span>
                         <span className='Routines-Profile-Name'>{this.state.user.last_name}</span>
+                            <div className='Desc-Content'>
+                                <img src={RoutinesIcon} alt='Goal-Icon' />
+                                <h1>Routines</h1>
+                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                            </div>
                     </div>
                 </div>
 
-                <div className='Routines-Dash-Navbar1'>
-                    <ul>
-                        <div className='Routines-li'>
-                        <Link to='/Goals'><li>My Goals</li></Link>
-                        <Link to='/Stats'><li>Body Stats</li></Link>
-                        <Link to='/Routines'><li>My Routines</li></Link>
-                        <Link to='/Account'><li>Manage Account</li></Link>
-                        <Link to='/Contact-Us'><li>Contact Us</li></Link>
-                        </div>
-                    </ul>
-                </div>
             </div>
 
                 <div className='Routines-Body'>
-                    <Link to='/Create'><button>Create New Routine</button></Link>
+                    {/* <Link to='/Create'><button>Create New Routine</button></Link> */}
                     <div className = 'binsTitle'>
                         {/* <Link to = {`/Exercises/${this.props.match.params.id}`}><h1>Routine! {this.props.match.params.id}</h1></Link> */}
                     </div>

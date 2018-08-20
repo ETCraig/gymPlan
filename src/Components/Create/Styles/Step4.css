@@ -3,19 +3,24 @@
 }
 .Step4-Body {
     padding-top: 80px;
-    background-image: url('http://wishsalonspa.com/wp-content/uploads/revslider/homeslider/bg3.jpg');
+    background-image: url('https://www.solidbackgrounds.com/images/2560x1440/2560x1440-davys-grey-solid-color-background.jpg');
 }
 .Search-Input {
-
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-left: 600px;
+    align-items: center;
 }
 .Custom-Select {
-
+    margin-left: 600px;
 }
 .Search-Btn {
-
+    margin-left: 750px;
+    margin-right: -750px;
 }
 .Reset-Btn {
-
+    margin-left: 750px;
 }
 .All-Exercises>.Both-Sidez {
     margin-top: 80px;
@@ -23,54 +28,38 @@
 .All-Exercises:after {
     content: '';
     clear: both;
-    display: inline-table;
+    display: table;
 }
 /* .All-Exercises>img:hover {
     cursor: pointer;
 } */
 .Both-Sidez {
-    float: right;
-    width: 32.00%;
+    float: left;
+    /* width: 15.00%; */
     padding: 5px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     margin: 5px;
+    margin-left: 100px;
+    min-height: 310px;
+    max-height: 310px;
 }
 .Both-Sidez>img {
-    width: 218px;
-    height: 175px;
+    /* margin-top: -75px; */
+    width: 200px;
+    height: 200px;
+}
+.Both-Sidez h2 {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    margin-top: 8px;
+    padding: 0px;
 }
 .Both-Sidez {
     color: black;
     font-family: 'Changa', sans-serif;
     background: url('http://bootstrap.sadaqatclinic.com/wp-content/uploads/2016/07/bg.jpg');
-}
-.Step4-Dash-Header {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 50px;
-    background-image: linear-gradient(97deg, #ffffff, #000000);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    color: black;
-    position: absolute;
-}
-.Step4-Title {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-.Step4-Logout {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    background-color: transparent;
-    border: none;
-    justify-content: right;
-    float: right;
-}
-.Step4-Logout:hover {
-    cursor: pointer;
 }
 
 
@@ -80,37 +69,34 @@
 @media only screen and (max-width: 376px) {
     .Step4-App {
         width: 375px;
-        height: 672px;
-    }
-    .Step4-Dash-Header {
-        min-height: 25px;
-    }
-    .Step4-Logout {
-        font-size: 18px;
-    }
-    .Step4-Title {
-        font-size: 25px;
-        margin-top: -5px;
+        min-height: 672px;
+        height: auto;
     }
     .Search-Input {
         width: 300px;
+        margin-left: 28px;
+    }
+    .Custom-Select {
+        margin-left: 100px;
+    }
+    .Search-Btn {
+        margin-left: 200px;
+        margin-right: -750px;
+    }
+    .Reset-Btn {
+        margin-left: 750px;
     }
     .All-Exercises {
         width: 500px;
+        margin-left: -95px;
     }
     .Both-Sidez {
-        width: 10.00%;
-        min-height: 220px;
+        width: 24.00%;
+        height: 180px;
+        float: left;
     }
     .Both-Sidez>img {
         width: 100px;
         height: 100px;
     }
-}
-.Both-Sidez {
-    float: left;
-    width: 33.00%;
-    padding: 5px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    margin: 5px;
 }

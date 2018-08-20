@@ -118,39 +118,6 @@ a:hover {
     color: white;
     text-decoration: none;
   }
-/* Header  */
-.Stats-Dash-Header {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px;
-    background-image: linear-gradient(97deg, #ffffff, #000000);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    color: white;
-    position: absolute;
-}
-.Stats-Title {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    font-family: 'Changa', sans-serif;
-    font-size: 30px;
-}
-.Stats-Logout {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    background-color: transparent;
-    border: none;
-    justify-content: right;
-    float: right;
-    font-family: 'Changa', sans-serif;
-}
-.Stats-Logout:hover {
-    cursor: pointer;
-    box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.26);
-}
 /* Profile Img  */
 .Stats-Dash-Profile {
     height: 250px;
@@ -159,8 +126,8 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     float: left;
-    /* padding: 6px; */
-    margin-top: 70px;
+    padding: 12px;
+    margin-top: 50px;
     border-radius: 5px;
 }
 .Stats-Profile-Img-Content {
@@ -177,40 +144,14 @@ a:hover {
 }
 .Stats-Profile-Name {
     font-size: 35px;
-    padding: 5px;
+    padding-right: 10px;
     font-family: 'Audiowide', cursive;
     color: white;
 }
-/* Nav column */
-.Stats-Dash-Navbar {
-    height: 250px;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    float: left;
-    padding: 6px;
-    margin-top: 70px;
-}
-.Stats-Dash-Navbar>ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 20px;
-    text-decoration: none;
-    list-style: none;
-    margin-right: 35px;
-}
-li {
-    padding: 15px;
-    background-color: black;
-    border-radius: 2px;
-    font-family: 'Audiowide', cursive;
-}
-li:hover {
-    background-color: #ffffff;
-    color: black;
+.Lower-Icon, 
+.Upper-Icon {
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -220,6 +161,7 @@ li:hover {
 @media only screen and (max-width: 376px) {
     .Stats-App {
         width: 375px;
+        min-height: 672px;
         height: auto;
     }
     .Stats-Dash-Header {
@@ -234,7 +176,7 @@ li:hover {
     .Profile-Img {
         height: 110%;
         width: 110%;
-        margin-top: -40px;
+        margin-top: 40px;
     }
     .Stats-Profile-Info-Content {
         padding-top: -80px;
@@ -264,6 +206,7 @@ li:hover {
     .Edit button {
         width: 150px;
         margin-left: 70px;
+        margin-top: 20px;
     }
     .Edit {
         margin-left: -420px;

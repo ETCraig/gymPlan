@@ -36,11 +36,13 @@ class Step1 extends Component {
     }
     render() {
         return (
+            <div className='Create-App'>
+            
             <div className='Routines-Create'>
                 <input onChange={e => this.handleNewPropChange('newName', e.target.value)} value={this.state.newName} className='Routines-Name' type='text' placeholder='Routine Name' />
 
                 <select onChange={e => this.handleNewPropChange('newDay', e.target.value)} value={this.state.newDay} className='Routines-Day'>
-                    <option defaultValue='...'>...</option>
+                    <option defaultValue='Day..'>Day..</option>
                     <option value='Monday'>Monday</option>
                     <option value='Tuesday'>Tuesday</option>
                     <option value='Wednesday'>Wednesday</option>
@@ -51,14 +53,14 @@ class Step1 extends Component {
                 </select>
 
                 <select onChange={e => this.handleNewPropChange('newDiff', e.target.value)} value={this.state.newDiff} className='Routines-Diff'>
-                    <option defaultValue='...'>...</option>
+                    <option defaultValue='Difficulty..'>Difficulty..</option>
                     <option value='Beginner'>Beginner</option>
                     <option value='Intermediate'>Intermediate</option>
                     <option value='Advanced'>Advanced</option>
                 </select>
 
                 <select onChange={e => this.handleNewPropChange('newMuscle', e.target.value)} value={this.state.newMuscle} className='Routines-Muscle'>
-                    <option defaultValue='...'>...</option>
+                    <option defaultValue='Muscle..'>Muscle..</option>
                     <option value='Abs'>Abs</option>
                     <option value='Back'>Back</option>
                     <option value='Biceps'>Biceps</option>
@@ -73,14 +75,16 @@ class Step1 extends Component {
                 </select>
 
                 <select onChange={e => this.handleNewPropChange('newType', e.target.value)} value={this.state.newType} className='Routines-Type'>
-                    <option defaultValue='...'>...</option>
+                    <option defaultValue='Type..'>Type..</option>
                     <option value='Weight Loss'>Weight Loss</option>
                     <option value='Muscle Toning'>Muscle Toning</option>
                     <option value='Maintaining'>Maintaining</option>
                     <option value='Mass Gaining'>Mass Gaining</option>
                 </select>
                 <input onChange={e => this.handleNewPropChange('newDesc', e.target.value)} value={this.state.newDesc} className='Routines-Desc' type='text' placeholder='Routine Description' />
+                <br />
                 <button onClick={this.handleCreateBtn} className='Create-Routine-Btn'>Create Routine</button>
+            </div>
             </div>
         );
     }

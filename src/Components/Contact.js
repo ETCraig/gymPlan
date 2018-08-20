@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import './Styles/Contact.css';
 
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import EmailIcon from '../Assets/icons8-new-post-80.png';
+import SendIcon from '../Assets/icons8-send-email-16.png';
 
 export default class Contact extends Component {
     constructor() {
@@ -24,18 +25,21 @@ export default class Contact extends Component {
     }
     handleSubmit(e){
         e.preventDefault();
+        console.log('Hit front.')
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
+        console.log(name, email, message)
         axios({
             method: "POST", 
-            url: process.env.SEND, 
+            url: process.env.REACT_APP_SEND, 
             data: {
                 name: name,   
                 email: email,  
-                messsage: message
+                message: message
             }
         }).then((response)=>{
+            console.log('Passed Axios')
             if (response.data.msg === 'success'){
                 alert("Message Sent."); 
                 this.resetForm()
@@ -52,10 +56,10 @@ export default class Contact extends Component {
             <div className='Contact-App'>
                 
                 <div className='Contact-Dash-App'>
-                <div className='Contact-Dash-Header'>
+                {/* <div className='Contact-Dash-Header'>
                     <h1 className='Contact-Title'>gymPlan</h1>
                     <button className='Contact-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
+                </div> */}
 
                 <div className='Contact-Dash-Profile'>
                     <div className='Contact-Profile-Img-Content'>
@@ -64,35 +68,34 @@ export default class Contact extends Component {
                     <div className='Contact-Profile-Info-Content'>
                         <span className='Contact-Profile-Name'>{this.state.user.first_name}</span>
                         <span className='Contact-Profile-Name'>{this.state.user.last_name}</span>
+                            <div className='Desc-Content'>
+                                <img src={EmailIcon} alt='Goal-Icon' />
+                                <h1>Contact</h1>
+                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                            </div>
                     </div>
                 </div>
 
-                <div className='Contact-Dash-Navbar'>
-                    <ul>
-                        <Link to='/Goals'><li>My Goals</li></Link>
-                        <Link to='/Stats'><li>Body Stats</li></Link>
-                        <Link to='/Routines'><li>My Routines</li></Link>
-                        <Link to='/Account'><li>Manage Account</li></Link>
-                        <Link to='/Contact-Us'><li>Contact Us</li></Link>
-                    </ul>
-                </div>
             </div>
 
                 <div className='Contact-Body'>
                     <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
+                            <br />
                             <input type="text" className="form-control" id="name" placeholder='Your Name'/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email address</label>
+                            <br />
                             <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder='Your Email'/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="message">Message</label>
+                            <br />
                             <textarea className="form-control" rows="5" id="message" placeholder='Message'></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">Submit <img src={SendIcon} /></button>
                     </form>
                 </div>
             </div>

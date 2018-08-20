@@ -72,10 +72,6 @@ class Step4 extends Component {
         displayExercises = this.state.exercises;
         return(
             <div className='Step4-App'>
-                <div className='Step4-Dash-Header'>
-                    <h1 className='Step4-Title'>gymPlan</h1>
-                    <button className='Step4-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
 
                 <div className='Step4-Body'>
                     <div>
@@ -97,10 +93,10 @@ class Step4 extends Component {
                 {displayExercises.map((exercise, i) => {
                     return(
                         <div className='Both-Sidez' key={i}>
+                            <img src={exercise.picture} alt='Motion Pic' />
                             <Link to={`/Step3/${this.state.routine.routine_id}/${exercise.exercise_id}`}><h2>{exercise.name}</h2></Link>
                             <h2>{exercise.muscle_group}</h2>
                             <h2>{exercise.equip}</h2>
-                            <img src={exercise.picture} alt='Motion Pic' />
                         </div>
                     )
                 })}

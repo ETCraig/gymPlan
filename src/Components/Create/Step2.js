@@ -47,24 +47,24 @@ class Step2 extends Component {
         return(
             <div className='Step2-App'>
                 
-                <div className='Step2-Dash-Header'>
+                {/* <div className='Step2-Dash-Header'>
                     <h1 className='Step2-Title'>gymPlan</h1>
                     <button className='Step2-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
+                </div> */}
 
                 <div className='Step2-Routine-Info'>
-                    <div className='Step2-Routine-Details1'>
-                        <span>{this.state.user.first_name} {this.state.user.last_name}</span>
-                        <span>{this.state.routine.name}</span>
-                        <span>{this.state.routine.day}</span>
+                    <div className='Step2-Routine-Details2'>
+                    <span><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
+                        <span><strong>Routine Name:</strong> {this.state.routine.name}</span>
+                        <span><strong>Routine Day:</strong> {this.state.routine.day}</span>
                     </div>
                 </div>
 
                 <div className='Step2-Routine-Details'>
-                    <span>{this.state.routine.muscle}</span>
-                    <span>{this.state.routine.type}</span>
-                    <span>{this.state.routine.diff}</span>
-                    <span>{this.state.routine.description}</span>
+                <span><strong>Routine Muscle:</strong> {this.state.routine.muscle}</span>
+                    <span><strong>Routine Type:</strong> {this.state.routine.type}</span>
+                    <span><strong>Routine Difficulty:</strong> {this.state.routine.diff}</span>
+                    <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
                 </div>
 
                 <Link to={`/Step1/${this.props.match.params.routine_id}`}><button className='Step2-Return-Btn'>Muscle Groups</button></Link>

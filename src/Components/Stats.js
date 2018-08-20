@@ -3,6 +3,18 @@ import './Styles/Stats.css';
 
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import StatsIcon from '../Assets/icons8-bar-chart-80.png';
+import HeightIcon from '../Assets/icons8-height-16.png';
+import WeightIcon from '../Assets/icons8-scale-16.png';
+import FatIcon from '../Assets/icons8-fat-man-16.png'
+import BodyIcon from '../Assets/icons8-standing-man-16.png'
+import NeckIcon from '../Assets/icons8-neck-16.png';
+import ShouldersIcon from '../Assets/icons8-shoulders-16.png';
+import ArmsIcon from '../Assets/icons8-muscle-16.png';
+import Chesticon from '../Assets/icons8-chest-16.png';
+import WaistIcon from '../Assets/icons8-prelum-16.png';
+import LowerIcon from '../Assets/icons8-calves-48.png';
+import UpperIcon from '../Assets/icons8-hamstrings-48.png';
 
 export default class Stats extends Component { 
     constructor() {
@@ -98,49 +110,49 @@ export default class Stats extends Component {
                     <button onClick={() => this.setState({bool: true})}>UPDATE</button>
                     <br />
                     <div className='Edit-Left'>
-                    <span>Height</span>
+                    <span>Height <img src={HeightIcon} alt='Height-Icon' /></span>
                     <br />
                     <input type = 'text' value={this.state.user.heigh_t} readOnly placeholder='My Height' />
                     <br />
-                    <span>Weight</span>
+                    <span>Weight <img src={WeightIcon} alt='Weight-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.weight} readOnly placeholder='My Weight' />
                     <br />
-                    <span>BMI</span>
+                    <span>BMI <img src={BodyIcon} alt='Body-Icon' /></span>
                     <br />
                     <input type = 'text' value={this.state.user.bmi} readOnly placeholder='My BMI' />
                     <br />
-                    <span>Body Fat</span>
+                    <span>Body Fat <img src={FatIcon} alt='Fat-Icon' /></span>
                     <br />
                     <input type = 'text' value={this.state.user.body_fat} readOnly placeholder='My Body Fat' />
                     <br />
-                    <span>Neck</span>
+                    <span>Neck <img src={NeckIcon} alt='Neck-Icon' /></span>
                     <br />
                     <input type = 'text' value={this.state.user.neck} readOnly placeholder='My Neck' />
                     <br />
-                    <span>Shoulders</span>
+                    <span>Shoulders <img src={ShouldersIcon} alt='Shoulders-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.shoulders} readOnly placeholder='My Sgoulders' />
                     <br />
-                    <span>Arms</span>
+                    <span>Arms <img src={ArmsIcon} alt='Arms-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.arms} readOnly placeholder='My Arms' />
                     <br />
-                    <span>Chest</span>
+                    <span>Chest <img src={Chesticon} alt='Chest-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.chest} readOnly placeholder='My Chest' />
                     </div>
                     <div className='Edit-Right'>
                     <br />
-                    <span>Waist</span>
+                    <span>Waist <img src={WaistIcon} alt='Waist-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.waist} readOnly placeholder='My Waist' />
                     <br />
-                    <span>Thighs</span>
+                    <span>Thighs <img src={UpperIcon} alt='Upper-Icon' className='Upper-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.thighs} readOnly placeholder='My Thighs' />
                     <br />
-                    <span>Calves</span>
+                    <span>Calves <img src={LowerIcon} alt='Lower-Icon' className='Lower-Icon' /></span>
                     <br />
                     <input type='text' value={this.state.user.calves} readOnly placeholder='My Calves' />
                     <br />
@@ -240,10 +252,10 @@ export default class Stats extends Component {
         return(
             <div className='Stats-App'>
                 <div className='Stats-Dash-App'>
-                <div className='Stats-Dash-Header'>
+                {/* <div className='Stats-Dash-Header'>
                     <h1 className='Stats-Title'>gymPlan</h1>
                     <button className='Stats-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
+                </div> */}
 
                 <div className='Stats-Dash-Profile'>
                     <div className='Stats-Profile-Img-Content'>
@@ -252,18 +264,14 @@ export default class Stats extends Component {
                     <div className='Stats-Profile-Info-Content'>
                         <span className='Stats-Profile-Name'>{this.state.user.first_name}</span>
                         <span className='Stats-Profile-Name'>{this.state.user.last_name}</span>
+                            <div className='Desc-Content'>
+                                <img src={StatsIcon} alt='Goal-Icon' />
+                                <h1>Stats</h1>
+                                <h2>jfwenfcowencoinoiefijfiwejcoimweomclkewnflkwelkfjwejflkwejflkneslknfvkjnevkjnkflkesnvkjnkjnvkjwenfjknvkjnvkjnkrejnfvjknfdkjvnrjknvkjrenvkjernvkjn</h2>
+                            </div>
                     </div>
                 </div>
 
-                <div className='Stats-Dash-Navbar'>
-                    <ul>
-                        <Link to='/Goals'><li>My Goals</li></Link>
-                        <Link to='/Stats'><li>Body Stats</li></Link>
-                        <Link to='/Routines'><li>My Routines</li></Link>
-                        <Link to='/Account'><li>Manage Account</li></Link>
-                        <Link to='/Contact-Us'><li>Contact Us</li></Link>
-                    </ul>
-                </div>
             </div>
 
                 <div className='Stats-Body'>

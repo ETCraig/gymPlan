@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import './Styles/Step1.css';
 
 import axios from 'axios';
-// import {connect} from 'react-redux';
-// import {addRoutine, deleteRoutine} from '../../Redux/reducer';
 import {Link} from 'react-router-dom'
 
 class Step1 extends Component {
@@ -45,24 +43,24 @@ class Step1 extends Component {
     render() {
         return(
             <div className='Step1-App'>
-                <div className='Step1-Dash-Header'>
+                {/* <div className='Step1-Dash-Header'>
                     <h1 className='Step1-Title'>gymPlan</h1>
                     <button className='Step1-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
+                </div> */}
 
                 <div className='Step1-Routine-Info'>
                     <div className='Step1-Routine-Details3'>
-                        <span>{this.state.user.first_name} {this.state.user.last_name}</span>
-                        <span>{this.state.routine.name}</span>
-                        <span>{this.state.routine.day}</span>
+                        <span><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
+                        <span><strong>Routine Name:</strong> {this.state.routine.name}</span>
+                        <span><strong>Routine Day:</strong> {this.state.routine.day}</span>
                     </div>
                 </div>
 
                 <div className='Step1-Routine-Details'>
-                    <span>{this.state.routine.muscle}</span>
-                    <span>{this.state.routine.type}</span>
-                    <span>{this.state.routine.diff}</span>
-                    <span>{this.state.routine.description}</span>
+                    <span><strong>Routine Muscle:</strong> {this.state.routine.muscle}</span>
+                    <span><strong>Routine Type:</strong> {this.state.routine.type}</span>
+                    <span><strong>Routine Difficulty:</strong> {this.state.routine.diff}</span>
+                    <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
                 </div>
 
                 <Link to='/Routines'><button className='Return-Btn'>All Routines</button></Link>
