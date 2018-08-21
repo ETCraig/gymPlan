@@ -14,6 +14,7 @@ import Step1 from './Components/Create/Step1';
 import Step2 from './Components/Create/Step2';
 import Step3 from './Components/Create/Step3';
 import Step4 from './Components/Create/Step4';
+import BMIcalc from './Components/BMI/BMIcalc';
 
 export default (
     <Switch>
@@ -29,5 +30,6 @@ export default (
         <Route component={Step2} path='/Step2/:routine_id/:muscle_group' />
         <Route component={Step3} path='/Step3/:routine_id/:exercise_id' />
         <Route component={Step4} path='/Step4/:routine_id' />
+        <Route component={BMIcalc} path='/BMIcalc' />
     </Switch>
 );

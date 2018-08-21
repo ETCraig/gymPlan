@@ -13,6 +13,7 @@ const sideDrawer = props => {
             <ul>
                 <li><Link to='/Goals'>Goals</Link></li>
                 <li><Link to='/Stats'>Stats</Link></li>
+                <li><Link to='/BMIcalc'>BMI Calculator</Link></li>
                 <li><Link to='/Routines'>Routines</Link></li>
                 <li><Link to='/Account'>Account</Link></li>
                 <li><Link to='/Contact-us'>Contact Us</Link></li>
