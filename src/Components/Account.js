@@ -23,6 +23,7 @@ class Account extends Component {
         this.handleAccountChange = this.handleAccountChange.bind(this);
         this.handleAccountDelete = this.handleAccountDelete.bind(this);
     }
+    
     componentDidMount() {
         axios.get('/api/checkLoggedIn').then().catch(res => {
             console.log('error');
