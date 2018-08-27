@@ -16,7 +16,7 @@
     padding: 0 1rem;
 }
 .toolbar-logo {
-    margin-left: 1.0rem;
+    margin-left: 3.0rem;
     margin-bottom: 5.0px;
     font-size: 2.5rem;
     font-family: 'Audiowide', cursive;
@@ -40,25 +40,173 @@
 .toolbar-nav-items li {
     padding: 0 0.5rem;
 }
-.toolbar-nav-items {
-    color: black;
-    text-decoration: none;
-}
-.toolbar-nav-items:hover {
-    color: #000000;
-}
-.toolbar-nav-items:active {
-    color: rgb(0, 0, 0);
-}
-@media only screen and (max-width: 376px) {
+/* Mobile Small */
+@media only screen and (min-width: 320px) {
+    .toolbar {
+        height: 30px;
+    }
     .toolbar-logo {
-        font-size: 1.0rem;
+        margin-left: 2.0rem;
+        margin-bottom: 5.0px;
+        font-size: 1.5rem;
     }
     .toolbar-nav img {
-        width: 40px;
         height: 40px;
+        width: 40px;
+    }
+    .toolbar-nav-items ul li {
+        margin-left: 22px;
+    }
+    .toolbar-nav-items ul li Button {
+        font-size: 12px;
+        height: 20px;
+        margin-bottom: 1px;
+    }
+}
+/* Mobile Medium */
+@media only screen and (min-width: 375px) {
+    .toolbar {
+        height: 30px;
+    }
+    .toolbar-logo {
+        margin-left: 2.0rem;
+        margin-bottom: 5.0px;
+        font-size: 1.5rem;
+    }
+    .toolbar-nav img {
+        height: 40px;
+        width: 40px;
+    }
+    .toolbar-nav-items ul li {
+        margin-right: -18px;
+    }
+    .toolbar-nav-items ul li Button {
+        font-size: 12px;
+        height: 20px;
+        margin-bottom: 1px;
+    }
+}
+/* Mobile Large */
+@media only screen and (min-width: 425px) {
+    .toolbar {
+        height: 30px;
+    }
+    .toolbar-logo {
+        margin-left: 2.0rem;
+        margin-bottom: 5.0px;
+        font-size: 1.5rem;
+    }
+    .toolbar-nav img {
+        height: 40px;
+        width: 40px;
+    }
+    .toolbar-nav-items ul li {
+        margin-left: 25px;
+    }
+    .toolbar-nav-items ul li Button {
+        font-size: 12px;
+        height: 20px;
+        margin-bottom: 1px;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .toolbar {
+        height: 30px;
+    }
+    .toolbar-logo {
+        margin-left: 2.0rem;
+        margin-bottom: 5.0px;
+        font-size: 1.5rem;
+    }
+    .toolbar-nav img {
+        height: 40px;
+        width: 40px;
+    }
+    .toolbar-nav-items ul li {
+        margin-left: 27px;
+    }
+    .toolbar-nav-items ul li Button {
+        font-size: 12px;
+        height: 20px;
+        margin-bottom: 1px;
+    }
+}
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+    .toolbar {
+        height: 30px;
+    }
+    .toolbar-logo {
+        margin-left: 2.0rem;
+        margin-bottom: 5.0px;
+        font-size: 1.5rem;
+    }
+    .toolbar-nav img {
+        height: 40px;
+        width: 40px;
+    }
+    .toolbar-nav-items ul li {
+        margin-left: -38px;
+    }
+    .toolbar-nav-items ul li Button {
+        font-size: 12px;
+        height: 20px;
+        margin-bottom: 1px;
+    }
+}
+/* Dell G7 */
+@media only screen and (min-width: 1400px) {
+    .toolbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-image: linear-gradient(97deg, #000000, #000000);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        height: 50px;
+    }
+    .toolbar-nav {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .toolbar-logo {
+        margin-left: 3.0rem;
+        margin-bottom: 5.0px;
+        font-size: 2.5rem;
+        font-family: 'Audiowide', cursive;
+    }
+    .toolbar-logo img {
+        margin-left: 50px;
+    }
+    .toolbar-logo Link {
+        color: white;
+        text-decoration: none;
+    }
+    .Spacer {
+        flex: 1;
+    }
+    .toolbar-nav-items ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
     }
     .toolbar-nav-items li {
-        margin-left: -850px;
+        padding: 0 0.5rem;
+    }
+    .toolbar-nav img {
+        height: 80px;
+        width: 80px;
+    }
+    .toolbar-nav-items ul li {
+        margin-left: 0px;
+    }
+    .toolbar-nav-items ul li Button {
+        font-size: 25px;
+        height: 40px;
+        margin-bottom: 1px;
     }
 }

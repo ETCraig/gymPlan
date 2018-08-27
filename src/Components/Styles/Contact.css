@@ -91,10 +91,10 @@ a:hover {
 
 }
 .Contact-Profile-Img {
-    width: 200px;
-    height: 200px;
-    border: 5px solid #ffffff;
-    border-radius: 120px;
+    width: 210px;
+    height: 210px;
+    border-radius: 80px;
+    border: 8px solid #c5c5c5;
 }
 .Contact-Profile-Info-Content {
 
@@ -103,7 +103,7 @@ a:hover {
     font-size: 35px;
     padding-right: 10px;
     font-family: 'Audiowide', cursive;
-    color: white;
+    color: black;
 }
 .Social-Media {
     margin-top: 20px;
@@ -117,84 +117,529 @@ a:hover {
 .Social-Media img:hover {
     cursor: pointer;
 }
-
-
-
-
-@media only screen and (max-width: 376px) {
+/* Mobile Small */
+@media only screen and (min-width: 320px) {
     .Contact-App {
-        width: 375px;
-        min-height: 672px;
-        height: 672px;
-    }
-    .Contact-Dash-Header {
-        height: 25px;
-    }
-    .Contact-Logout {
-        font-size: 18px;
-    }
-    .Contact-Title {
-        font-size: 25px;
+        height: auto;
+        width: 320px;
     }
     .Contact-Profile-Img {
-        height: 110%;
-        width: 110%;
-        margin-top: -40px;
-    }
-    .Contact-Profile-Info-Content {
-        padding-top: -80px;
-        height: 80px;
+        width: 150px;
+        height: 150px;
+        margin-left: 70px;
+        margin-top: -20px;
     }
     .Contact-Profile-Name {
-        font-size: 12.5px;
-    }
-    .Contact-Dash-Profile {
-        padding: 2px;
-    }
-    .Contact-Dash-Navbar {
-        height: 50px;
-        width: 33%;
-        margin-top: 5px;
-    }
-    .Contact-Dash-Navbar>ul {
-        font-size: 10px;
-    }
-    li {
-        padding: 5px;
+        font-size: 30px;
+        margin-left: 30px;
     }
     .Contact-Body {
-        margin-top: 50%;
-        height: 80%;
-    }
-    #contact-form {
-        margin-right: 900px;
-        margin-top: -300px;
+        width: 250px;
+        height: 60%;
+        padding: 6px;
+        margin-left: 38px;
+        margin-top: -100px;
     }
     .form-control {
-        width: 400%
-    }
-    .form-group>label {
-        width: 200%;
-    }
-    .form-group {
-        margin-left: 200px;
-    }
-    #name {
-        width: 200px;
-    }
-    #email {
+        margin-left: 0px;
         width: 200px;
     }
     #message {
         width: 200px;
-        height: 125px;
-        margin-right: -120px;
+        height: 150px;
     }
     .btn {
-        margin-left: 200px;
+        width: 100px;
+        border-radius: 5px;
     }
-    .btn img {
-        width: 16px;
-        height: 16px;
+    Button img {
+        width: 18px;
+        height: 18px;
+    }
+    .Social-Media {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+    }
+    .Social-Media img {
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    .Contact-App .Desc-Content {
+        width: 250px;
+        margin-top: 0px;
+        margin-left: 24px;
+    }
+    .Contact-App .Desc-Content img {
+        float: left;
+        width: 50px;
+        height: 50px;
+    }
+    .Contact-App .Desc-Content h1 {
+        font-size: 30px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Contact-App .Desc-Content h2 {
+        height: 225px;
+        max-width: 220px;
+    }
+}
+/* Mobile Medium */
+@media only screen and (min-width: 375px) {
+    .Contact-App {
+        height: auto;
+        width: 375px;
+    }
+    .Contact-Dash-Profile {
+        margin-left: 30px;
+    }
+    .Contact-Profile-Img {
+        width: 150px;
+        height: 150px;
+        margin-left: 70px;
+        margin-top: -20px;
+    }
+    .Contact-Profile-Name {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    .Contact-Body {
+        width: 250px;
+        height: 60%;
+        padding: 6px;
+        margin-left: 62px;
+        margin-top: -220px;
+    }
+    .form-control {
+        margin-left: 0px;
+        width: 200px;
+    }
+    #message {
+        width: 200px;
+        height: 150px;
+    }
+    .btn {
+        width: 100px;
+        border-radius: 5px;
+    }
+    Button img {
+        width: 18px;
+        height: 18px;
+    }
+    .Social-Media {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+    }
+    .Social-Media img {
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    .Contact-App .Desc-Content {
+        width: 250px;
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+    .Contact-App .Desc-Content img {
+        float: left;
+        width: 50px;
+        height: 50px;
+    }
+    .Contact-App .Desc-Content h1 {
+        font-size: 30px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Contact-App .Desc-Content h2 {
+        height: 120px;
+        max-width: 250px;
+    }
+}
+/* Mobile Large */
+@media only screen and (min-width: 425px) {
+    .Contact-App {
+        height: auto;
+        width: 425px;
+    }
+    .Contact-Dash-Profile {
+        margin-left: 65px;
+    }
+    .Contact-Profile-Img {
+        width: 180px;
+        height: 180px;
+        margin-left: 70px;
+        margin-top: -20px;
+    }
+    .Contact-Profile-Name {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    .Contact-Body {
+        width: 330px;
+        height: 60%;
+        padding: 6px;
+        margin-left: 55px;
+        margin-top: -220px;
+    }
+    .form-control {
+        margin-left: 0px;
+        width: 250px;
+    }
+    #message {
+        width: 250px;
+        height: 150px;
+    }
+    .btn {
+        width: 100px;
+        border-radius: 5px;
+    }
+    Button img {
+        width: 18px;
+        height: 18px;
+    }
+    .Social-Media {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+    }
+    .Social-Media img {
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    .Contact-App .Desc-Content {
+        width: 330px;
+        margin-top: 0px;
+        margin-left: -23px;
+    }
+    .Contact-App .Desc-Content img {
+        float: left;
+        width: 50px;
+        height: 50px;
+    }
+    .Contact-App .Desc-Content h1 {
+        font-size: 35px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Contact-App .Desc-Content h2 {
+        height: 100px;
+        max-width: 330px;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .Contact-App {
+        height: auto;
+        width: 768px;
+    }
+    .Contact-Dash-Profile {
+        margin-left: 5px;
+    }
+    .Contact-Profile-Img {
+        width: 180px;
+        height: 180px;
+        margin-left: 70px;
+        margin-top: -20px;
+    }
+    .Contact-Profile-Name {
+        font-size: 30px;
+        margin-left: 0px;
+    }
+    .Contact-Body {
+        width: 400px;
+        height: 60%;
+        padding: 6px;
+        margin-left: 242px;
+        margin-top: -350px;
+    }
+    .form-control {
+        margin-left: 0px;
+        width: 275px;
+    }
+    #message {
+        width: 275px;
+        height: 150px;
+    }
+    .btn {
+        width: 100px;
+        border-radius: 5px;
+    }
+    Button img {
+        width: 18px;
+        height: 18px;
+    }
+    .Social-Media {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+    }
+    .Social-Media img {
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    .Contact-App .Desc-Content {
+        width: 400px;
+        margin-top: -165px;
+        margin-left: 225px;
+    }
+    .Contact-App .Desc-Content img {
+        float: left;
+        width: 55px;
+        height: 55px;
+    }
+    .Contact-App .Desc-Content h1 {
+        font-size: 35px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Contact-App .Desc-Content h2 {
+        height: 100px;
+        max-width: 400px;
+        font-size: 17px;
+    }
+}
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+    .Contact-App {
+        height: auto;
+        width: 1024px;
+    }
+    .Contact-Dash-Profile {
+        margin-left: 5px;
+    }
+    .Contact-Profile-Img {
+        width: 180px;
+        height: 180px;
+        margin-left: 70px;
+        margin-top: -20px;
+    }
+    .Contact-Profile-Name {
+        font-size: 30px;
+        margin-left: 0px;
+    }
+    .Contact-Body {
+        width: 600px;
+        height: 60%;
+        padding: 6px;
+        margin-left: 242px;
+        margin-top: -350px;
+    }
+    .form-control {
+        margin-left: 0px;
+        width: 350px;
+    }
+    #message {
+        width: 350px;
+        height: 150px;
+    }
+    .btn {
+        width: 100px;
+        border-radius: 5px;
+    }
+    Button img {
+        width: 18px;
+        height: 18px;
+    }
+    .Social-Media {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+    }
+    .Social-Media img {
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    .Contact-App .Desc-Content {
+        width: 600px;
+        margin-top: -165px;
+        margin-left: 225px;
+    }
+    .Contact-App .Desc-Content img {
+        float: left;
+        width: 60px;
+        height: 60px;
+    }
+    .Contact-App .Desc-Content h1 {
+        font-size: 40px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Contact-App .Desc-Content h2 {
+        height: 80px;
+        max-width: 600px;
+        font-size: 20px;
+    }
+}
+/* Dell G7 */
+@media only screen and (min-width: 1400px) {
+    .Contact-App {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+    }
+    .Contact-Body {
+        width: 40%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        margin-left: 500px;
+        margin-top: -650px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .form-group {
+    
+    }
+    .Contact-Body label {
+        font-size: 20px;
+    }
+    .form-control {
+        margin-left: 0px;
+        width: 500px;
+    }
+    #name {
+    
+    }
+    #email {
+    
+    }
+    #message {
+        width: 500px;
+        height: 150px;
+    }
+    .btn {
+        width: 100px;
+        border-radius: 5px;
+    }
+    .Title {
+        font-size: 40px;
+        font-style: italic;
+        font-family: 'Audiowide', cursive;
+    }
+    Input {
+        width: 400px;
+    }
+    .Goals-Content {
+        
+    }
+    .Goals-List {
+        font-size: 30px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Contact-Dash-App {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+      }
+    a:hover {
+        text-decoration: none;
+        color: white;
+        text-decoration: none;
+      }
+    /* Profile Img  */
+    .Contact-Dash-Profile {
+        height: 250px;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 12px;
+        margin-top: 50px;
+    }
+    .Contact-Profile-Img-Content {
+    
+    }
+    .Contact-Profile-Img {
+        width: 210px;
+        height: 210px;
+        border-radius: 80px;
+        border: 8px solid #c5c5c5;
+    }
+    .Contact-Profile-Info-Content {
+    
+    }
+    .Contact-Profile-Name {
+        font-size: 35px;
+        padding-right: 10px;
+        font-family: 'Audiowide', cursive;
+        color: black;
+    }
+    .Social-Media {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        font-size: 25px;
+    }
+    .Social-Media img {
+        margin-left: 10px;
+    }
+    .Social-Media img:hover {
+        cursor: pointer;
+    }
+    .Contact-App .Desc-Content {
+        background-color: #c5c5c5;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        width: 240px;
+        flex-direction: column;
+        justify-content: left;
+        align-content: left;
+        align-items: left;
+        float: left;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .Contact-App .Desc-Content img {
+        float: left;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+    }
+    .Contact-App .Desc-Content h1 {
+        float: right;
+        font-size: 35px;
+        margin-left: 85px;
+        margin-top: -60px;
+    }
+    .Contact-App .Desc-Content h2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        float: left;
+        word-wrap: break-word;
+        height: 190px;
+        max-width: 220px;
+        margin-left: 0px;
+        font-size: 15px;
     }
 }

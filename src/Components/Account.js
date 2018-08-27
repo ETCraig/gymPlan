@@ -4,6 +4,9 @@ import './Styles/Account.css';
 import axios from 'axios';
 import AccountIcon from '../Assets/icons8-customer-80.png';
 
+import {Button, Input, Radio} from 'antd';
+import RadioGroup from 'antd/lib/radio/group';
+
 class Account extends Component {
     constructor() {
         super();
@@ -72,11 +75,13 @@ class Account extends Component {
                     <br />
                     <span>Profile Picture</span>
                     <br />
-                    <input type='text' value={this.state.user.profile_picture} readOnly placeholder='You!' />
+                    <Input type='text' value={this.state.user.profile_picture} readOnly placeholder='You!' />
                     <br />
                     {/* <img src={this.state.profile_picture} alt='Profile Pic' /> */}
                     <br />
-                    <div className='Gender'><span>Gender</span><select id='inlineFormCustomSelect' value={this.state.user.gender} readOnly><option>{this.state.user.gender}</option></select></div>
+                    <div className='Gender'><span>Gender</span>
+                    <h2 value={this.state.user.gender}>{this.state.user.gender}</h2>
+                    </div>
                 </div>
             );
         }
@@ -94,13 +99,18 @@ class Account extends Component {
                     <br />
                     <span>Profile Picture</span>
                     <br />
-                    <input onChange={(e) => this.setState({profile_picture: e.target.value})} />
+                    <Input onChange={(e) => this.setState({profile_picture: e.target.value})} />
                     <br />
                     {/* <img src={this.state.profile_picture} alt='Profile Pic' /> */}
                     <br />
                     <span>Gender</span>
                     <br />
-                    <div className='Gender'><select id='inlineFormCustomSelect' onChange={(e) => this.setState({gender: e.target.value})}><option value='Female'>Female</option><option value='Male'>Male</option></select></div>
+                    <div className='Gender'>
+                    <RadioGroup onChange={(e) => this.setState({gender: e.target.value})}>
+                        <Radio value='Female'>Female</Radio>
+                        <Radio value='Male'>Male</Radio>
+                    </RadioGroup>
+                    </div>
                     {/* <br /> */}
                     <button onClick={() => this.handleAccountChange()} className='Save'>Save</button>
                 </div>
@@ -142,7 +152,7 @@ class Account extends Component {
                     {this.handleFeilds()}
                     <br />
                     <br />
-                    <button onClick={(e) => this.handleAccountDelete(e.target.value)} className='Delete-Btn'>Delete Account</button>
+                    <Button onClick={(e) => this.handleAccountDelete(e.target.value)} className='Delete-Btn'>Delete Account</Button>
                 </div>
             </div>
         );

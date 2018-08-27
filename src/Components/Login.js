@@ -2,6 +2,8 @@ import React from 'react';
 import './Styles/Login.css';
 import GymLogo from '../Assets/icons8-barbell-64.png';
 
+import {Button} from 'antd';
+
 export default function Login() {
     function login() {
         let { REACT_APP_DOMAIN, REACT_APP_CLIENT_ID, REACT_APP_CALLBACK_URL} = process.env;
@@ -11,7 +13,7 @@ export default function Login() {
     
     return(
         <div className='Login-App'>
-        <ul className="cb-slideshow">
+        <ul className="cb-slideshow" style={{color: 'white', position: 'absolute'}}>
             <li><span>Image 01</span><div><h3>am·bi·tion</h3></div></li>
             <li><span>Image 02</span><div><h3>vi·sion</h3></div></li>
             <li><span>Image 03</span><div><h3>prep·a·ra·tion</h3></div></li>
@@ -32,7 +34,7 @@ export default function Login() {
             </div>
             <br />
             <div className='Btn-Content'>
-                <button className='Login-Btn' onClick={login}>Login / Register</button>
+                <Button className='Login-Btn' onClick={login} type="primary">Login / Register</Button>
             </div>
             </div>
         

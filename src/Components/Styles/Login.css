@@ -17,16 +17,19 @@
 }
 .Logo {
     position: absolute;
-    margin-left: -520px;
+    margin-left: -518px;
     margin-top: -375px;
+    color: white;
 }
 .Intro-Content {
+    position: absolute;
     width: 100%;
     height: 20%;
     min-height: 50px;
     min-width: 400px;
     border-radius: 8px;
     margin-top: -200px;
+    margin-left: 5px;
     position: absolute;
     font-family: 'Changa', sans-serif;
 }
@@ -36,6 +39,7 @@
     margin-left: -708px;
     margin-top: -200px;
     font-family: 'Audiowide', cursive;
+    color: white;
 }
 .Intro-Content>p {
     min-width: 400px;
@@ -54,7 +58,7 @@
     border-radius: 8px;
     position: absolute;
     margin-left: 580px;
-    margin-top: -370px;
+    margin-top: -382px;
 }
 .Login-Btn {
     text-decoration: none;
@@ -64,8 +68,8 @@
     display: flex;
     justify-content: center;
     border-radius: 1px;
-    background-image: radial-gradient(circle at 50%-46%, #737373, #402d39);
-    box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.26);
+    /* background-image: radial-gradient(circle at 50%-46%, #737373, #402d39);
+    box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.26); */
     position: absolute;
 }
 .Login-Btn:hover {
@@ -313,6 +317,7 @@ p.codrops-demos a.current-demo:hover{
     top: 0px;
     left: 0px;
     z-index: 0; 
+    color: white;
 }
 .cb-slideshow:after { 
     content: '';
@@ -357,6 +362,7 @@ p.codrops-demos a.current-demo:hover{
     font-size: 240px;
     padding: 0;
     line-height: 200px; 
+    color: white;
 }
 .cb-slideshow li:nth-child(1) span { 
     background-image: url(../../Assets/gymslider_1.jpg) 
@@ -530,9 +536,45 @@ p.codrops-demos a.current-demo:hover{
     .cb-slideshow li div h3 { font-size: 80px }
 }
 
-
  /* Mobile Small  */
- @media only screen and (max-width: 376px) {
+ @media only screen and (min-width: 320px) {
+    .Intro-Content {
+        max-width: 200px;
+    }
+    .Intro-Content>h2 {
+        margin-top: -150px;
+        margin-left: -160px;
+        font-size: 30px;
+    }
+    .Logo {
+        font-size: 0px;
+    }
+    .Intro-Content>p {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: -155px;
+        max-width: 20px;
+    }
+    .cb-slideshow {
+        width: 392px;
+        height: 822px;
+    }
+    .Btn-Content {
+        margin-left: 80px;
+        margin-top: -340px;
+    }
+    .Login-Btn {
+        font-size: 12px;
+        width: 120%;
+        height: 30px;;
+    }
+    .cb-slideshow li div h3 {
+        font-size: 60px;
+        justify-content: center;
+    }
+}
+ /* Mobile Medium */
+ @media only screen and (min-width: 375px) {
     .Intro-Content {
         max-width: 20px;
     }
@@ -550,24 +592,276 @@ p.codrops-demos a.current-demo:hover{
     .Intro-Content>p {
         font-size: 20px;
         margin-top: 0px;
-        margin-left: -180px;
+        margin-left: -185px;
         max-width: 20px;
     }
     .cb-slideshow {
-        width: 376px;
-        height: 672px;
+        width: 410px;
+        height: 735px;
     }
     .Btn-Content {
-        margin-left: 45px;
+        margin-left: 70px;
         margin-top: -340px;
     }
     .Login-Btn {
-        font-size: 12px;
+        font-size: 15px;
         width: 120%;
         height: 30px;;
     }
     .cb-slideshow li div h3 {
-        font-size: 65px;
+        font-size: 60px;
         justify-content: center;
     }
 }
+/* Mobile Large */
+@media only screen and (min-width: 425px) {
+    .Intro-Content {
+        max-width: 100px;
+    }
+    .Intro-Content>h2 {
+        margin-top: -152px;
+        margin-left: -172px;
+        font-size: 25px;
+    }
+    .Logo { 
+        height: 40px;
+        width: 40px;
+        margin-left: -51px;
+        margin-top: -330px;
+    }
+    .Intro-Content>p {
+        font-size: 22px;
+        margin-top: 100px;
+        margin-left: -210px;
+        min-width: 450px;
+    }
+    .cb-slideshow {
+        width: 427px;
+        height: 680px;
+    }
+    .Btn-Content {
+        margin-left: 95px;
+        margin-top: -340px;
+    }
+    .Login-Btn {
+        font-size: 12px;
+        width: 100%;
+        height: 25px;;
+    }
+    .cb-slideshow li div h3 {
+        font-size: 65px;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .Intro-Content {
+        max-width: 100px;
+    }
+    .Intro-Content>h2 {
+        margin-top: -153px;
+        margin-left: -344px;
+        font-size: 25px;
+    }
+    .Logo { 
+        font-size: 50px;
+        margin-left: -220px;
+        margin-top: -330px;
+    }
+    .Intro-Content>p {
+        font-size: 22px;
+        margin-top: 0px;
+        margin-left: -325px;
+        min-width: 450px;
+    }
+    .cb-slideshow {
+        width: 550px;
+        height: 480px;
+    }
+    .Btn-Content {
+        margin-left: 15px;
+        margin-top: -340px;
+    }
+    .Login-Btn {
+        font-size: 15px;
+        width: 120%;
+        height: 30px;;
+    }
+    .cb-slideshow li div h3 {
+        font-size: 85px;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+}
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+    .Intro-Content {
+        max-width: 100px;
+    }
+    .Intro-Content>h2 {
+        margin-top: -153px;
+        margin-left: -471px;
+        font-size: 25px;
+    }
+    .Logo { 
+        font-size: 50px;
+        margin-left: -350px;
+        margin-top: -330px;
+    }
+    .Intro-Content>p {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: -445px;
+        min-width: 600px;
+    }
+    .cb-slideshow {
+        width: 760px;
+        height: 500px;
+    }
+    .Btn-Content {
+        margin-left: 35px;
+        margin-top: -340px;
+    }
+    .Login-Btn {
+        font-size: 18px;
+        width: 130%;
+        height: 30px;;
+    }
+    .cb-slideshow li div h3 {
+        font-size: 85px;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+}
+/* Dell G7 */
+@media only screen and (min-width: 1400px) {
+    .Login-App {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        /* background: url(../../Assets/gymslider_1.jpg); */
+        font-family: "Open sans";
+        color: white;
+    }
+    .Login-App>ul>li {
+        background-color: #000;
+    }
+    .Logo {
+        position: absolute;
+        margin-left: -518px;
+        margin-top: -385px;
+        color: white;
+        height: 80px;
+        width: 80px;
+    }
+    .Intro-Content {
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        min-height: 50px;
+        min-width: 400px;
+        border-radius: 8px;
+        margin-top: -200px;
+        margin-left: 5px;
+        position: absolute;
+        font-family: 'Changa', sans-serif;
+    }
+    
+    .Intro-Content>h2 {
+        font-size: 2.5rem;
+        margin-left: -708px;
+        margin-top: -200px;
+        font-family: 'Audiowide', cursive;
+        color: white;
+    }
+    .Intro-Content>p {
+        min-width: 400px;
+        font-size: 30px;
+        margin-top: -70px;
+        margin-left: 0px;
+        min-width: 1000px;
+    }
+    .Container {
+        position: absolute;
+    }
+    .Btn-Content {
+        width: 400%;
+        height: 20%;
+        min-height: 50px;
+        min-width: 100px;
+        border-radius: 8px;
+        position: absolute;
+        margin-left: 580px;
+        margin-top: -382px;
+    }
+    .Login-Btn {
+        text-decoration: none;
+        color: white;
+        width: 160%;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        border-radius: 1px;
+        margin-left: 5px;
+        /* background-image: radial-gradient(circle at 50%-46%, #737373, #402d39);
+        box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.26); */
+        position: absolute;
+    }
+    .Login-Btn:hover {
+        cursor: pointer;
+        position: absolute;
+    }
+    .cb-slideshow {
+        width: 1520px;
+        height: 760px;
+    }
+    .cb-slideshow li div h3 {
+        font-size: 200px;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+}
+/* Laptop Large
+@media only screen and (min-width: 1440px) {
+    .Intro-Content {
+        max-width: 100px;
+    }
+    .Intro-Content>h2 {
+        margin-top: -215px;
+        margin-left: -660px;
+        font-size: 40px;
+    }
+    .Logo { 
+        font-size: 50px;
+        margin-left: -468px;
+        margin-top: -390px;
+    }
+    .Intro-Content>p {
+        font-size: 35px;
+        margin-top: 0px;
+        margin-left: -540px;
+        min-width: 650px;
+    }
+    .cb-slideshow {
+        width: 980px;
+        height: 550px;
+    }
+    .Btn-Content {
+        margin-left: 95px;
+        margin-top: -390px;
+    }
+    .Login-Btn {
+        font-size: 18px;
+        width: 130%;
+        height: 30px;;
+    }
+    .cb-slideshow li div h3 {
+        font-size: 120px;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+} */

@@ -4,6 +4,8 @@ import './Styles/Step2.css';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
+import {Button} from 'antd';
+
 class Step2 extends Component {
     constructor() {
         super();
@@ -67,9 +69,9 @@ class Step2 extends Component {
                     <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
                 </div>
 
-                <Link to={`/Step1/${this.props.match.params.routine_id}`}><button className='Step2-Return-Btn'>Muscle Groups</button></Link>
+                <Link to={`/Step1/${this.props.match.params.routine_id}`}><Button className='Step2-Return-Btn'>Muscle Groups</Button></Link>
                 <br /><br /><br />
-                <Link to={`/Step3/${this.state.routine.routine_id}`}><button className='Step2-Return-Btn'>View Full Routine</button></Link>
+                <Link to={`/Step3/${this.state.routine.routine_id}`}><Button className='Step2-Return-Btn'>View Full Routine</Button></Link>
 
                 <div className='Step2-Body'>
 

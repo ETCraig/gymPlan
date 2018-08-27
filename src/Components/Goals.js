@@ -9,6 +9,8 @@ import RoutineIcon from '../Assets/icons8-edit-property-80.png';
 import DataIcon from '../Assets/icons8-combo-chart-80.png'; 
 import ExIcon from '../Assets/icons8-weightlifting-80.png';
 
+import {Input, Button} from 'antd';
+
 class Goals extends Component {
     constructor(props) {
         super(props);
@@ -67,10 +69,6 @@ class Goals extends Component {
         return(
             <div className='Goals-Appp'>
                 <div className='Goals-Dash-App'>
-                <div className='Goals-Dash-Header'>
-                    <h1 className='Goals-Title'>gymPlan</h1>
-                    <button className='Goals-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div>
 
                 <div className='Goals-Dash-Profile'>
                     <div className='Profile-Img-Content'>
@@ -111,8 +109,8 @@ class Goals extends Component {
                 <div className='Goals-Bodyy' style={{color: 'white'}}>
                     <h1 className='Title'>My Goals</h1>
                     <div className='Goals-Content'>
-                        <input type='text'onChange={(e) => this.handleGoalInput(e.target.value)} placeholder='Enter New Goal' className='Goal-Input' value={this.state.goal} />
-                        <button onClick={this.handleCreateGoal} className='Goal-Btn'>Add Goal</button>
+                        <Input type='text'onChange={(e) => this.handleGoalInput(e.target.value)} placeholder='Enter New Goal' className='Goal-Input' value={this.state.goal} />
+                        <Button onClick={this.handleCreateGoal} className='Goal-Btn'>Add Goal</Button>
                         <div className='Goals-List'>
                         {displayHomes.map((goal, i) => {
                             return(

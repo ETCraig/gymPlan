@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './BMIcalc.css';
 
+import {Input} from 'antd';
+
 class BMIcalc extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +47,7 @@ class BMIcalc extends Component {
           <div className="Span1">
             <div className="FormControls">
               <label>Weight <small>Pounds</small></label>
-              <input type="tel" value={this.state.weight} onChange={(e) => this.setState({weight: e.target.value})} className="Control" />
+              <Input type="tel" value={this.state.weight} onChange={(e) => this.setState({weight: e.target.value})} className="Control" />
             </div>
           </div>
         </div>
@@ -54,14 +56,14 @@ class BMIcalc extends Component {
           <div className="Span1">
             <div className="FormControls">
               <label>Height <small>Feet</small></label>
-              <input type="tel" value={this.state.heightFeet} onChange={(e) => this.setState({heightFeet: e.target.value})} className="Control" />
+              <Input type="tel" value={this.state.heightFeet} onChange={(e) => this.setState({heightFeet: e.target.value})} className="Control" />
             </div>
           </div>
 
           <div className="Span1">
             <div className="FormControls">
               <label><small>Inches</small></label>
-              <input type="tel" value={this.state.heightInches} onChange={(e) => this.setState({heightInches: e.target.value})} className="Control"/>
+              <Input type="tel" value={this.state.heightInches} onChange={(e) => this.setState({heightInches: e.target.value})} className="Control"/>
             </div>
           </div>
         </div>
@@ -70,7 +72,7 @@ class BMIcalc extends Component {
           <div className="Span1">
             <div className="FormControls">
               <label>BMI</label>
-              <input value={this.bmi()} readOnly className="Control" />
+              <Input value={this.bmi()} readOnly className="Control" />
             </div>
           </div>
         </div>

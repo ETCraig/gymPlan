@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom';
 import DeleteRoutine from '../Assets/icons8-delete-document-16.png';
 import DeleteIcon from '../Assets/icons8-delete-16.png';
 
+import {Button} from 'antd';
+
 class Routine extends Component {
     constructor() {
         super();
@@ -78,13 +80,13 @@ class Routine extends Component {
                     <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
                 </div>
 
-                <Link to='/Routines'><button className='Return-Btn'>All Routines</button></Link>
+                <Link to='/Routines'><Button className='Return-Btn'>All Routines</Button></Link>
                 <br />
                 <br />
-                <button className='Return-Btn' onClick={() => this.deleteRoutine()}>Delete Routine <img src={DeleteRoutine} alt='Delete-Routine' /></button>
+                <Button className='Return-Btn' onClick={() => this.deleteRoutine()}>Delete Routine <img src={DeleteRoutine} alt='Delete-Routine' /></Button>
                 <br />
-                <Link to={`/Step1/${this.state.routine.routine_id}`}><button>Add Exercises</button></Link>
-                <div className='List-Container'>
+                <Link to={`/Step1/${this.state.routine.routine_id}`}><Button>Add Exercises</Button></Link>
+                <div id='List-Container'>
                     {displayRoutineExercises.map((exercise, i) => {
                         return(
                             <div key={i} className='Routine-Exercises'>
@@ -98,9 +100,9 @@ class Routine extends Component {
                                 {/* <h2><strong>Exercise:</strong> <br />{exercise.defaultreps}</h2> */}
                                 </div>
                                 <div className='Routine-Btn'>
-                                <button onClick={() => this.removeExercise(exercise.exercise_id, this.state.routine.routine_id)}>
+                                <Button onClick={() => this.removeExercise(exercise.exercise_id, this.state.routine.routine_id)}>
                                     <h2>Remove {exercise.name} <img src={DeleteIcon} alt='Delete-Icon' className='Delete-Img' /></h2>
-                                </button>
+                                </Button>
                                 </div>
                             </div>
                         )

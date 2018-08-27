@@ -3,6 +3,9 @@ import './Styles/Create.css';
 
 import axios from 'axios'
 
+import {Button, Input, Radio, Select} from 'antd';
+import RadioGroup from 'antd/lib/radio/group';
+
 class Step1 extends Component {
     constructor() {
         super();
@@ -48,7 +51,7 @@ class Step1 extends Component {
             <div className='Create-App'>
             
             <div className='Routines-Create'>
-                <input onChange={e => this.handleNewPropChange('newName', e.target.value)} value={this.state.newName} className='Routines-Name' type='text' placeholder='Routine Name' />
+                <Input onChange={e => this.handleNewPropChange('newName', e.target.value)} value={this.state.newName} className='Routines-Name' type='text' placeholder='Routine Name' />
 
                 <select onChange={e => this.handleNewPropChange('newDay', e.target.value)} value={this.state.newDay} className='Routines-Day'>
                     <option defaultValue='Day..'>Day..</option>
@@ -61,12 +64,12 @@ class Step1 extends Component {
                     <option value='Sunday'>Sunday</option>
                 </select>
 
-                <select onChange={e => this.handleNewPropChange('newDiff', e.target.value)} value={this.state.newDiff} className='Routines-Diff'>
-                    <option defaultValue='Difficulty..'>Difficulty..</option>
-                    <option value='Beginner'>Beginner</option>
-                    <option value='Intermediate'>Intermediate</option>
-                    <option value='Advanced'>Advanced</option>
-                </select>
+                <RadioGroup onChange={e => this.handleNewPropChange('newDiff', e.target.value)} value={this.state.newDiff} className='Routines-Diff'>
+                    Difficulty
+                    <Radio value='Beginner'>Beginner</Radio>
+                    <Radio value='Intermediate'>Intermediate</Radio>
+                    <Radio value='Advanced'>Advanced</Radio>
+                </RadioGroup>
 
                 <select onChange={e => this.handleNewPropChange('newMuscle', e.target.value)} value={this.state.newMuscle} className='Routines-Muscle'>
                     <option defaultValue='Muscle..'>Muscle..</option>
@@ -83,16 +86,16 @@ class Step1 extends Component {
                     <option value='Upper Legs'>Upper Legs</option>
                 </select>
 
-                <select onChange={e => this.handleNewPropChange('newType', e.target.value)} value={this.state.newType} className='Routines-Type'>
-                    <option defaultValue='Type..'>Type..</option>
-                    <option value='Weight Loss'>Weight Loss</option>
-                    <option value='Muscle Toning'>Muscle Toning</option>
-                    <option value='Maintaining'>Maintaining</option>
-                    <option value='Mass Gaining'>Mass Gaining</option>
-                </select>
-                <input onChange={e => this.handleNewPropChange('newDesc', e.target.value)} value={this.state.newDesc} className='Routines-Desc' type='text' placeholder='Routine Description' />
+                <RadioGroup onChange={e => this.handleNewPropChange('newType', e.target.value)} value={this.state.newType} className='Routines-Type'>
+                    Type
+                    <Radio value='Weight Loss'>Weight Loss</Radio>
+                    <Radio value='Muscle Toning'>Muscle Toning</Radio>
+                    <Radio value='Maintaining'>Maintaining</Radio>
+                    <Radio value='Mass Gaining'>Mass Gaining</Radio>
+                </RadioGroup>
+                <Input onChange={e => this.handleNewPropChange('newDesc', e.target.value)} value={this.state.newDesc} className='Routines-Desc' type='text' placeholder='Routine Description' />
                 <br />
-                <button onClick={this.handleCreateBtn} className='Create-Routine-Btn'>Create Routine</button>
+                <Button onClick={this.handleCreateBtn} className='Create-Routine-Btn'>Create Routine</Button>
             </div>
             </div>
         );

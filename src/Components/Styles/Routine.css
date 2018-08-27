@@ -20,7 +20,7 @@
     padding: 6px;
 }
 .Routine-Routine-Details {
-    height: 100px;
+    max-height: 150px;
     width: 20%;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     display: flex;
@@ -29,7 +29,7 @@
     float: left;
     padding: 6px;
     margin-top: 180px;
-    margin-left: -316px;
+    margin-left: -305px;
     color: #ffffff;
 }
 .Return-Btn {
@@ -71,72 +71,364 @@
 }
 .Routine-Exercises>.Routine-Btn>button {
     float: left;
-    max-width: 218px;
+    max-width: 290px;
 }
 
-@media only screen and (max-width: 376px) {
+/* Mobile Small */
+/* @media only screen and (min-width: 320px) {
     .Routine-App {
-        width: 375px;
-        min-height: 672px;
         height: auto;
+        width: 320px;
     }
     .Routine-Routine-Info {
-        width: 100px;
-        height: 130px;
-        margin-top: 60px;
+        height: 75px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 70px;
     }
     .Routine-Routine-Details3 {
-
+        padding: 6px;
+        width: 275px;
     }
     .Routine-Routine-Details {
-        margin-top: 220px;
-        margin-left: -111px;
-        width: 100px;
-        height: 300px;
-    }
-    .Routine-Exercises {
-        justify-content: center;
-        min-height: 650px;
-        margin-top: -50px;
-        align-items: center;
-        margin-bottom: 60px;
-    }
-    .List-Container {
-        margin-left: -271px;
-        margin-top: 0px;
-        width: 400px;
+        max-height: 150px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 180px;
+        margin-left: 0px;
     }
     .Return-Btn {
-        float: left;
-        height: 50px;
-        width: 100px;
-        margin-top: 700px;
-        margin-left: -900px;
+
     }
-    .Return-Btn img {
-        width: 16px;
-        height: 16px;
+} */
+/* Mobile Medium */
+/* @media only screen and (min-width: 375px) {
+    .Routine-App {
+        height: auto;
+        width: 375px;
+    }
+    .Routine-Routine-Info {
+        height: 85px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 70px;
+        margin-left: 25px;
+    }
+    .Routine-Routine-Details3 {
+        padding: 6px;
+        width: 275px;
+    }
+    .Routine-Routine-Details {
+        max-height: 185px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+    .Return-Btn {
+
+    }
+    Button {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .Routine-Exercises {
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 70%;
+        max-height: 270px;
     }
     .Routine-Exercises>img {
         max-width: 218px;
         max-height: 200px;
-        float: none;
+        float: left;
     }
     .Routine-Text {
         margin-top: -100px;
+        margin-left: 430px;
+        width: 670px;
+        color: white;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     }
     .Routine-Text>h2 {
-        margin-top: 100px;
         width: 180px;
-        float: none;
-        color: #000000;
+        float: right;
     }
     .Routine-Exercises>.Routine-Btn>button {
-        float: none;
-        max-width: 218px;
+        float: left;
+        height: 25px;
+        max-width: 290px;
+        font-size: 15px;
+        margin-left: 0px;
     }
-    .Delete-Img {
-        width: 16px;
-        height: 16px;
+} */
+/* Mobile Large */
+/* @media only screen and (min-width: 425px) {
+    .Routine-App {
+        height: auto;
+        width: 425px;
+    }
+    .Routine-Routine-Info {
+        height: 85px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 70px;
+        margin-left: 25px;
+    }
+    .Routine-Routine-Details3 {
+        padding: 6px;
+        width: 275px;
+    }
+    .Routine-Routine-Details {
+        max-height: 185px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+    .Return-Btn {
+
+    }
+    Button {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #List-Container {
+        padding-top: -400px;
+    }
+    .Routine-Exercises {
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 70%;
+        max-height: 270px;
+    }
+    .Routine-Exercises>img {
+        max-width: 218px;
+        max-height: 200px;
+        float: left;
+    }
+    .Routine-Text {
+        margin-top: -100px;
+        margin-left: 430px;
+        width: 670px;
+        color: white;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+    .Routine-Text>h2 {
+        width: 180px;
+        float: right;
+    }
+    .Routine-Exercises>.Routine-Btn>button {
+        float: left;
+        height: 25px;
+        max-width: 290px;
+        font-size: 15px;
+        margin-left: 0px;
+    }
+} */
+/* Tablet */
+/* @media only screen and (min-width: 768px) {
+    .Routine-App {
+        height: auto;
+        width: 768px;
+    }
+    .Routine-Routine-Info {
+        height: 85px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 70px;
+        margin-left: 25px;
+    }
+    .Routine-Routine-Details3 {
+        padding: 6px;
+        width: 275px;
+    }
+    .Routine-Routine-Details {
+        max-height: 185px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+    .Return-Btn {
+
+    }
+    Button {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #List-Container {
+        padding-top: -1000px;
+    }
+    .Routine-Exercises {
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 30%;
+        height: 270px;
+    }
+    .Routine-Exercises>img {
+        max-width: 218px;
+        max-height: 200px;
+        float: left;
+    }
+    .Routine-Text {
+        margin-top: -100px;
+        margin-left: 230px;
+        width: 400px;
+        color: white;
+        height: 270px;
+    }
+    .Routine-Text>h2 {
+        width: 180px;
+        float: right;
+    }
+    .Routine-Exercises>.Routine-Btn>button {
+        float: left;
+        height: 25px;
+        max-width: 290px;
+        font-size: 15px;
+        margin-left: 0px;
+    }
+} */
+/* Laptop */
+/* @media only screen and (min-width: 1024px) {
+    .Routine-App {
+        height: auto;
+        width: 1024px;
+    }
+    .Routine-Routine-Info {
+        height: 85px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 70px;
+        margin-left: 25px;
+    }
+    .Routine-Routine-Details3 {
+        padding: 6px;
+        width: 275px;
+    }
+    .Routine-Routine-Details {
+        max-height: 185px;
+        width: 275px;
+        padding: 6px;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+    .Return-Btn {
+
+    }
+    Button {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #List-Container {
+        padding-top: -1000px;
+    }
+    .Routine-Exercises {
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 30%;
+        height: 270px;
+    }
+    .Routine-Exercises>img {
+        max-width: 218px;
+        max-height: 200px;
+        float: left;
+    }
+    .Routine-Text {
+        margin-top: -100px;
+        margin-left: 230px;
+        width: 400px;
+        color: white;
+        height: 270px;
+    }
+    .Routine-Text>h2 {
+        width: 180px;
+        float: right;
+    }
+    .Routine-Exercises>.Routine-Btn>button {
+        float: left;
+        height: 25px;
+        max-width: 290px;
+        font-size: 15px;
+        margin-left: 0px;
+    }
+} */
+/* Dell G7 */
+@media only screen and (max-width: 320px) {
+    .Routine-App {
+        min-height: 100vh;
+    }
+    .Routine-Routine-Info {
+        height: 75px;
+        width: 20%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 70px;
+        color: #ffffff;
+    }
+    .Routine-Routine-Details3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6px;
+    }
+    .Routine-Routine-Details {
+        max-height: 150px;
+        width: 20%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 180px;
+        margin-left: -305px;
+        color: #ffffff;
+    }
+    .Return-Btn {
+        display: flex;
+        float: left;
+        padding: 20px;
+        margin-top: 625px;
+        margin-left: -800px;
+    }
+    
+    .Routine-App {
+        background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+    }
+    .Routine-Exercises {
+        margin-left: 400px;
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        margin-top: 20px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        width: 60%;
+        max-height: 270px;
+        color: #ffffff;
+    }
+    .Routine-Exercises>img {
+        max-width: 218px;
+        max-height: 200px;
+        float: left;
+    }
+    .Routine-Text {
+        margin-top: -100px;
+        margin-left: 230px;
+        width: 670px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+    .Routine-Text>h2 {
+        width: 180px;
+        float: right;
+    }
+    .Routine-Exercises>.Routine-Btn>button {
+        float: left;
+        max-width: 290px;
     }
 }

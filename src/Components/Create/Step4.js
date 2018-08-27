@@ -4,6 +4,8 @@ import './Styles/Step4.css';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
+import {Button, Input, Select} from 'antd';
+
 class Step4 extends Component {
     constructor() {
         super();
@@ -75,19 +77,19 @@ class Step4 extends Component {
 
                 <div className='Step4-Body'>
                     <div>
-                        <input type='text' className='Search-Input' onChange={e => this.handleInputChange('searchInput', e.target.value)} value={this.state.searchInput} />
+                        <Input type='text' className='Search-Input' onChange={e => this.handleInputChange('searchInput', e.target.value)} value={this.state.searchInput} />
                     </div>
                     <div>
-                        <select className='Custom-Select' id='inlineFormCustomSelect' value={this.state.searchParameter} onChange={e => this.handleChange('searchParameter', e.target.value)}>
+                        <Select className='Custom-Select' id='inlineFormCustomSelect' value={this.state.searchParameter} onChange={e => this.handleChange('searchParameter', e.target.value)}>
                             <option defaultValue='...'>...</option>
                             <option value='name'>name</option>
                             <option value='equip'>equipment</option>
                             <option value='muscle_group'>muscle</option>
-                        </select>
+                        </Select>
                     </div>
                     <div>
-                        <button className='Search-Btn' onClick={() => this.handleUserSearch()}>Search</button>
-                        <button className='Reset-Btn' onClick={this.reset}>Reset</button>
+                        <Button className='Search-Btn' onClick={() => this.handleUserSearch()}>Search</Button>
+                        <Button className='Reset-Btn' onClick={this.reset}>Reset</Button>
                     </div>
                 <div className='All-Exercises'>
                 {displayExercises.map((exercise, i) => {

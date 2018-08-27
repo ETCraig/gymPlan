@@ -19,6 +19,8 @@ import SquatIcon from '../Assets/icons8-squats-16.png';
 import DeadLiftIcon from '../Assets/icons8-deadlift-16.png';
 import RowIcon from '../Assets/icons8-workout-16.png';
 
+import {Button} from 'antd';
+
 export default class Stats extends Component { 
     constructor() {
         super(); 
@@ -110,7 +112,7 @@ export default class Stats extends Component {
         if(this.state.bool === false) {
             return(
                 <div className='Edit'>
-                    <button onClick={() => this.setState({bool: true})}>UPDATE</button>
+                    <Button onClick={() => this.setState({bool: true})}>UPDATE</Button>
                     <br />
                     <div className='Edit-Left'>
                     <span>Height <img src={HeightIcon} alt='Height-Icon' /></span>
@@ -181,7 +183,7 @@ export default class Stats extends Component {
         else if(this.state.bool === true) {
             return (
                 <div className='Edit'>
-                    <button onClick={() => this.setState({bool: false, heigh_t: '', weight: '', bmi: '', body_fat: '', neck: '', shoulders: '', arms: '', chest: '', waist: '', thighs: '', calves: '', bench: '', squat: '', d_lift: '', row: ''})}>Cancel</button>
+                    <Button onClick={() => this.setState({bool: false, heigh_t: '', weight: '', bmi: '', body_fat: '', neck: '', shoulders: '', arms: '', chest: '', waist: '', thighs: '', calves: '', bench: '', squat: '', d_lift: '', row: ''})}>Cancel</Button>
                     <div className='Edit-Left'>
                     <span>Height</span>
                     <br />
@@ -246,7 +248,7 @@ export default class Stats extends Component {
                     <input onChange={(e) => this.setState({row: e.target.value})} placeholder='lbs' />
                     <br />
                     </div>
-                    <button onClick={() => this.handleUpdateStats()} className='Save'>Save</button>
+                    <Button onClick={() => this.handleUpdateStats()} className='Save'>Save</Button>
                 </div>
             );
         }

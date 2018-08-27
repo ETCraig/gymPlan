@@ -5,7 +5,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+    background: #ffffff
 }
 .Routines-Body {
     width: 50%;
@@ -45,7 +45,7 @@
     left: 20%;
     top: 16%;
     width: 800px;
-    height: 50px;
+    height: 85px;
     font-size: 40px;
     left: 0%;
     font-family: 'Audiowide', cursive;
@@ -127,10 +127,10 @@ a:hover {
     
 }
 .Profile-Img {
-    width: 200px;
-    height: 200px;
-    border-radius: 120px;
-    border: 5px solid #ffffff;
+    width: 210px;
+    height: 210px;
+    border-radius: 80px;
+    border: 8px solid #c5c5c5;
 }
 .Routines-Profile-Info-Content {
     
@@ -139,50 +139,311 @@ a:hover {
     font-size: 35px;
     padding-right: 10px;
     font-family: 'Audiowide', cursive;
-    color: white;
+    color: black;
 }
-
-
-
-
-@media only screen and (max-width: 376px) {
+/* Mobile Small */
+@media only screen and (min-width: 320px) {
     .Routines-App {
-        width: 375px;
-        min-height: 672px;
         height: auto;
+        width: 320px;
     }
     .Profile-Img {
-        height: 110%;
-        width: 110%;
-        margin-top: -40px;
-    }
-    .Routines-Profile-Info-Content {
-        padding-top: -80px;
-        height: 80%;
-        /* padding-top: -80px;
-        height: 80%; */
+        width: 150px;
+        height: 150px;
+        margin-left: 70px;
+        margin-top: -20px;
     }
     .Routines-Profile-Name {
-        font-size: 12.5px;
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    .Routine-List .Routine-Btn-Container {
+        padding: 12px;
+        border-radius: 10px;
+        left: 20%;
+        top: 16%;
+        width: 300px;
+        height: 45px;
+        font-size: 20px;
+        left: 0%;
+        font-family: 'Audiowide', cursive;
+        margin-top: 10px;
+        margin-right: 840px;
+    }
+    .Routines-Body {
+        margin-top: -190px;
+    }
+    .Routines-App .Desc-Content {
+        width: 250px;
+        margin-top: 0px;
+        margin-left: 24px;
+    }
+    .Routines-App.Desc-Content img {
+        float: left;
+        width: 50px;
+        height: 50px;
+    }
+    .Routines-App .Desc-Content h1 {
+        font-size: 30px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Routines-App .Desc-Content h2 {
+        height: 175px;
+        max-width: 220px;
+    }
+}
+/* Mobile Medium */
+@media only screen and (min-width: 375px) {
+    .Routines-App {
+        height: auto;
+        width: 375px;
+    }
+    .Profile-Img {
+        width: 150px;
+        height: 150px;
+        margin-left: 70px;
+        margin-top: -20px;
+    }
+    .Routines-Profile-Name {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    .Routine-List .Routine-Btn-Container {
+        padding: 12px;
+        border-radius: 10px;
+        left: 20%;
+        top: 16%;
+        width: 300px;
+        height: 45px;
+        font-size: 20px;
+        left: 0%;
+        font-family: 'Audiowide', cursive;
+        margin-top: 10px;
+        margin-right: 875px;
+    }
+    .Routines-Body {
+        margin-top: -190px;
+    }
+    .Routines-App .Desc-Content {
+        width: 250px;
+        margin-top: 0px;
+        margin-left: 24px;
+    }
+    .Routines-App.Desc-Content img {
+        float: left;
+        width: 50px;
+        height: 50px;
+    }
+    .Routines-App .Desc-Content h1 {
+        font-size: 30px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Routines-App .Desc-Content h2 {
+        height: 175px;
+        max-width: 220px;
+    }
+}
+/* Mobile Large */
+@media only screen and (min-width: 425px) {
+    .Routines-App {
+        height: auto;
+        width: 425px;
+    }
+    .Profile-Img {
+        width: 180px;
+        height: 180px;
+        margin-left: 70px;
+        margin-top: -20px;
+    }
+    .Routines-Profile-Name {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    .Routine-List .Routine-Btn-Container {
+        padding: 12px;
+        border-radius: 10px;
+        left: 20%;
+        top: 16%;
+        width: 300px;
+        height: 45px;
+        font-size: 20px;
+        left: 0%;
+        font-family: 'Audiowide', cursive;
+        margin-top: 10px;
+        margin-right: 890px;
+    }
+    .Routines-Body {
+        margin-top: -190px;
+    }
+    .Routines-App .Desc-Content {
+        width: 300px;
+        margin-top: 0px;
+        margin-left: -1px;
+    }
+    .Routines-App.Desc-Content img {
+        float: left;
+        width: 55px;
+        height: 55px;
+    }
+    .Routines-App .Desc-Content h1 {
+        font-size: 35px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Routines-App .Desc-Content h2 {
+        height: 150px;
+        max-width: 300px;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .Routines-App {
+        height: auto;
+        width: 768px;
     }
     .Routines-Dash-Profile {
-        padding: 2px;
+        margin-left: -5px;
     }
-    .Routines-Dash-Navbar1 {
-        height: 50px;
-        width: 33%;
-        margin-top: -110px;
+    .Routines-App .Profile-Img {
+        width: 180px;
+        height: 180px;
+        margin-left: 15px;
+        margin-top: -20px;
     }
-    .Routines-Dash-Navbar1>ul {
-        font-size: 10px;
+    .Routines-Profile-Name {
+        font-size: 30px;
+        margin-left: 5px;
     }
-    li {
-        padding: 5px;
+    .Routine-List .Routine-Btn-Container {
+        padding: 12px;
+        border-radius: 10px;
+        left: 20%;
+        top: 16%;
+        width: 400px;
+        height: 65px;
+        font-size: 20px;
+        left: 0%;
+        font-family: 'Audiowide', cursive;
+        margin-top: 10px;
+        margin-right: 370px;
+    }
+    .Routines-Body {
+        margin-top: -390px;
+    }
+    .Routines-App .Desc-Content {
+        width: 400px;
+        margin-top: -200px;
+        margin-left: 300px;
+    }
+    .Routines-App.Desc-Content img {
+        float: left;
+        width: 55px;
+        height: 55px;
+    }
+    .Routines-App .Desc-Content h1 {
+        font-size: 35px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Routines-App .Desc-Content h2 {
+        height: 150px;
+        max-width: 400px;
+        font-size: 17px;
+    }
+}
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+    .Routines-App {
+        height: auto;
+        width: 1024px;
+    }
+    .Routines-Dash-Profile {
+        margin-left: -5px;
+    }
+    .Routines-App .Profile-Img {
+        width: 180px;
+        height: 180px;
+        margin-left: 15px;
+        margin-top: -20px;
+    }
+    .Routines-Profile-Name {
+        font-size: 30px;
+        margin-left: 5px;
+    }
+    .Routine-List .Routine-Btn-Container {
+        padding: 12px;
+        border-radius: 10px;
+        left: 20%;
+        top: 16%;
+        width: 600px;
+        height: 65px;
+        font-size: 20px;
+        left: 0%;
+        font-family: 'Audiowide', cursive;
+        margin-top: 10px;
+        margin-right: 300px;
+        text-align: center;
+    }
+    .Routines-Body {
+        margin-top: -390px;
+    }
+    .Routines-App .Desc-Content {
+        width: 600px;
+        margin-top: -210px;
+        margin-left: 300px;
+    }
+    .Routines-App.Desc-Content img {
+        float: left;
+        width: 60px;
+        height: 60px;
+    }
+    .Routines-App .Desc-Content h1 {
+        font-size: 40px;
+        margin-left: 85px;
+        margin-top: -50px;
+    }
+    .Routines-App .Desc-Content h2 {
+        height: 130px;
+        max-width: 600px;
+        font-size: 20px;
+    }
+}
+/* Dell G7 */
+@media only screen and (min-width: 1400px) {
+    .Routines-App {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
     }
     .Routines-Body {
         width: 50%;
         height: 80%;
-        margin-top: -600px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 6px;
+        margin-left: 500px;
+        margin-top: -650px;
+    }
+    
+    .Routine-List > h2 {
+        padding: 0px;
+        /* height: 140px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        position: relative;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        background: grey; */
     }
     .Routine-List .Routine-Btn-Container {
         color: white;
@@ -195,11 +456,138 @@ a:hover {
         border-radius: 10px;
         left: 20%;
         top: 16%;
-        width: 200px;
-        height: 50px;
-        font-size: 25px;
-        left: -160%;
+        width: 800px;
+        height: 85px;
+        font-size: 40px;
+        left: 0%;
         font-family: 'Audiowide', cursive;
         margin-top: 10px;
+    }
+    .Routine-List .Routine-Btn-Container:hover {
+        background: white;
+        color: black;
+        border: 1px solid rgb(0, 0, 0);
+    }
+    .binsTitle {
+        position: absolute;
+        left: 310px; 
+        font-family: 'Open Sans', sans-serif;
+        font-size: 35px;
+        font-weight: 500px;
+        color: white;
+        top: -52px;
+        text-decoration: none;
+    }
+    .binsTitle h1 {
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+    }
+    
+    
+    
+    .Routine-List>day {
+    
+    }
+    .Routine-List>name {
+    
+    }
+    .Routine-List>muscle {
+    
+    }
+    .Routine-List>type {
+    
+    }
+    .Routine-List>diff {
+    
+    }
+    .Routine-List>desc {
+    
+    }
+    
+    
+    .Routines-Dash-App {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+      }
+    a:hover {
+        text-decoration: none;
+        color: white;
+        text-decoration: none;
+      }
+    /* Profile Img  */
+    .Routines-Dash-Profile {
+        height: 250px;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 12px;
+        margin-top: 50px;
+    }
+    .Routines-Profile-Img-Content {
+        
+    }
+    .Routines-Profile-Img {
+        
+    }
+    .Routines-App .Profile-Img {
+        width: 210px;
+        height: 210px;
+        border-radius: 80px;
+        border: 8px solid #c5c5c5;
+        margin-top: 10px;
+    }
+    .Routines-Profile-Info-Content {
+        
+    }
+    .Routines-Profile-Name {
+        font-size: 35px;
+        padding-right: 10px;
+        font-family: 'Audiowide', cursive;
+        color: white;
+    }
+    .Routines-App .Desc-Content {
+        background-color: #c5c5c5;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        width: 240px;
+        flex-direction: column;
+        justify-content: left;
+        align-content: left;
+        align-items: left;
+        float: left;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .Routines-App .Desc-Content img {
+        float: left;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+    }
+    .Routines-App .Desc-Content h1 {
+        float: right;
+        font-size: 35px;
+        margin-left: 85px;
+        margin-top: -60px;
+    }
+    .Routines-App .Desc-Content h2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        float: left;
+        word-wrap: break-word;
+        height: 190px;
+        max-width: 220px;
+        margin-left: 0px;
+        font-size: 15px;
     }
 }

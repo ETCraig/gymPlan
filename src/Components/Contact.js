@@ -8,6 +8,8 @@ import TwitterIcon from '../Assets/icons8-twitter-30.png';
 import FacebookIcon from '../Assets/icons8-facebook-30.png';
 import InstagramIcon from '../Assets/icons8-instagram-30.png';
 
+import {Input, Button, Form} from 'antd';
+
 export default class Contact extends Component {
     constructor() {
         super();
@@ -82,24 +84,24 @@ export default class Contact extends Component {
             </div>
 
                 <div className='Contact-Body' style={{color: 'black'}}>
-                    <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                    <Form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
                             <br />
-                            <input type="text" className="form-control" id="name" placeholder='Your Name'/>
+                            <Input size="large" type="text" className="form-control" id="name" placeholder='Your Name'/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email address</label>
                             <br />
-                            <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder='Your Email'/>
+                            <Input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder='Your Email'/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="message">Message</label>
                             <br />
                             <textarea className="form-control" rows="5" id="message" placeholder='Message'></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary">Submit <img src={SendIcon} alt='Send-Icon' /></button>
-                    </form>
+                        <Button type="submit" className="btn btn-primary">Submit <img src={SendIcon} alt='Send-Icon' /></Button>
+                    </Form>
                     <div className='Social-Media'>
                         <h2>Follow us at </h2>
                         <img src={TwitterIcon} alt='Twitter-Icon' />
