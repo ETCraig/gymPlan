@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Styles/Step4.css';
 
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import {Button, Input, Select} from 'antd';
+import { Button, Input, Select } from 'antd';
 
 class Step4 extends Component {
     constructor() {
@@ -27,23 +27,23 @@ class Step4 extends Component {
     }
     getUserInfo() {
         axios.get('/api/getUserInfo').then(res => {
-            this.setState({user: res.data});
+            this.setState({ user: res.data });
         });
     }
     getUserRoutine() {
         axios.get(`/api/getUserRoutine/${this.props.match.params.routine_id}`, console.log('sent', this.props.match.params.routine_id)).then(res => {
             console.log('res', res);
-            this.setState({routine: res.data[0]});
+            this.setState({ routine: res.data[0] });
         });
     }
     getAllExercises() {
         axios.get('/api/getAllExercises').then(res => {
-            this.setState({exercises: res.data});
+            this.setState({ exercises: res.data });
         });
     }
     handleUserSearch() {
         axios.get(`/api/getUserSearch/${this.state.searchParameter}/${this.state.searchInput}/${this.state.routine.routine_id}`).then(res => {
-            this.setState({exercises: res.data});
+            this.setState({ exercises: res.data });
         });
     }
     reset = () => {
@@ -57,13 +57,13 @@ class Step4 extends Component {
         this.getAllExercises();
     }
     handleChange(prop, val) {
-        this.setState({[prop]: val});
+        this.setState({ [prop]: val });
     }
     handleInputChange(prop, val) {
-        this.setState({[prop]: this.handleFormatCase(val)});
+        this.setState({ [prop]: this.handleFormatCase(val) });
     }
     handleFormatCase(str) {
-        if(str) {
+        if (str) {
             return str[0].toUpperCase() + str.slice(1).toLowerCase();
         } else {
             null;
@@ -72,7 +72,7 @@ class Step4 extends Component {
     render() {
         let displayExercises;
         displayExercises = this.state.exercises;
-        return(
+        return (
             <div className='Step4-App'>
 
                 <div className='Step4-Body'>
@@ -91,18 +91,18 @@ class Step4 extends Component {
                         <Button className='Search-Btn' onClick={() => this.handleUserSearch()}>Search</Button>
                         <Button className='Reset-Btn' onClick={this.reset}>Reset</Button>
                     </div>
-                <div className='All-Exercises'>
-                {displayExercises.map((exercise, i) => {
-                    return(
-                        <div className='Both-Sidez' key={i} style={{color: 'black'}}>
-                            <img src={exercise.picture} alt='Motion Pic' />
-                            <Link to={`/Step3/${this.state.routine.routine_id}/${exercise.exercise_id}`}><h2>{exercise.name}</h2></Link>
-                            <h2>{exercise.muscle_group}</h2>
-                            <h2>{exercise.equip}</h2>
-                        </div>
-                    )
-                })}
-                </div>
+                    <div className='All-Exercises'>
+                        {displayExercises.map((exercise, i) => {
+                            return (
+                                <div className='Both-Sidez' key={i} style={{ color: 'black' }}>
+                                    <img src={exercise.picture} alt='Motion Pic' />
+                                    <Link to={`/Step3/${this.state.routine.routine_id}/${exercise.exercise_id}`}><h2>{exercise.name}</h2></Link>
+                                    <h2>{exercise.muscle_group}</h2>
+                                    <h2>{exercise.equip}</h2>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         );

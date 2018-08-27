@@ -3,9 +3,9 @@ import './Toolbar.css';
 
 import DrawerToggle from '../SideDrawer/DrawerToggle';
 import GymIcon from '../../Assets/icons8-barbell-64.png';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import {Button} from 'antd';
+import { Button } from 'antd';
 
 const toolbar = props => (
     <header className='toolbar'>

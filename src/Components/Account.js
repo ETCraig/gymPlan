@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Styles/Account.css';
 
 import axios from 'axios';
 import AccountIcon from '../Assets/icons8-customer-80.png';
 
-import {Button, Input, Radio} from 'antd';
+import { Button, Input, Radio } from 'antd';
 import RadioGroup from 'antd/lib/radio/group';
 
 class Account extends Component {
@@ -23,7 +23,7 @@ class Account extends Component {
         this.handleAccountChange = this.handleAccountChange.bind(this);
         this.handleAccountDelete = this.handleAccountDelete.bind(this);
     }
-    
+
     componentDidMount() {
         axios.get('/api/checkLoggedIn').then().catch(res => {
             console.log('error');
@@ -33,11 +33,11 @@ class Account extends Component {
     }
     getUserInfo() {
         axios.get('/api/getUserInfo').then(res => {
-            this.setState({user: res.data});
+            this.setState({ user: res.data });
         });
     }
     handleAccountChange() {
-        if(window.confirm('Update Account?')) {
+        if (window.confirm('Update Account?')) {
             let newInfo = {
                 "first_name": this.state.first_name ? this.state.first_name : this.state.user.first_name,
                 "last_name": this.state.last_name ? this.state.last_name : this.state.user.last_name,
@@ -46,11 +46,11 @@ class Account extends Component {
             };
             console.log(newInfo);
             axios.patch('/api/updateUserAccount', newInfo).then(res => {
-                this.setState({user: res.data});
+                this.setState({ user: res.data });
             });
         }
         axios.get('/api/getUserInfo').then(res => {
-            this.setState({user: res.data});
+            this.setState({ user: res.data });
         });
         console.log('Getting Info Again');
         this.setState({
@@ -62,10 +62,10 @@ class Account extends Component {
         });
     }
     handleFeilds() {
-        if(this.state.bool === false) {
-            return(
+        if (this.state.bool === false) {
+            return (
                 <div className='Account-Edit'>
-                    <button onClick={() => this.setState({bool: true})}>UPDATE</button>
+                    <button onClick={() => this.setState({ bool: true })}>UPDATE</button>
                     <span>First Name</span>
                     <br />
                     <input type='text' value={this.state.user.first_name} readOnly placeholder='Your Name' />
@@ -81,36 +81,36 @@ class Account extends Component {
                     {/* <img src={this.state.profile_picture} alt='Profile Pic' /> */}
                     <br />
                     <div className='Gender'><span>Gender</span>
-                    <h2 value={this.state.user.gender}>{this.state.user.gender}</h2>
+                        <h2 value={this.state.user.gender}>{this.state.user.gender}</h2>
                     </div>
                 </div>
             );
         }
-        else if(this.state.bool === true) {
-            return(
+        else if (this.state.bool === true) {
+            return (
                 <div className='Account-Edit'>
-                    <button onClick={() => this.setState({bool: false, first_name: '', last_name: '', profile_picture: '', gender: ''})}>Cancel</button>
+                    <button onClick={() => this.setState({ bool: false, first_name: '', last_name: '', profile_picture: '', gender: '' })}>Cancel</button>
                     <span>First Name</span>
                     <br />
-                    <input onChange={(e) => this.setState({first_name: e.target.value})} />
+                    <input onChange={(e) => this.setState({ first_name: e.target.value })} />
                     <br />
                     <span>Last Name</span>
                     <br />
-                    <input onChange={(e) => this.setState({last_name: e.target.value})} />
+                    <input onChange={(e) => this.setState({ last_name: e.target.value })} />
                     <br />
                     <span>Profile Picture</span>
                     <br />
-                    <Input onChange={(e) => this.setState({profile_picture: e.target.value})} />
+                    <Input onChange={(e) => this.setState({ profile_picture: e.target.value })} />
                     <br />
                     {/* <img src={this.state.profile_picture} alt='Profile Pic' /> */}
                     <br />
                     <span>Gender</span>
                     <br />
                     <div className='Gender'>
-                    <RadioGroup onChange={(e) => this.setState({gender: e.target.value})}>
-                        <Radio value='Female'>Female</Radio>
-                        <Radio value='Male'>Male</Radio>
-                    </RadioGroup>
+                        <RadioGroup onChange={(e) => this.setState({ gender: e.target.value })}>
+                            <Radio value='Female'>Female</Radio>
+                            <Radio value='Male'>Male</Radio>
+                        </RadioGroup>
                     </div>
                     {/* <br /> */}
                     <button onClick={() => this.handleAccountChange()} className='Save'>Save</button>
@@ -124,32 +124,32 @@ class Account extends Component {
         });
     }
     render() {
-        return(
+        return (
             <div className='Account-App'>
                 <div className='Account-Dash-App'>
-                {/* <div className='Account-Dash-Header'>
+                    {/* <div className='Account-Dash-Header'>
                     <h1 className='Account-Title'>gymPlan</h1>
                     <button className='Account-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div> */}
 
-                <div className='Account-Dash-Profile'>
-                    <div className='Account-Profile-Img-Content'>
-                        <img src={this.state.user.profile_picture} alt='Profile' className='Profile-Img' />
-                    </div>
-                    <div className='Account-Profile-Info-Content'>
-                        <span className='Account-Profile-Name'>{this.state.user.first_name}</span>
-                        <span className='Account-Profile-Name'>{this.state.user.last_name}</span>
+                    <div className='Account-Dash-Profile'>
+                        <div className='Account-Profile-Img-Content'>
+                            <img src={this.state.user.profile_picture} alt='Profile' className='Profile-Img' />
+                        </div>
+                        <div className='Account-Profile-Info-Content'>
+                            <span className='Account-Profile-Name'>{this.state.user.first_name}</span>
+                            <span className='Account-Profile-Name'>{this.state.user.last_name}</span>
                             <div className='Desc-Content'>
                                 <img src={AccountIcon} alt='Goal-Icon' />
                                 <h1>Account</h1>
                                 <h2>Manage your personal account information such as your name and profile picture. Here you can also completely delete your account.</h2>
                             </div>
+                        </div>
                     </div>
+
                 </div>
 
-            </div>
-
-                <div className='Account-Body' style={{color: 'black'}}>
+                <div className='Account-Body' style={{ color: 'black' }}>
                     {this.handleFeilds()}
                     <br />
                     <br />

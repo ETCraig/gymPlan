@@ -2,42 +2,42 @@ import React from 'react';
 import './Styles/Login.css';
 import GymLogo from '../Assets/icons8-barbell-64.png';
 
-import {Button} from 'antd';
+import { Button } from 'antd';
 
 export default function Login() {
     function login() {
-        let { REACT_APP_DOMAIN, REACT_APP_CLIENT_ID, REACT_APP_CALLBACK_URL} = process.env;
+        let { REACT_APP_DOMAIN, REACT_APP_CLIENT_ID, REACT_APP_CALLBACK_URL } = process.env;
         let redirectUri = encodeURIComponent(`${window.location.origin + REACT_APP_CALLBACK_URL}`);
         window.location = `https://${REACT_APP_DOMAIN}/authorize?client_id=${REACT_APP_CLIENT_ID}&scope=openid%20profile%20email&redirect_uri=${redirectUri}&response_type=code`;
     }
-    
-    return(
+
+    return (
         <div className='Login-App'>
-        <ul className="cb-slideshow" style={{color: 'white', position: 'absolute'}}>
-            <li><span>Image 01</span><div><h3>am·bi·tion</h3></div></li>
-            <li><span>Image 02</span><div><h3>vi·sion</h3></div></li>
-            <li><span>Image 03</span><div><h3>prep·a·ra·tion</h3></div></li>
-            <li><span>Image 04</span><div><h3>ex·e·cu·tion</h3></div></li>
-            <li><span>Image 05</span><div><h3>ded·i·ca·tion</h3></div></li>
-            <li><span>Image 06</span><div><h3>re·flec·tion</h3></div></li>
-        </ul>
-        <div className='Container'>
-        <img src={GymLogo} alt='Gym-Logo' className='Logo' />
+            <ul className="cb-slideshow" style={{ color: 'white', position: 'absolute' }}>
+                <li><span>Image 01</span><div><h3>am·bi·tion</h3></div></li>
+                <li><span>Image 02</span><div><h3>vi·sion</h3></div></li>
+                <li><span>Image 03</span><div><h3>prep·a·ra·tion</h3></div></li>
+                <li><span>Image 04</span><div><h3>ex·e·cu·tion</h3></div></li>
+                <li><span>Image 05</span><div><h3>ded·i·ca·tion</h3></div></li>
+                <li><span>Image 06</span><div><h3>re·flec·tion</h3></div></li>
+            </ul>
+            <div className='Container'>
+                <img src={GymLogo} alt='Gym-Logo' className='Logo' />
 
 
-        
-            <div className='Intro-Content'>
+
+                <div className='Intro-Content'>
+                    <br />
+                    <h2>gymPlan</h2>
+                    <br />
+                    <p>Start creating your own personal routine!</p>
+                </div>
                 <br />
-                <h2>gymPlan</h2>
-                <br />
-                <p>Start creating your own personal routine!</p>
+                <div className='Btn-Content'>
+                    <Button className='Login-Btn' onClick={login} type="primary">Login / Register</Button>
+                </div>
             </div>
-            <br />
-            <div className='Btn-Content'>
-                <Button className='Login-Btn' onClick={login} type="primary">Login / Register</Button>
-            </div>
-            </div>
-        
+
             {/* <div className='Features-List1'>
                 <div className='Create'>
                     <h4>Create your own personalized Routines that fit your goals and lifestyle.</h4>
