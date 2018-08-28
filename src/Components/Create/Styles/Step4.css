@@ -3,7 +3,7 @@
 }
 .Step4-Body {
     padding-top: 80px;
-    background-image: url('https://www.solidbackgrounds.com/images/2560x1440/2560x1440-davys-grey-solid-color-background.jpg');
+    background: #ffffff;
 }
 .Search-Input {
     display: flex;

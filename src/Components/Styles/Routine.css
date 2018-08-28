@@ -1,5 +1,7 @@
 .Routine-App {
     min-height: 100vh;
+    background: #ffffff;
+    color: #333;
 }
 .Routine-Routine-Info {
     height: 75px;
@@ -11,13 +13,16 @@
     float: left;
     padding: 6px;
     margin-top: 70px;
-    color: #ffffff;
+    color: #333;
+    background: #c5c5c5;
 }
 .Routine-Routine-Details3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 6px;
+    color: #333;
+    background: #c5c5c5;
 }
 .Routine-Routine-Details {
     max-height: 150px;
@@ -30,7 +35,8 @@
     padding: 6px;
     margin-top: 180px;
     margin-left: -305px;
-    color: #ffffff;
+    color: #333;
+    background: #c5c5c5;
 }
 .Return-Btn {
     display: flex;
@@ -38,10 +44,6 @@
     padding: 20px;
     margin-top: 625px;
     margin-left: -800px;
-}
-
-.Routine-App {
-    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
 }
 .Routine-Exercises {
     margin-left: 400px;
@@ -52,7 +54,8 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     width: 60%;
     max-height: 270px;
-    color: #ffffff;
+    color: #333;
+    background: #c5c5c5;
 }
 .Routine-Exercises>img {
     max-width: 218px;
@@ -73,291 +76,11 @@
     float: left;
     max-width: 290px;
 }
-
-/* Mobile Small */
-/* @media only screen and (min-width: 320px) {
-    .Routine-App {
-        height: auto;
-        width: 320px;
-    }
-    .Routine-Routine-Info {
-        height: 75px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 70px;
-    }
-    .Routine-Routine-Details3 {
-        padding: 6px;
-        width: 275px;
-    }
-    .Routine-Routine-Details {
-        max-height: 150px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 180px;
-        margin-left: 0px;
-    }
-    .Return-Btn {
-
-    }
-} */
-/* Mobile Medium */
-/* @media only screen and (min-width: 375px) {
-    .Routine-App {
-        height: auto;
-        width: 375px;
-    }
-    .Routine-Routine-Info {
-        height: 85px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 70px;
-        margin-left: 25px;
-    }
-    .Routine-Routine-Details3 {
-        padding: 6px;
-        width: 275px;
-    }
-    .Routine-Routine-Details {
-        max-height: 185px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 25px;
-        margin-left: 25px;
-    }
-    .Return-Btn {
-
-    }
-    Button {
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    .Routine-Exercises {
-        margin-left: 20px;
-        margin-top: 20px;
-        width: 70%;
-        max-height: 270px;
-    }
-    .Routine-Exercises>img {
-        max-width: 218px;
-        max-height: 200px;
-        float: left;
-    }
-    .Routine-Text {
-        margin-top: -100px;
-        margin-left: 430px;
-        width: 670px;
-        color: white;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    }
-    .Routine-Text>h2 {
-        width: 180px;
-        float: right;
-    }
-    .Routine-Exercises>.Routine-Btn>button {
-        float: left;
-        height: 25px;
-        max-width: 290px;
-        font-size: 15px;
-        margin-left: 0px;
-    }
-} */
-/* Mobile Large */
-/* @media only screen and (min-width: 425px) {
-    .Routine-App {
-        height: auto;
-        width: 425px;
-    }
-    .Routine-Routine-Info {
-        height: 85px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 70px;
-        margin-left: 25px;
-    }
-    .Routine-Routine-Details3 {
-        padding: 6px;
-        width: 275px;
-    }
-    .Routine-Routine-Details {
-        max-height: 185px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 25px;
-        margin-left: 25px;
-    }
-    .Return-Btn {
-
-    }
-    Button {
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    #List-Container {
-        padding-top: -400px;
-    }
-    .Routine-Exercises {
-        margin-left: 20px;
-        margin-top: 20px;
-        width: 70%;
-        max-height: 270px;
-    }
-    .Routine-Exercises>img {
-        max-width: 218px;
-        max-height: 200px;
-        float: left;
-    }
-    .Routine-Text {
-        margin-top: -100px;
-        margin-left: 430px;
-        width: 670px;
-        color: white;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    }
-    .Routine-Text>h2 {
-        width: 180px;
-        float: right;
-    }
-    .Routine-Exercises>.Routine-Btn>button {
-        float: left;
-        height: 25px;
-        max-width: 290px;
-        font-size: 15px;
-        margin-left: 0px;
-    }
-} */
-/* Tablet */
-/* @media only screen and (min-width: 768px) {
-    .Routine-App {
-        height: auto;
-        width: 768px;
-    }
-    .Routine-Routine-Info {
-        height: 85px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 70px;
-        margin-left: 25px;
-    }
-    .Routine-Routine-Details3 {
-        padding: 6px;
-        width: 275px;
-    }
-    .Routine-Routine-Details {
-        max-height: 185px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 25px;
-        margin-left: 25px;
-    }
-    .Return-Btn {
-
-    }
-    Button {
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    #List-Container {
-        padding-top: -1000px;
-    }
-    .Routine-Exercises {
-        margin-left: 20px;
-        margin-top: 20px;
-        width: 30%;
-        height: 270px;
-    }
-    .Routine-Exercises>img {
-        max-width: 218px;
-        max-height: 200px;
-        float: left;
-    }
-    .Routine-Text {
-        margin-top: -100px;
-        margin-left: 230px;
-        width: 400px;
-        color: white;
-        height: 270px;
-    }
-    .Routine-Text>h2 {
-        width: 180px;
-        float: right;
-    }
-    .Routine-Exercises>.Routine-Btn>button {
-        float: left;
-        height: 25px;
-        max-width: 290px;
-        font-size: 15px;
-        margin-left: 0px;
-    }
-} */
-/* Laptop */
-/* @media only screen and (min-width: 1024px) {
-    .Routine-App {
-        height: auto;
-        width: 1024px;
-    }
-    .Routine-Routine-Info {
-        height: 85px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 70px;
-        margin-left: 25px;
-    }
-    .Routine-Routine-Details3 {
-        padding: 6px;
-        width: 275px;
-    }
-    .Routine-Routine-Details {
-        max-height: 185px;
-        width: 275px;
-        padding: 6px;
-        margin-top: 25px;
-        margin-left: 25px;
-    }
-    .Return-Btn {
-
-    }
-    Button {
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    #List-Container {
-        padding-top: -1000px;
-    }
-    .Routine-Exercises {
-        margin-left: 20px;
-        margin-top: 20px;
-        width: 30%;
-        height: 270px;
-    }
-    .Routine-Exercises>img {
-        max-width: 218px;
-        max-height: 200px;
-        float: left;
-    }
-    .Routine-Text {
-        margin-top: -100px;
-        margin-left: 230px;
-        width: 400px;
-        color: white;
-        height: 270px;
-    }
-    .Routine-Text>h2 {
-        width: 180px;
-        float: right;
-    }
-    .Routine-Exercises>.Routine-Btn>button {
-        float: left;
-        height: 25px;
-        max-width: 290px;
-        font-size: 15px;
-        margin-left: 0px;
-    }
-} */
 /* Dell G7 */
 @media only screen and (max-width: 320px) {
     .Routine-App {
         min-height: 100vh;
+        background: #ffffff;
     }
     .Routine-Routine-Info {
         height: 75px;
@@ -369,7 +92,7 @@
         float: left;
         padding: 6px;
         margin-top: 70px;
-        color: #ffffff;
+        color: #333;
     }
     .Routine-Routine-Details3 {
         display: flex;
@@ -388,7 +111,7 @@
         padding: 6px;
         margin-top: 180px;
         margin-left: -305px;
-        color: #ffffff;
+        color: #333;
     }
     .Return-Btn {
         display: flex;
@@ -410,7 +133,7 @@
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
         width: 60%;
         max-height: 270px;
-        color: #ffffff;
+        color: #333;
     }
     .Routine-Exercises>img {
         max-width: 218px;

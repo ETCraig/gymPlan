@@ -1,25 +1,41 @@
 import React, { Component } from 'react';
 import './BMIcalc.css';
 
+import axios from 'axios';
+import BMIIcon from '../../Assets/icons8-calculator-80.png';
+
 import { Input } from 'antd';
 
 class BMIcalc extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
+      user: [],
       weight: 150,
       heightInches: 6,
       heightFeet: 5,
     }
-    let storedState = window.localStorage.getItem('AppState');
-    if (storedState) {
-      this.state = JSON.parse(storedState);
-    }
+    // let storedState = window.localStorage.getItem('AppState');
+    // if (storedState) {
+    //   this.state = JSON.parse(storedState);
+    // }
   }
-
-  componentDidUpdate(prevProps, prevState) {
-    window.localStorage.setItem('AppState', JSON.stringify(this.state));
-  }
+  componentDidMount() {
+    axios.get('/api/checkLoggedIn').then().catch(res => {
+        console.log('error');
+        this.props.history.push('/');
+    });
+    this.getUserInfo();
+}
+  getUserInfo() {
+    axios.get('/api/getUserInfo').then(res => {
+        this.setState({ user: res.data });
+    });
+}
+  // componentDidUpdate(prevProps, prevState) {
+  //   window.localStorage.setItem('AppState', JSON.stringify(this.state));
+  // }
 
   bmi() {
     let w = parseFloat(this.state.weight);
@@ -42,6 +58,26 @@ class BMIcalc extends Component {
 
   render() {
     return (
+      <div className='BMI-App'>
+
+      <div className='BMI-Dash-App'>
+                    <div className='BMI-Dash-Profile'>
+                        <div className='BMI-Profile-Img-Content'>
+                            <img src={this.state.user.profile_picture} alt='Profile' className='Profile-Img' />
+                        </div>
+                        <div className='BMI-Profile-Info-Content'>
+                            <span className='BMI-Profile-Name'>{this.state.user.first_name}</span>
+                            <span className='BMI-Profile-Name'>{this.state.user.last_name}</span>
+                            <div className='Desc-Content'>
+                                <img src={BMIIcon} alt='Goal-Icon' />
+                                <h1>BMI</h1>
+                                <h2>Manage your personal BMI information such as your name and profile picture. Here you can also completely delete your BMI.</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
       <div className="BMI">
         <div className="Row">
           <div className="Span1">
@@ -76,6 +112,7 @@ class BMIcalc extends Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

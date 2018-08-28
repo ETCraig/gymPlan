@@ -4,7 +4,7 @@ import './Styles/Step4.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import { Button, Input, Select } from 'antd';
+import { Button, Input, select } from 'antd';
 
 class Step4 extends Component {
     constructor() {
@@ -80,12 +80,12 @@ class Step4 extends Component {
                         <Input type='text' className='Search-Input' onChange={e => this.handleInputChange('searchInput', e.target.value)} value={this.state.searchInput} />
                     </div>
                     <div>
-                        <Select className='Custom-Select' id='inlineFormCustomSelect' value={this.state.searchParameter} onChange={e => this.handleChange('searchParameter', e.target.value)}>
+                        <select className='Custom-select' id='inlineFormCustomSelect' value={this.state.searchParameter} onChange={e => this.handleChange('searchParameter', e.target.value)}>
                             <option defaultValue='...'>...</option>
                             <option value='name'>name</option>
                             <option value='equip'>equipment</option>
                             <option value='muscle_group'>muscle</option>
-                        </Select>
+                        </select>
                     </div>
                     <div>
                         <Button className='Search-Btn' onClick={() => this.handleUserSearch()}>Search</Button>

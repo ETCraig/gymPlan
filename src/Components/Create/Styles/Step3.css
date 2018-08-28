@@ -5,7 +5,7 @@
     height: 100vh;
     /* display: flex;
     flex-direction: column; */
-    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+    background: #ffffff;
 }
 .Step3-Body {
     height: 80%;
@@ -21,9 +21,10 @@
     padding: 5px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     margin: 5px;
+    background: #c5c5c5;
 }
 .Exercise-Desc {
-
+    
 }
 .Exercise-Desc>h1 {
     font-size: 29px;

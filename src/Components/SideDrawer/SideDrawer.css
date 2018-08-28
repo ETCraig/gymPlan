@@ -29,11 +29,11 @@
     align-items: center;
 }
 .side-drawer li:hover {
-    color: #000000;
+    color: white;
     cursor: pointer;
 }
-.side-drawer a {
-    color: white;
+.side-drawer ul li Link {
+    color: black;
     text-decoration: none;
     font-size: 2.2rem;
 }
@@ -46,13 +46,13 @@
 }
 li {
     padding: 15px;
-    background-color: black;
+    background-color: white;
     border-radius: 2px;
     font-family: 'Audiowide', cursive;
 }
 li:hover {
-    background-color: #ffffff;
-    color: black;
+    font-size: 15px;
+    color: white;
 }
 .Menu-Icon {
     margin-top: 10px;
@@ -135,29 +135,29 @@ li:hover {
         align-items: center;
     }
     .side-drawer li:hover {
-        color: #000000;
+        color: white;
         cursor: pointer;
     }
     .side-drawer a {
-        color: white;
+        color: black;
         text-decoration: none;
         font-size: 2.2rem;
     }
     .side-drawer a:hover,
     .side-drawer a:active {
-        color: #000000;
+        color: white;
     }
     .side-drawer li:hover {
         color: #000000;
     }
     li {
+        color: #333;
         padding: 15px;
-        background-color: black;
+        background-color: white;
         border-radius: 2px;
         font-family: 'Audiowide', cursive;
     }
     li:hover {
-        background-color: #ffffff;
         color: black;
     }
     .Menu-Icon {

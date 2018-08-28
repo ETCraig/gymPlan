@@ -33,12 +33,14 @@ class sideDrawer extends Component {
           onClose={this.onClose}
           visible={this.state.visible}
         >
-          <li><Link to='/Goals'>Goals</Link></li>
-          <li><Link to='/Stats'>Stats</Link></li>
-          <li><Link to='/BMIcalc'>BMI Calculator</Link></li>
-          <li><Link to='/Routines'>Routines</Link></li>
-          <li><Link to='/Account'>Account</Link></li>
-          <li><Link to='/Contact-us'>Contact Us</Link></li>
+        <div className='List'>
+          <li><Link to='/Goals' style={{color: '#333'}}>Goals</Link></li>
+          <li><Link to='/Stats' style={{color: '#333'}}>Stats</Link></li>
+          <li><Link to='/BMIcalc' style={{color: '#333'}}>BMI Calculator</Link></li>
+          <li><Link to='/Routines' style={{color: '#333'}}>Routines</Link></li>
+          <li><Link to='/Account' style={{color: '#333'}}>Account</Link></li>
+          <li><Link to='/Contact-us' style={{color: '#333'}}>Contact Us</Link></li>
+          </div>
         </Drawer>
       </div>
     );

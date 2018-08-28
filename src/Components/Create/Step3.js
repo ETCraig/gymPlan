@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import DeleteIcon from '../../Assets/icons8-delete-16.png';
 import AddIcon from '../../Assets/icons8-plus-16.png';
 
-import { Button, Select } from 'antd'
+import { Button, select } from 'antd'
 
-const Option = Select.option;
+const option = select.option;
 
 class Step3 extends Component {
     constructor(props) {
@@ -75,103 +75,103 @@ class Step3 extends Component {
                     <h3><strong>Description:</strong> {exercises.description}</h3>
                     <div className='Selectors'>
                         <h2><strong>Reps:</strong> </h2>
-                        <Select onChange={e => this.handleChange('reps', e.target.value)} onChange={this.handleChange} value={this.state.reps}>
-                            <Option defaultValue='...'>...</Option>
-                            <Option value='0'>0</Option>
-                            <Option value='5'>5</Option>
-                            <Option value='10'>10</Option>
-                            <Option value='15'>15</Option>
-                            <Option value='20'>20</Option>
-                            <Option value='25'>25</Option>
-                            <Option value='30'>30</Option>
-                            <Option value='35'>35</Option>
-                            <Option value='40'>40</Option>
-                            <Option value='45'>45</Option>
-                            <Option value='50'>50</Option>
-                            <Option value='55'>55</Option>
-                            <Option value='60'>60</Option>
-                            <Option value='65'>65</Option>
-                            <Option value='70'>70</Option>
-                            <Option value='75'>75</Option>
-                            <Option value='80'>80</Option>
-                            <Option value='85'>85</Option>
-                            <Option value='90'>90</Option>
-                            <Option value='95'>95</Option>
-                            <Option value='100'>100</Option>
-                        </Select>
+                        <select onChange={e => this.handleChange('reps', e.target.value)} onChange={this.handleChange} value={this.state.reps}>
+                            <option defaultValue='...'>...</option>
+                            <option value='0'>0</option>
+                            <option value='5'>5</option>
+                            <option value='10'>10</option>
+                            <option value='15'>15</option>
+                            <option value='20'>20</option>
+                            <option value='25'>25</option>
+                            <option value='30'>30</option>
+                            <option value='35'>35</option>
+                            <option value='40'>40</option>
+                            <option value='45'>45</option>
+                            <option value='50'>50</option>
+                            <option value='55'>55</option>
+                            <option value='60'>60</option>
+                            <option value='65'>65</option>
+                            <option value='70'>70</option>
+                            <option value='75'>75</option>
+                            <option value='80'>80</option>
+                            <option value='85'>85</option>
+                            <option value='90'>90</option>
+                            <option value='95'>95</option>
+                            <option value='100'>100</option>
+                        </select>
                         <h2><strong>Weight:</strong> </h2>
-                        <Select onChange={e => this.handleChange('weight', e.target.value)} onChange={this.handleChange} value={this.state.weight}>
-                            <Option defaultValue='...'>...</Option>
-                            <Option value='0'>0</Option>
-                            <Option value='5'>5</Option>
-                            <Option value='10'>10</Option>
-                            <Option value='15'>15</Option>
-                            <Option value='20'>20</Option>
-                            <Option value='25'>25</Option>
-                            <Option value='30'>30</Option>
-                            <Option value='35'>35</Option>
-                            <Option value='40'>40</Option>
-                            <Option value='45'>45</Option>
-                            <Option value='50'>50</Option>
-                            <Option value='55'>55</Option>
-                            <Option value='60'>60</Option>
-                            <Option value='65'>65</Option>
-                            <Option value='70'>70</Option>
-                            <Option value='75'>75</Option>
-                            <Option value='80'>80</Option>
-                            <Option value='85'>85</Option>
-                            <Option value='90'>90</Option>
-                            <Option value='95'>95</Option>
-                            <Option value='100'>100</Option>
-                            <Option value='105'>105</Option>
-                            <Option value='110'>110</Option>
-                            <Option value='115'>115</Option>
-                            <Option value='120'>120</Option>
-                            <Option value='125'>125</Option>
-                            <Option value='130'>130</Option>
-                            <Option value='135'>135</Option>
-                            <Option value='140'>140</Option>
-                            <Option value='145'>145</Option>
-                            <Option value='150'>150</Option>
-                            <Option value='155'>155</Option>
-                            <Option value='160'>160</Option>
-                            <Option value='165'>165</Option>
-                            <Option value='170'>170</Option>
-                            <Option value='175'>175</Option>
-                            <Option value='180'>180</Option>
-                            <Option value='185'>185</Option>
-                            <Option value='190'>190</Option>
-                            <Option value='195'>195</Option>
-                            <Option value='200'>200</Option>
-                            <Option value='205'>205</Option>
-                            <Option value='210'>210</Option>
-                            <Option value='215'>215</Option>
-                            <Option value='220'>220</Option>
-                            <Option value='225'>225</Option>
-                            <Option value='230'>230</Option>
-                            <Option value='235'>235</Option>
-                            <Option value='240'>240</Option>
-                            <Option value='245'>245</Option>
-                            <Option value='250'>250</Option>
-                            <Option value='255'>255</Option>
-                            <Option value='260'>260</Option>
-                            <Option value='265'>265</Option>
-                            <Option value='270'>270</Option>
-                            <Option value='275'>275</Option>
-                            <Option value='280'>280</Option>
-                            <Option value='285'>285</Option>
-                            <Option value='290'>290</Option>
-                            <Option value='295'>295</Option>
-                            <Option value='300'>300</Option>
-                            <Option value='305'>305</Option>
-                            <Option value='310'>310</Option>
-                            <Option value='315'>315</Option>
-                            <Option value='320'>320</Option>
-                            <Option value='325'>325</Option>
-                            <Option value='330'>330</Option>
-                            <Option value='335'>335</Option>
-                            <Option value='340'>340</Option>
-                        </Select>
+                        <select onChange={e => this.handleChange('weight', e.target.value)} onChange={this.handleChange} value={this.state.weight}>
+                            <option defaultValue='...'>...</option>
+                            <option value='0'>0</option>
+                            <option value='5'>5</option>
+                            <option value='10'>10</option>
+                            <option value='15'>15</option>
+                            <option value='20'>20</option>
+                            <option value='25'>25</option>
+                            <option value='30'>30</option>
+                            <option value='35'>35</option>
+                            <option value='40'>40</option>
+                            <option value='45'>45</option>
+                            <option value='50'>50</option>
+                            <option value='55'>55</option>
+                            <option value='60'>60</option>
+                            <option value='65'>65</option>
+                            <option value='70'>70</option>
+                            <option value='75'>75</option>
+                            <option value='80'>80</option>
+                            <option value='85'>85</option>
+                            <option value='90'>90</option>
+                            <option value='95'>95</option>
+                            <option value='100'>100</option>
+                            <option value='105'>105</option>
+                            <option value='110'>110</option>
+                            <option value='115'>115</option>
+                            <option value='120'>120</option>
+                            <option value='125'>125</option>
+                            <option value='130'>130</option>
+                            <option value='135'>135</option>
+                            <option value='140'>140</option>
+                            <option value='145'>145</option>
+                            <option value='150'>150</option>
+                            <option value='155'>155</option>
+                            <option value='160'>160</option>
+                            <option value='165'>165</option>
+                            <option value='170'>170</option>
+                            <option value='175'>175</option>
+                            <option value='180'>180</option>
+                            <option value='185'>185</option>
+                            <option value='190'>190</option>
+                            <option value='195'>195</option>
+                            <option value='200'>200</option>
+                            <option value='205'>205</option>
+                            <option value='210'>210</option>
+                            <option value='215'>215</option>
+                            <option value='220'>220</option>
+                            <option value='225'>225</option>
+                            <option value='230'>230</option>
+                            <option value='235'>235</option>
+                            <option value='240'>240</option>
+                            <option value='245'>245</option>
+                            <option value='250'>250</option>
+                            <option value='255'>255</option>
+                            <option value='260'>260</option>
+                            <option value='265'>265</option>
+                            <option value='270'>270</option>
+                            <option value='275'>275</option>
+                            <option value='280'>280</option>
+                            <option value='285'>285</option>
+                            <option value='290'>290</option>
+                            <option value='295'>295</option>
+                            <option value='300'>300</option>
+                            <option value='305'>305</option>
+                            <option value='310'>310</option>
+                            <option value='315'>315</option>
+                            <option value='320'>320</option>
+                            <option value='325'>325</option>
+                            <option value='330'>330</option>
+                            <option value='335'>335</option>
+                            <option value='340'>340</option>
+                        </select>
                         <div className=''>
                             {exercises.is_in_routine === true ? (
                                 <Button onClick={() => this.removeExercise(exercises.exercise_id, this.state.routine.routine_id)}>

@@ -5,7 +5,7 @@
     height: 100vh; */
     /* display: flex;
     flex-direction: column; */
-    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+    background: #ffffff;
 }
 .Step2-Body {
     width: 50%;
@@ -15,7 +15,7 @@
     align-content: center;
     align-items: center;
     padding: 6px;
-    color: black;
+    color: #333;
     margin-left: 500px;
     margin-top: 0px;
 }
@@ -24,6 +24,8 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     margin: 5px;
     font-family: 'Audiowide', cursive;
+    background: #c5c5c5;
+    color: #333;
 }
 .Step2-Routine-List > h2 {
     padding: 0px;
@@ -74,13 +76,16 @@
     float: left;
     padding: 6px;
     margin-top: 70px;
-    color: #f2f2f2;
+    color: #333;
+    background: #c5c5c5;
 }
 .Step2-Routine-Details2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 6px;
+    color: #333;
+    background: #c5c5c5;
 }
 .Step2-Routine-Details {
     height: 100px;
@@ -93,43 +98,6 @@
     padding: 6px;
     margin-top: 180px;
     margin-left: -316px;
-    color: white;
+    color: #333;
+    background: #c5c5c5;
 } 
-
-
-
-
-@media only screen and (max-width: 376px) {
-    .Step2-App {
-        width: 375px;
-        min-height: 672px;
-        height: auto;
-    }
-    .Step2-Routine-Info {
-        height: 150px;
-        width: 10%;
-        background: transparent;
-    }
-    .Step2-Routine-Details2 {
-        color: transparent;
-        background: transparent;
-    }
-    .Step2-Routine-Details {
-        background: transparent;
-    }
-    .Step2-Routine-List {
-        margin-right: 825px;
-    }
-    .Step2-Return-Btn {
-        margin-left: 10px;
-        margin-top: 60px;
-    }
-    .Step2-Routine-List>img {
-        width: 255px;
-        height: 220px;
-    }
-    .Step2-Routine-Info {
-        background: transparent;
-        color: transparent;
-    }
-}

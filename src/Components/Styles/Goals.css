@@ -67,7 +67,7 @@ a:hover {
     font-size: 35px;
     padding-right: 10px;
     font-family: 'Audiowide', cursive;
-    color: black;
+    color: #333;
 }
 .Desc-Content {
     background-color: #c5c5c5;
@@ -694,7 +694,7 @@ Input {
         font-size: 35px;
         padding-right: 10px;
         font-family: 'Audiowide', cursive;
-        color: black;
+        color: #333;
     }
     .Desc-Content {
         background-color: #c5c5c5;
@@ -746,7 +746,7 @@ Input {
         width: 342px;
         align-items: center;
         padding: 24px;
-        color: black;
+        color: #333;
         text-align: center;
         margin-bottom: 10px;
         background-color: #c5c5c5;

@@ -5,7 +5,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column; */
-    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+    background: #ffffff;
 }
 .Exersise-List>.Both-Sides {
     margin-top: 80px;
@@ -24,13 +24,14 @@
     padding: 5px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     margin: 5px;
+    background: #c5c5c5;
 }
 .Step1-Both-Sides>img {
     width: 218px;
     height: 175px;
 }
 .Step1-Both-Sides {
-    color: white;
+    color: #333;
     font-family: 'Changa', sans-serif;
 }
 
@@ -47,13 +48,16 @@
     float: left;
     padding: 6px;
     margin-top: 70px;
-    color: #f2f2f2;
+    color: #333;
+    background: #c5c5c5;
 }
 .Step1-Routine-Details3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 6px;
+    color: #333;
+    background: #c5c5c5;
 }
 .Step1-Routine-Details {
     height: 100px;
@@ -66,7 +70,8 @@
     padding: 6px;
     margin-top: 180px;
     margin-left: -316px;
-    color: white;
+    color: #333;
+    background: #c5c5c5;
 } 
 .Return-Btn {
     display: flex;
@@ -95,7 +100,7 @@
 }
 .Search_Btn:hover {
     cursor: pointer;
-    color: white;
+    color: #333;
     background: black;
 }
 
@@ -106,29 +111,35 @@
 
 
 
-
-@media only screen and (max-width: 376px) {
+/* Mobile Small */
+@media only screen and (min-width: 320px) {
     .Step1-App {
-        width: 375px;
+        width: 320px;
         min-height: 672px;
         height: auto;
     }
-    .Step1-Routine-Info {
+    /* .Step1-Routine-Info {
         height: 150px;
         width: 10%;
+        font-size: 0px;
+        margin-left: -50px;
     }
     .Step1-Routine-Details {
         height: 150px;
         width: 10%;
-    }
+        font-size: 0px;
+        margin-left: -50px;
+    } */
     .Step1-Routine-Details3 {
         color: transparent;
+        font-size: 0px;
+        margin-left: -50px;
     }
     .Search_Btn {
         margin-top: 30px;
     }
     .Exersise-List {
-        margin-left: -80px;
+        margin-left: -118px;
         flex-direction: column;
         width: 430px;
     }
@@ -152,5 +163,350 @@
     .Return-Btn {
         margin-left: 10px;
         margin-top: 40px;
+    }
+}
+/* Mobile Medium */
+@media only screen and (min-width: 375px) {
+    .Step1-App {
+        width: 375px;
+        min-height: 672px;
+        height: auto;
+    }
+    /* .Step1-Routine-Info {
+        height: 150px;
+        width: 10%;
+        font-size: 0px;
+        margin-left: -50px;
+    }
+    .Step1-Routine-Details {
+        height: 150px;
+        width: 10%;
+        font-size: 0px;
+        margin-left: -50px;
+    } */
+    .Step1-Routine-Details3 {
+        color: transparent;
+        font-size: 0px;
+        margin-left: -50px;
+    }
+    .Search_Btn {
+        margin-top: 30px;
+    }
+    .Exersise-List {
+        margin-left: -90px;
+        flex-direction: column;
+        width: 430px;
+    }
+    .Exersise-List:after {
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    img {
+        width: 135px;
+        height: 120px;
+    }
+    .Step1-Routine-Details {
+        width: 0px;
+        height: 0px;
+    }
+    .Step1-Routine-Info {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+    .Return-Btn {
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+}
+/* Mobile Large */
+@media only screen and (min-width: 425px) {
+    .Step1-App {
+        width: 425px;
+        min-height: 672px;
+        height: auto;
+    }
+    /* .Step1-Routine-Info {
+        height: 150px;
+        width: 10%;
+        font-size: 0px;
+        margin-left: -50px;
+    }
+    .Step1-Routine-Details {
+        height: 150px;
+        width: 10%;
+        font-size: 0px;
+        margin-left: -50px;
+    } */
+    .Step1-Routine-Details3 {
+        color: transparent;
+        font-size: 0px;
+        margin-left: -50px;
+    }
+    .Search_Btn {
+        margin-top: 30px;
+    }
+    .Exersise-List {
+        margin-left: -65px;
+        flex-direction: column;
+        width: 430px;
+    }
+    .Exersise-List:after {
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    img {
+        width: 135px;
+        height: 120px;
+    }
+    .Step1-Routine-Details {
+        width: 0px;
+        height: 0px;
+    }
+    .Step1-Routine-Info {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+    .Return-Btn {
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .Step1-App {
+        width: 768px;
+        min-height: 672px;
+        height: auto;
+    }
+    /* .Step1-Routine-Info {
+        height: 100px;
+        width: 20%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        font-size: 10px;
+        margin-top: 80px;
+        color: #333;
+        background: #c5c5c5;
+    }
+    .Step1-Routine-Details3 {
+        display: flex;
+        width: 20%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6px;
+        font-size: 10px;
+        color: #333;
+        background: #c5c5c5;
+    } */
+    .Step1-Routine-Details {
+        min-height: 150px;
+        min-width: 30%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 180px;
+        font-size: 15px;
+        margin-left: 0px;
+        color: #333;
+        background: #c5c5c5;
+    } 
+    .Search_Btn {
+        margin-top: 30px;
+    }
+    .Exersise-List {
+        margin-left: 200px;
+        flex-direction: column;
+        width: 430px;
+    }
+    .Exersise-List:after {
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    img {
+        width: 135px;
+        height: 120px;
+    }
+    .Step1-Routine-Details {
+        width: 0px;
+        height: 0px;
+    }
+    .Step1-Routine-Info {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+    .Return-Btn {
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+}
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+    .Step1-App {
+        width: 1024px;
+        min-height: 672px;
+        height: auto;
+    }
+    /* 
+    \ */
+    .Step1-Routine-Details {
+        min-height: 100px;
+        min-width: 30%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 180px;
+        font-size: 15px;
+        margin-left: 0px;
+        color: #333;
+        background: #c5c5c5;
+    } 
+    .Search_Btn {
+        margin-top: 30px;
+    }
+    .Exersise-List {
+        margin-left: 300px;
+        flex-direction: column;
+        width: 650px;
+    }
+    .Exersise-List:after {
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    img {
+        width: 205px;
+        height: 190px;
+    }
+    .Step1-Routine-Details {
+        width: 0px;
+        height: 0px;
+    }
+    .Step1-Routine-Info {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+    .Return-Btn {
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+}
+/* Dell G7 */
+@media only screen and (min-width: 1400px) {
+    .Step1-App {
+        /* width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column; */
+        width: auto;
+        background: #ffffff;
+    }
+    .Exersise-List>.Both-Sides {
+        margin-top: 80px;
+    }
+    .Exersise-List:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .Exersise-List>img:hover {
+        cursor: pointer;
+    }
+    .Step1-Both-Sides {
+        float: right;
+        width: 33.33%;
+        padding: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        background: #c5c5c5;
+    }
+    .Step1-Both-Sides>img {
+        width: 218px;
+        height: 175px;
+    }
+    .Step1-Both-Sides {
+        color: #333;
+        font-family: 'Changa', sans-serif;
+    }
+    
+    
+    
+    
+    .Step1-Routine-Info {
+        height: 75px;
+        width: 20%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 70px;
+        color: #333;
+        background: #c5c5c5;
+    }
+    .Step1-Routine-Details3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6px;
+        color: #333;
+        background: #c5c5c5;
+    }
+    .Step1-Routine-Details {
+        height: 100px;
+        width: 20%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 180px;
+        margin-left: -316px;
+        color: #333;
+        background: #c5c5c5;
+    } 
+    .Return-Btn {
+        display: flex;
+        float: left;
+        padding: 6px;
+        margin-top: 625px;
+        margin-left: -200px;
+        font-size: 15px;
+        font-weight: bold;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+    .Return-Btn:hover {
+        cursor: pointer;
+    }
+    .Search_Btn {
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 0.5%;
+        min-width: 12%;
+        width: auto;
+        font-size: 15px;
+        margin-top: 0;
+        font-weight: bold;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+    .Search_Btn:hover {
+        cursor: pointer;
+        color: #333;
+        background: black;
     }
 }

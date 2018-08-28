@@ -5,6 +5,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import RoutinesIcon from '../Assets/icons8-edit-property-80.png';
 
+import {Button} from 'antd'; 
+
 class Routines extends Component {
     constructor(props) {
         super(props);
@@ -62,7 +64,7 @@ class Routines extends Component {
                 <div className='Routines-Dash-App'>
                     {/* <div className='Routines-Dash-Header'>
                     <h1 className='Routines-Title'>gymPlan</h1>
-                    <button className='Routines-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
+                    <Button className='Routines-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></Button>
                 </div> */}
 
                     <div className='Routines-Dash-Profile'>
@@ -83,7 +85,7 @@ class Routines extends Component {
                 </div>
 
                 <div className='Routines-Body' style={{ color: 'black' }}>
-                    {/* <Link to='/Create'><button>Create New Routine</button></Link> */}
+                    <Link to='/Create'><Button>Create New Routine</Button></Link>
                     <div className='binsTitle'>
                         {/* <Link to = {`/Exercises/${this.props.match.params.id}`}><h1>Routine! {this.props.match.params.id}</h1></Link> */}
                     </div>

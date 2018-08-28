@@ -3,7 +3,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+    background: #ffffff;
 }
 .Contact-Body {
     width: 40%;
@@ -16,6 +16,7 @@
     padding: 6px;
     margin-left: 500px;
     margin-top: -650px;
+    background: #c5c5c5;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 #contact-form {
@@ -56,7 +57,7 @@ Input {
 }
 .Goals-List {
     font-size: 30px;
-    color: black;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +104,7 @@ a:hover {
     font-size: 35px;
     padding-right: 10px;
     font-family: 'Audiowide', cursive;
-    color: black;
+    color: #333;
 }
 .Social-Media {
     margin-top: 20px;
@@ -488,7 +489,7 @@ a:hover {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jVhILry/grey-4k-motion-background_eye4pxwjl__F0000.png');
+        background: #ffffff;
     }
     .Contact-Body {
         width: 40%;
@@ -501,6 +502,7 @@ a:hover {
         padding: 6px;
         margin-left: 500px;
         margin-top: -650px;
+        background: #c5c5c5;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     }
     #contact-form {
@@ -545,7 +547,7 @@ a:hover {
     }
     .Goals-List {
         font-size: 30px;
-        color: black;
+        color: #333;
         display: flex;
         justify-content: center;
         align-items: center;

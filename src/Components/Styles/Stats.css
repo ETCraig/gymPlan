@@ -53,7 +53,7 @@
     height: 40px;
 }
 .Edit input {
-    border: 1px solid black;
+    border: 1px solid #333;
 }
 .Edit Button {
     border: none;
@@ -149,7 +149,7 @@ a:hover {
     font-size: 35px;
     padding-right: 10px;
     font-family: 'Audiowide', cursive;
-    color: black;
+    color: #333;
 }
 .Lower-Icon, 
 .Upper-Icon {
@@ -782,11 +782,11 @@ a:hover {
         margin-top: 0;
         margin-bottom: 1.5%;
         font-weight: bold;
-        color: black;
+        color: #333;
         height: 40px;
     }
     .Edit input {
-        border: 1px solid black;
+        border: 1px solid #333;
     }
     .Edit Button {
         border: none;
@@ -804,7 +804,7 @@ a:hover {
     }
     .Edit button:hover {
         cursor: pointer;
-        background: #000000;
+        background: #333;
         color: #ffffff;
     }
     .Edit span {
@@ -883,7 +883,7 @@ a:hover {
         font-size: 35px;
         padding-right: 10px;
         font-family: 'Audiowide', cursive;
-        color: black;
+        color: #333;
     }
     .Lower-Icon, 
     .Upper-Icon {
