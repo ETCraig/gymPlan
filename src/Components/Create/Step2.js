@@ -71,7 +71,7 @@ class Step2 extends Component {
 
                 <Link to={`/Step1/${this.props.match.params.routine_id}`}><Button className='Step2-Return-Btn'>Muscle Groups</Button></Link>
                 <br /><br /><br />
-                <Link to={`/Step3/${this.state.routine.routine_id}`}><Button className='Step2-Return-Btn'>View Full Routine</Button></Link>
+                <Link to={`/Step3/${this.state.routine.routine_id}`}><Button className='Step2-Return-Btn' id='btn-2'>View Full Routine</Button></Link>
 
                 <div className='Step2-Body'>
 

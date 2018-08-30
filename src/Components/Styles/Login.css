@@ -542,12 +542,15 @@ p.codrops-demos a.current-demo:hover{
         max-width: 200px;
     }
     .Intro-Content>h2 {
-        margin-top: -150px;
-        margin-left: -160px;
-        font-size: 30px;
+        margin-top: -153px;
+        margin-left: -120px;
+        font-size: 1.5rem;
     }
     .Logo {
-        font-size: 0px;
+        height: 40px;
+        width: 40px;
+        margin-left: 5px;
+        margin-top: -330px;
     }
     .Intro-Content>p {
         font-size: 20px;
@@ -579,9 +582,15 @@ p.codrops-demos a.current-demo:hover{
         max-width: 20px;
     }
     .Intro-Content>h2 {
-        margin-top: -150px;
-        margin-left: -180px;
-        font-size: 35px;
+        margin-top: -152px;
+        margin-left: -145px;
+        font-size: 1.5rem;
+    }
+    .Logo { 
+        height: 40px;
+        width: 40px;
+        margin-left: -25px;
+        margin-top: -330px;
     }
     /* .Logo {
         margin-left: -10px;
@@ -592,7 +601,7 @@ p.codrops-demos a.current-demo:hover{
     .Intro-Content>p {
         font-size: 20px;
         margin-top: 0px;
-        margin-left: -185px;
+        margin-left: -175px;
         max-width: 20px;
     }
     .cb-slideshow {

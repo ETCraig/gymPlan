@@ -149,8 +149,8 @@ a:hover {
 /* Mobile Small */
 @media only screen and (min-width: 320px) {
   .BMI-App {
-    height: auto;
-    width: 320px;
+    min-height: 672px;
+    min-width: 320px;
   }
   .BMI-Profile-Img {
     width: 210px;

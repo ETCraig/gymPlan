@@ -69,7 +69,7 @@ class Step3 extends Component {
                 <div className='Exercise-Desc' key={i}>
                     <h1>{exercises.name}</h1>
                     <br />
-                    <img src={exercises.picture} alt='Motion Pic' />
+                    <img id='img-single' src={exercises.picture} alt='Motion Pic' />
                     <h3><strong>Muscle Group:</strong> {exercises.muscle_group}</h3>
                     <h3><strong>Equipment:</strong> {exercises.equip}</h3>
                     <h3><strong>Description:</strong> {exercises.description}</h3>
@@ -172,7 +172,7 @@ class Step3 extends Component {
                             <option value='335'>335</option>
                             <option value='340'>340</option>
                         </select>
-                        <div className=''>
+                        <div className='Change-Btn'>
                             {exercises.is_in_routine === true ? (
                                 <Button onClick={() => this.removeExercise(exercises.exercise_id, this.state.routine.routine_id)}>
                                     <h2>Remove {exercises.name} <img src={DeleteIcon} alt='Delete-Icon' className='Btn-Img' /></h2>

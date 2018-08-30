@@ -101,3 +101,291 @@
     color: #333;
     background: #c5c5c5;
 } 
+/* Mobile Small */
+@media only screen and (min-width: 320px) {
+    .Step2-App {
+        min-height: 672px;
+        min-width: 320px;
+    }
+    .Step2-Body {
+        width: 30%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 6px;
+        color: #333;
+        margin-left: 110px;
+        margin-top: 240px;
+    }
+    .Step2-Routine-List {
+        padding: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        font-family: 'Audiowide', cursive;
+        background: #c5c5c5;
+        color: #333;
+    }
+    .Step2-Routine-List > h2 {
+        padding: 0px;
+    }
+    .Step2-Routine-List>img {
+        width: 250px;
+        height: 135px;
+    }
+    .Step2-Return-Btn {
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+}
+/* Mobile Medium */
+@media only screen and (min-width: 375px) {
+    .Step2-App {
+        min-height: 672px;
+        min-width: 375px;
+    }
+    .Step2-Body {
+        width: 30%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 6px;
+        color: #333;
+        margin-left: 130px;
+        margin-top: 240px;
+    }
+    .Step2-Routine-List {
+        padding: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        font-family: 'Audiowide', cursive;
+        background: #c5c5c5;
+        color: #333;
+    }
+    .Step2-Routine-List > h2 {
+        padding: 0px;
+    }
+    .Step2-Routine-List>img {
+        width: 270px;
+        height: 155px;
+    }
+    .Step2-Return-Btn {
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+}
+/* Mobile Large */
+@media only screen and (min-width: 425px) {
+    .Step2-App {
+        min-height: 672px;
+        min-width: 425px;
+    }
+    .Step2-Body {
+        width: 30%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 6px;
+        color: #333;
+        margin-left: 150px;
+        margin-top: 240px;
+    }
+    .Step2-Routine-List {
+        padding: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        font-family: 'Audiowide', cursive;
+        background: #c5c5c5;
+        color: #333;
+    }
+    .Step2-Routine-List > h2 {
+        padding: 0px;
+    }
+    .Step2-Routine-List>img {
+        width: 300px;
+        height: 185px;
+    }
+    .Step2-Return-Btn {
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .Step2-App {
+        min-height: 672px;
+        min-width: 768px;
+    }
+    .Step2-Body {
+        width: 30%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 6px;
+        color: #333;
+        margin-left: 270px;
+        margin-top: 150px;
+    }
+    .Step2-Routine-List {
+        padding: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        font-family: 'Audiowide', cursive;
+        background: #c5c5c5;
+        color: #333;
+    }
+    .Step2-Routine-List > h2 {
+        padding: 0px;
+    }
+    .Step2-Routine-List>img {
+        width: 400px;
+        height: 285px;
+    }
+    .Step2-Return-Btn {
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+   #btn-2 {
+        margin-left: -118px;
+        margin-top: 46px;
+    }
+    .Step2-Routine-Info {
+        height: 130px;
+        width: 20%;
+        padding: 6px;
+        margin-top: 70px;
+    }
+    .Step2-Routine-Details2 {
+        padding: 6px;
+    }
+    .Step2-Routine-Details {
+        height: 100px;
+        width: 20%;
+        padding: 6px;
+        margin-top: 180px;
+        margin-left: -316px;
+    } 
+}
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+    .Step2-App {
+        min-height: 672px;
+        min-width: 1024px;
+    }
+    .Step2-Body {
+        width: 30%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 6px;
+        color: #333;
+        margin-left: 450px;
+        margin-top: 120px;
+    }
+    .Step2-Routine-List {
+        padding: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        font-family: 'Audiowide', cursive;
+        background: #c5c5c5;
+        color: #333;
+    }
+    .Step2-Routine-List > h2 {
+        padding: 0px;
+    }
+    .Step2-Routine-List>img {
+        width: 500px;
+        height: 385px;
+    }
+    .Step2-Return-Btn {
+        margin-top: 70px;
+        margin-left: 30px;
+    }
+   #btn-2 {
+        margin-left: -118px;
+        margin-top: 46px;
+    }
+    .Step2-Routine-Info {
+        height: 95px;
+        width: 20%;
+        padding: 6px;
+        margin-top: 70px;
+    }
+    .Step2-Routine-Details2 {
+        padding: 6px;
+    }
+    .Step2-Routine-Details {
+        height: 150px;
+        width: 20%;
+        padding: 6px;
+        margin-top: 180px;
+        margin-left: -205px;
+    } 
+}
+/* Dell G7 */
+@media only screen and (min-width: 1400px) {
+    .Step2-App {
+        min-height: 672px;
+        min-width: 1400px;
+    }
+    .Step2-Body {
+        width: 30%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 6px;
+        color: #333;
+        margin-left: 550px;
+        margin-top: 120px;
+    }
+    .Step2-Routine-List {
+        padding: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        margin: 5px;
+        font-family: 'Audiowide', cursive;
+        background: #c5c5c5;
+        color: #333;
+    }
+    .Step2-Routine-List > h2 {
+        padding: 0px;
+    }
+    .Step2-Routine-List>img {
+        width: 500px;
+        height: 385px;
+    }
+    .Step2-Return-Btn {
+        margin-top: 70px;
+        margin-left: 30px;
+    }
+   #btn-2 {
+        margin-left: -118px;
+        margin-top: 46px;
+    }
+    .Step2-Routine-Info {
+        height: 95px;
+        width: 20%;
+        padding: 6px;
+        margin-top: 70px;
+    }
+    .Step2-Routine-Details2 {
+        padding: 6px;
+    }
+    .Step2-Routine-Details {
+        height: 150px;
+        width: 20%;
+        padding: 6px;
+        margin-top: 180px;
+        margin-left: -305px;
+    } 
+}

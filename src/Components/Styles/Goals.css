@@ -542,8 +542,8 @@ Input {
 /* Laptop */
 @media only screen and (min-width: 1024px) {
     .Goals-Appp {
-        height: 1000px;
-        width: 1024;
+        min-height: 1000px;
+        min-width: 1024px;
     }
     .Goals-Intro {
         margin-top: -350px;
