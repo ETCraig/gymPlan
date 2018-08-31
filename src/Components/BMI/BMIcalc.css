@@ -194,8 +194,8 @@ a:hover {
 /* Mobile Medium */
 @media only screen and (min-width: 375px) {
   .BMI-App {
-    height: auto;
-    width: 375px;
+    min-height: 672px;
+    min-width: 375px;
   }
   .BMI-Dash-Profile {
     margin-left: 20px;

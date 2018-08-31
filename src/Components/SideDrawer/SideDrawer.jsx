@@ -40,6 +40,7 @@ class sideDrawer extends Component {
           <li><Link to='/Routines' style={{color: '#333'}}>Routines</Link></li>
           <li><Link to='/Account' style={{color: '#333'}}>Account</Link></li>
           <li><Link to='/Contact-us' style={{color: '#333'}}>Contact Us</Link></li>
+          {/* <li><Link to='/Cart' style={{color: '#333'}}>Shopping Cart</Link></li> */}
           </div>
         </Drawer>
       </div>

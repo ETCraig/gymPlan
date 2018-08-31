@@ -44,6 +44,7 @@
 @media only screen and (min-width: 320px) {
     .toolbar {
         height: 30px;
+        min-width: 320px;
     }
     .toolbar-logo {
         margin-left: 2.0rem;
@@ -59,14 +60,16 @@
     }
     .toolbar-nav-items ul li Button {
         font-size: 12px;
-        height: 20px;
-        margin-bottom: 1px;
+        height: 30px;
+        margin-bottom: 0px;
+        margin-left: -225px;
     }
 }
 /* Mobile Medium */
 @media only screen and (min-width: 375px) {
     .toolbar {
         height: 30px;
+        min-width: 375px;
     }
     .toolbar-logo {
         margin-left: 2.0rem;
@@ -82,14 +85,16 @@
     }
     .toolbar-nav-items ul li Button {
         font-size: 12px;
-        height: 20px;
-        margin-bottom: 1px;
+        height: 30px;
+        margin-bottom: 0px;
+        margin-left: -188px;
     }
 }
 /* Mobile Large */
 @media only screen and (min-width: 425px) {
     .toolbar {
         height: 30px;
+        min-width: 425px;
     }
     .toolbar-logo {
         margin-left: 2.0rem;
@@ -105,14 +110,16 @@
     }
     .toolbar-nav-items ul li Button {
         font-size: 12px;
-        height: 20px;
-        margin-bottom: 1px;
+        height: 30px;
+        margin-bottom: 0px;
+        margin-left: -138px;
     }
 }
 /* Tablet */
 @media only screen and (min-width: 768px) {
     .toolbar {
         height: 30px;
+        min-width: 768px;
     }
     .toolbar-logo {
         margin-left: 2.0rem;
@@ -128,14 +135,16 @@
     }
     .toolbar-nav-items ul li Button {
         font-size: 12px;
-        height: 20px;
-        margin-bottom: 1px;
+        height: 30px;
+        margin-bottom: 0px;
+        margin-left: -151px;
     }
 }
 /* Laptop */
 @media only screen and (min-width: 1024px) {
     .toolbar {
         height: 30px;
+        min-width: 1024px;
     }
     .toolbar-logo {
         margin-left: 2.0rem;
@@ -151,8 +160,9 @@
     }
     .toolbar-nav-items ul li Button {
         font-size: 12px;
-        height: 20px;
-        margin-bottom: 1px;
+        height: 30px;
+        margin-bottom: 0px;
+        margin-left: -35px;
     }
 }
 /* Dell G7 */

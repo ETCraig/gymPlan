@@ -81,6 +81,7 @@
     .Routine-App {
         min-height: 100vh;
         background: #ffffff;
+        min-width: 320px;
     }
     .Routine-Routine-Info {
         height: 240px;
@@ -144,6 +145,168 @@
         margin-top: -100px;
         margin-left: 230px;
         width: 670px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+    .Routine-Text>h2 {
+        width: 180px;
+        float: right;
+    }
+    .Routine-Exercises>.Routine-Btn>button {
+        float: left;
+        max-width: 290px;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .Routine-App {
+        min-height: 100vh;
+        background: #ffffff;
+        min-width: 768px;
+    }
+    .Routine-Routine-Info {
+        height: 140px;
+        width: 25%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 70px;
+        color: #333;
+    }
+    .Routine-Routine-Details3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6px;
+    }
+    .Routine-Routine-Details {
+        max-height: 150px;
+        width: 30%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 218px;
+        margin-left: -192px;
+        color: #333;
+    }
+    .Return-Btn {
+        display: flex;
+        float: left;
+        padding: 20px;
+        margin-top: 625px;
+        margin-left: -800px;
+    }
+    
+    .Routine-App {
+        background: #ffffff;
+    }
+    .Routine-Exercises {
+        margin-left: 0px;
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        margin-top: 250px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        width: 60%;
+        max-height: 270px;
+        color: #333;
+    }
+    .Routine-Exercises>img {
+        max-width: 258px;
+        max-height: 240px;
+        float: left;
+    }
+    .Routine-Text {
+        margin-top: -100px;
+        margin-left: 230px;
+        width: 540px;
+        background: #c5c5c5;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+    .Routine-Text>h2 {
+        width: 180px;
+        float: right;
+    }
+    .Routine-Exercises>.Routine-Btn>button {
+        float: left;
+        max-width: 290px;
+    }
+}
+/* Laptop */
+@media only screen and (min-width: 768px) {
+    .Routine-App {
+        min-height: 100vh;
+        background: #ffffff;
+        min-width: 768px;
+    }
+    .Routine-Routine-Info {
+        height: 140px;
+        width: 25%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 70px;
+        color: #333;
+    }
+    .Routine-Routine-Details3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6px;
+    }
+    .Routine-Routine-Details {
+        max-height: 150px;
+        width: 30%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        float: left;
+        padding: 6px;
+        margin-top: 218px;
+        margin-left: -260px;
+        color: #333;
+    }
+    .Return-Btn {
+        display: flex;
+        float: left;
+        padding: 20px;
+        margin-top: 625px;
+        margin-left: -800px;
+    }
+    
+    .Routine-App {
+        background: #ffffff;
+    }
+    .Routine-Exercises {
+        margin-left: 0px;
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        margin-top: 250px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        width: 60%;
+        max-height: 270px;
+        color: #333;
+    }
+    .Routine-Exercises>img {
+        max-width: 258px;
+        max-height: 240px;
+        float: left;
+    }
+    .Routine-Text {
+        margin-top: -100px;
+        margin-left: 230px;
+        width: 540px;
+        background: #c5c5c5;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     }
     .Routine-Text>h2 {
