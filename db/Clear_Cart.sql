@@ -1,0 +1,1 @@
+UPDATE gymplan_cart SET active = false WHERE cart_user = $1 and cart_id = $2;

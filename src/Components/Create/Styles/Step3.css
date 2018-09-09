@@ -1,334 +1,68 @@
-@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Nunito');
 
 .Step3-App {
-    width: 100%;
-    height: 100vh;
-    /* display: flex;
-    flex-direction: column; */
-    background: #ffffff;
-}
-.Step3-Body {
-    height: 80%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #333333;
+    font-family: 'Nunito', sans-serif;
+}
+.Step3-Body {
+    background-color: #3f3f3f;
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     align-content: center;
     align-items: center;
     padding: 6px;
     margin-top: 0px;
-    padding-top: 50px;
 }
 .Exercise-Detail {
     padding: 5px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     margin: 5px;
-    background: #c5c5c5;
 }
 .Exercise-Desc {
-    
+    margin-top: 0px;
 }
 .Exercise-Desc>h1 {
+    color: #f2f2f2;
     font-size: 29px;
     float: left;
-    font-family: 'Audiowide', cursive;
+    font-family: 'Fjalla One', sans-serif;
 }
 .Exercise-Desc>img {
     height: 400px;
     width: 400px;
     float: left;
+    border-radius: 15px;
+    border: 8px solid black;
+    margin-left: -150px;
+    margin: 20px;
 }
 h3 {
-    padding-top: 10px;
+    color: #f2f2f2;
+    padding-top: 40px;
     padding-left: 10px;
-    width: 340px;
+    width: 640px;
 }
 .Selectors {
     display: flex;
     flex-direction: row;
+    margin-top: 150px;
 }
 .Guide-Btns {
     display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left: -900px;
 }
-/* Mobile Small */
-@media only screen and (min-width: 320px) {
-    .Step3-App {
-        min-width: 320px;
-        min-height: 672px;
-    }
-    .Exercise-Desc {
-        width: 300px;
-        height: 600px;
-    }
-    .Exercise-Desc>img {
-        height: 250px;
-        width: 200px;
-        float: left;
-    }
-    #img-single {
-        height: 250px;
-        width: 290px;
-        float: left;
-    }
-    h3 {
-        padding-top: 10px;
-        padding-left: 10px;
-        width: 300px;
-    }
-    .Btn-Img {
-        width: 16px;
-        height: 16px;
-    }
-    .Step3-Body {
-        min-width: 320px;
-        height: 80%;
-        padding: 6px;
-        margin-top: 0px;
-        padding-top: 50px;
-        margin-left: 0px;
-    }
-    .Exercise-Detail {
-        padding: 5px;
-        margin: 5px;
-    }
-    .Selectors {
-        display: flex;
-        flex-direction: row;
-    }
-    .Guide-Btns {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-}
-/* Mobile Medium */
-
-@media only screen and (min-width: 376px) {
-    .Step3-App {
-        min-width: 376px;
-        min-height: 672px;
-    }
-    .Exercise-Desc {
-        width: 300px;
-        height: 600px;
-    }
-    .Exercise-Desc>img {
-        height: 250px;
-        width: 200px;
-        float: left;
-    }
-    #img-single {
-        height: 250px;
-        width: 290px;
-        float: left;
-    }
-    .Btn-Img {
-        width: 16px;
-        height: 16px;
-    }
-    .Step3-Body {
-        height: 80%;
-        padding: 6px;
-        margin-top: 0px;
-        padding-top: 50px;
-        margin-left: 0px;
-    }
-    .Exercise-Detail {
-        padding: 5px;
-        margin: 5px;
-    }
-    .Selectors {
-        display: flex;
-        flex-direction: row;
-    }
-    .Guide-Btns {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-}
-/* Mobile Large */
-@media only screen and (min-width: 425px) {
-    .Step3-App {
-        min-width: 425px;
-        min-height: 672px;
-    }
-    .Exercise-Desc {
-        width: 300px;
-        height: 600px;
-    }
-    .Exercise-Desc>img {
-        height: 250px;
-        width: 200px;
-        float: left;
-    }
-    #img-single {
-        height: 250px;
-        width: 290px;
-        float: left;
-    }
-    .Btn-Img {
-        width: 16px;
-        height: 16px;
-    }
-    .Step3-Body {
-        height: 80%;
-        padding: 6px;
-        margin-top: 0px;
-        padding-top: 50px;
-        margin-left: 0px;
-    }
-    .Exercise-Detail {
-        padding: 5px;
-        margin: 5px;
-    }
-    .Selectors {
-        display: flex;
-        flex-direction: row;
-    }
-    .Guide-Btns {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-}
-/* Tablet */
-@media only screen and (min-width: 768px) {
-    .Step3-App {
-        min-width: 768px;
-        min-height: 672px;
-    }
-    .Exercise-Desc {
-        width: 400px;
-        height: 600px;
-    }
-    .Exercise-Desc>img {
-        height: 350px;
-        width: 300px;
-        float: left;
-    }
-    #img-single {
-        height: 350px;
-        width: 390px;
-        float: left;
-    }
-    h3 {
-        padding-top: 10px;
-        padding-left: 10px;
-        width: 340px;
-    }
-    .Btn-Img {
-        width: 16px;
-        height: 16px;
-    }
-    .Step3-Body {
-        height: 100%;
-        padding: 6px;
-        margin-top: 0px;
-        padding-top: 50px;
-        margin-left: 0px;
-    }
-    .Exercise-Detail {
-        padding: 5px;
-        margin: 5px;
-    }
-    .Selectors {
-        display: flex;
-        flex-direction: row;
-    }
-    .Guide-Btns {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-}
-/* Laptop */
-@media only screen and (min-width: 1024px) {
-    .Step3-App {
-        min-width: 1024px;
-        min-height: 672px;
-    }
-    .Exercise-Desc {
-        width: 400px;
-        height: 550px;
-    }
-    .Exercise-Desc>img {
-        height: 250px;
-        width: 200px;
-        float: left;
-    }
-    #img-single {
-        height: 350px;
-        width: 390px;
-        float: left;
-    }
-    .Btn-Img {
-        width: 16px;
-        height: 16px;
-    }
-    .Step3-Body {
-        height: 80%;
-        padding: 6px;
-        margin-top: 0px;
-        padding-top: 50px;
-        margin-left: 0px;
-    }
-    .Exercise-Detail {
-        padding: 5px;
-        margin: 5px;
-    }
-    .Selectors {
-        display: flex;
-        flex-direction: row;
-    }
-    .Guide-Btns {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-}
-/* Dell G7 */
-@media only screen and (min-width: 1400px) {
-    .Step3-App {
-        min-width: 1400px;
-        min-height: 672px;
-    }
-    .Exercise-Desc {
-        width: 410px;
-        height: 625px;
-    }
-    .Exercise-Desc>img {
-        height: 250px;
-        width: 200px;
-        float: left;
-    }
-    #img-single {
-        height: 360px;
-        width: 400px;
-        float: left;
-    }
-    .Btn-Img {
-        width: 16px;
-        height: 16px;
-    }
-    .Step3-Body {
-        height: 80%;
-        padding: 6px;
-        margin-top: 0px;
-        padding-top: 50px;
-        margin-left: 0px;
-    }
-    .Exercise-Detail {
-        padding: 5px;
-        margin: 5px;
-    }
-    .Selectors {
-        display: flex;
-        flex-direction: row;
-    }
-    .Guide-Btns {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
+.Guide-Btns Button {
+    max-width: 140px; 
+    min-width: 145px;
+    margin-left: 30px;
 }

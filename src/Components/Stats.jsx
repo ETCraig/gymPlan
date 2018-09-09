@@ -18,15 +18,20 @@ import BenchIcon from '../Assets/icons8-bench-press-16.png';
 import SquatIcon from '../Assets/icons8-squats-16.png';
 import DeadLiftIcon from '../Assets/icons8-deadlift-16.png';
 import RowIcon from '../Assets/icons8-workout-16.png';
+import GoalIcon from '../Assets/icons8-survey-80.png';
+import deletex from '../Assets/delete-icon.png';
+import edit from '../Assets/icons8-edit-30.png';
 
-import { Button } from 'antd';
+import { Input, Button } from 'antd';
 
 export default class Stats extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             user: [],
+            allGoals: [],
+            goal: props.content,
             bool: false,
             heigh_t: '',
             weight: '',
@@ -46,6 +51,9 @@ export default class Stats extends Component {
         }
         this.handleFields = this.handleFields.bind(this);
         this.handleUpdateStats = this.handleUpdateStats.bind(this);
+        this.handleGoalInput = this.handleGoalInput.bind(this);
+        this.handleGoalChange = this.handleGoalChange.bind(this);
+        this.handleCreateGoal = this.handleCreateGoal.bind(this);
     }
     componentDidMount() {
         axios.get('/api/checkLoggedIn').then(res => {
@@ -55,10 +63,16 @@ export default class Stats extends Component {
             this.props.history.push('/');
         });
         this.getUserInfo();
+        this.getUserGoals();
     }
     getUserInfo() {
         axios.get('/api/getUserInfo').then(res => {
             this.setState({ user: res.data });
+        });
+    }
+    getUserGoals() {
+        axios.get('/api/getUserGoals').then(res => {
+            this.setState({ allGoals: res.data });
         });
     }
     handleUpdateStats() {
@@ -108,6 +122,30 @@ export default class Stats extends Component {
             row: ''
         });
     }
+    handleGoalInput(val) {
+        this.setState({ goal: val });
+    }
+    handleCreateGoal() {
+        let promise = axios.post('/api/createUserGoal',
+            { content: this.state.goal });
+        promise.then(res => {
+            this.setState({ allGoals: res.data });
+            this.setState({ goal: '' });
+        });
+    }
+    goalPatch() {
+        axios.patch('/api/editUserGoal').then(res => {
+
+        })
+    }
+    deleteGoal(goal_id) {
+        axios.delete(`/api/deleteUserGoal/${goal_id}`).then(res => {
+            this.setState({ allGoals: res.data });
+        });
+    }
+    handleGoalChange(val) {
+        this.setState({ goal: val })
+    }
     handleFields() {
         if (this.state.bool === false) {
             return (
@@ -146,8 +184,8 @@ export default class Stats extends Component {
                         <span>Chest <img src={Chesticon} alt='Chest-Icon' /></span>
                         <br />
                         <input type='text' value={this.state.user.chest} readOnly placeholder='My Chest' />
-                    </div>
-                    <div className='Edit-Right'>
+                        </div>
+                        <div className='Edit-Right'>
                         <br />
                         <span>Waist <img src={WaistIcon} alt='Waist-Icon' /></span>
                         <br />
@@ -254,36 +292,34 @@ export default class Stats extends Component {
         }
     }
     render() {
+        let displayGoals;
+        displayGoals = this.state.allGoals;
         return (
             <div className='Stats-App'>
-                <div className='Stats-Dash-App'>
-                    {/* <div className='Stats-Dash-Header'>
-                    <h1 className='Stats-Title'>gymPlan</h1>
-                    <button className='Stats-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div> */}
-
-                    <div className='Stats-Dash-Profile'>
-                        <div className='Stats-Profile-Img-Content'>
-                            <img src={this.state.user.profile_picture} alt='Stats-Profile' className='Profile-Img' />
-                        </div>
-                        <div className='Stats-Profile-Info-Content'>
-                            <span className='Stats-Profile-Name'>{this.state.user.first_name}</span>
-                            <span className='Stats-Profile-Name'>{this.state.user.last_name}</span>
-                            <div className='Desc-Content'>
-                                <img src={StatsIcon} alt='Goal-Icon' />
-                                <h1>Stats</h1>
-                                <h2>Keeping track of your body and compound exercises stats helps motivate and inform you. Ensure to make a timely habit of keeping track and updating these numbers.</h2>
-                            </div>
+                <div className='Stats-Body' style={{ color: 'white' }}>
+                <img src={require('../Assets/Stats-Bkg.jpeg')} alt='Gym Equipment' className='Stats-Bkg-Picture'/>
+                    <h1 className='Title'>My Goals</h1>
+                    <div className='Goals-Content'>
+                        <Input type='text' onChange={(e) => this.handleGoalInput(e.target.value)} placeholder='Enter New Goal' className='Goal-Input' value={this.state.goal} />
+                        <Button onClick={this.handleCreateGoal} className='Goal-Btn'>Add Goal</Button>
+                        <div className='Goals-List'>
+                            {displayGoals.map((goal, i) => {
+                                return (
+                                    <div key={i} className='Goals-Listings'>
+                                        <div>Goal: {goal.content}</div>
+                                        <div className='Goals-Icons'>
+                                            <input onClick={() => this.deleteGoal(goal.goal_id)} type='image' className='Goal-Delete-Icon' src={deletex} alt='Delete Icon' />
+                                            <input onClick={() => this.handleGoalChange()} type='image' className='Goal-Edit-Icon' src={edit} alt='Edit Icon' />
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
-
-                </div>
-
-                <div className='Stats-Body' style={{ color: 'black' }}>
                     <div className='Stats-Content'>
                         {this.handleFields()}
                     </div>
-                </div>
+                    </div>
             </div>
         );
     }

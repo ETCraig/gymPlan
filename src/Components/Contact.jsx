@@ -59,31 +59,8 @@ export default class Contact extends Component {
     render() {
         return (
             <div className='Contact-App'>
-
-                <div className='Contact-Dash-App'>
-                    {/* <div className='Contact-Dash-Header'>
-                    <h1 className='Contact-Title'>gymPlan</h1>
-                    <button className='Contact-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div> */}
-
-                    <div className='Contact-Dash-Profile'>
-                        <div className='Contact-Profile-Img-Content'>
-                            <img src={this.state.user.profile_picture} alt='Profile' className='Profile-Img' />
-                        </div>
-                        <div className='Contact-Profile-Info-Content'>
-                            <span className='Contact-Profile-Name'>{this.state.user.first_name}</span>
-                            <span className='Contact-Profile-Name'>{this.state.user.last_name}</span>
-                            <div className='Desc-Content'>
-                                <img src={EmailIcon} alt='Goal-Icon' />
-                                <h1>Contact</h1>
-                                <h2>Contact us with any issues, ideas, comments, or concerns. Also follow us at any of our social media sites to get the newest updates and fitness advice.</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className='Contact-Body' style={{ color: 'black' }}>
+                <div className='Contact-Body'>
+                <img src={require('../Assets/Contact-Bkg.jpg')} alt='BMI Picture' className='Contact-Bkg-Picture' />
                     <Form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>

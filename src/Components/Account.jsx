@@ -65,7 +65,7 @@ class Account extends Component {
         if (this.state.bool === false) {
             return (
                 <div className='Account-Edit'>
-                    <button onClick={() => this.setState({ bool: true })}>UPDATE</button>
+                    <Button onClick={() => this.setState({ bool: true })}>UPDATE</Button>
                     <span>First Name</span>
                     <br />
                     <input type='text' value={this.state.user.first_name} readOnly placeholder='Your Name' />
@@ -89,7 +89,7 @@ class Account extends Component {
         else if (this.state.bool === true) {
             return (
                 <div className='Account-Edit'>
-                    <button onClick={() => this.setState({ bool: false, first_name: '', last_name: '', profile_picture: '', gender: '' })}>Cancel</button>
+                    <Button onClick={() => this.setState({ bool: false, first_name: '', last_name: '', profile_picture: '', gender: '' })}>Cancel</Button>
                     <span>First Name</span>
                     <br />
                     <input onChange={(e) => this.setState({ first_name: e.target.value })} />
@@ -126,34 +126,23 @@ class Account extends Component {
     render() {
         return (
             <div className='Account-App'>
+            <div className='Account-Body'>
+            <img src={require('../Assets/Account-Bkg.jpg')} alt='BMI Picture' className='Account-Bkg-Picture' />
                 <div className='Account-Dash-App'>
-                    {/* <div className='Account-Dash-Header'>
-                    <h1 className='Account-Title'>gymPlan</h1>
-                    <button className='Account-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div> */}
-
                     <div className='Account-Dash-Profile'>
                         <div className='Account-Profile-Img-Content'>
-                            <img src={this.state.user.profile_picture} alt='Profile' className='Profile-Img' />
+                            <img src={this.state.user.profile_picture} alt='Profile' className='Account-Profile-Img' />
                         </div>
                         <div className='Account-Profile-Info-Content'>
                             <span className='Account-Profile-Name'>{this.state.user.first_name}</span>
                             <span className='Account-Profile-Name'>{this.state.user.last_name}</span>
-                            <div className='Desc-Content'>
-                                <img src={AccountIcon} alt='Goal-Icon' />
-                                <h1>Account</h1>
-                                <h2>Manage your personal account information such as your name and profile picture. Here you can also completely delete your account.</h2>
-                            </div>
                         </div>
                     </div>
-
                 </div>
-
-                <div className='Account-Body' style={{ color: 'black' }}>
                     {this.handleFeilds()}
                     <br />
                     <br />
-                    <Button onClick={(e) => this.handleAccountDelete(e.target.value)} className='Delete-Btn'>Delete Account</Button>
+                    <Button onClick={(e) => this.handleAccountDelete(e.target.value)} className='Delete-Btn' type="danger">Delete Account</Button>
                 </div>
             </div>
         );

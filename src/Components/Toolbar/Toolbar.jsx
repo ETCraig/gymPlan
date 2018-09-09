@@ -2,7 +2,6 @@ import React from 'react';
 import './Toolbar.css';
 
 import DrawerToggle from '../SideDrawer/DrawerToggle';
-import GymIcon from '../../Assets/icons8-barbell-64.png';
 import { Link } from 'react-router-dom';
 
 import { Button } from 'antd';
@@ -13,7 +12,7 @@ const toolbar = props => (
             <div>
                 {/* <DrawerToggle click={props.drawerClickedHandler}/> */}
             </div>
-            <div className='toolbar-logo'><Link to=''>gymPlan</Link></div><img src={GymIcon} alt='GymIcon' />
+            <div className='toolbar-logo'><Link to=''>gymPlan</Link></div>
             <div className='Spacer'></div>
             <div className='toolbar-nav-items'>
                 <ul>

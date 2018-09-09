@@ -3,7 +3,7 @@ import './Styles/Routines.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import RoutinesIcon from '../Assets/icons8-edit-property-80.png';
+import {RoutinesBkg} from '../Assets/Routines-Bkg.jpg'; 
 
 import {Button} from 'antd'; 
 
@@ -61,34 +61,25 @@ class Routines extends Component {
         });
         return (
             <div className='Routines-App'>
+            <div className='Routines-Body'>
+            <img src={require('../Assets/Routines-Bkg.jpg')} alt='Gym Equipment' className='Routines-Bkg-Picture'/>
                 <div className='Routines-Dash-App'>
-                    {/* <div className='Routines-Dash-Header'>
-                    <h1 className='Routines-Title'>gymPlan</h1>
-                    <Button className='Routines-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></Button>
-                </div> */}
-
                     <div className='Routines-Dash-Profile'>
                         <div className='Routines-Profile-Img-Content'>
-                            <img src={this.state.user.profile_picture} alt='Routines-Profile' className='Profile-Img' />
+                            <img src={this.state.user.profile_picture} alt='Routines-Profile' className='Routines-Profile-Img' />
                         </div>
                         <div className='Routines-Profile-Info-Content'>
-                            <span className='Routines-Profile-Name'>{this.state.user.first_name}</span>
-                            <span className='Routines-Profile-Name'>{this.state.user.last_name}</span>
-                            <div className='Desc-Content'>
-                                <img src={RoutinesIcon} alt='Goal-Icon' />
-                                <h1>Routines</h1>
-                                <h2>Each routine should be carefully planned to your needs and current ability, both in regards to the days that you assign to each muscle group and to the types of exercises each has.</h2>
+                            {/* <span className='Routines-Profile-Name'>{this.state.user.first_name}</span>
+                            <span className='Routines-Profile-Name'>{this.state.user.last_name}</span> */}
+                            <div className='Routines-Desc-Content'>
+                                {/* <h1>Routines</h1>
+                                <h2>Each routine should be carefully planned to your needs and current ability, both in regards to the days that you assign to each muscle group and to the types of exercises each has.</h2> */}
                             </div>
                         </div>
                     </div>
 
                 </div>
-
-                <div className='Routines-Body' style={{ color: 'black' }}>
-                    <Link to='/Create'><Button>Create New Routine</Button></Link>
-                    <div className='binsTitle'>
-                        {/* <Link to = {`/Exercises/${this.props.match.params.id}`}><h1>Routine! {this.props.match.params.id}</h1></Link> */}
-                    </div>
+                    {/* <Link to='/Create'><Button>Create New Routine</Button></Link> */}
                     <div className='Routine-List'>
                         <h2>{routineBtns}</h2>
                     </div>

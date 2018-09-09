@@ -3,6 +3,8 @@ import './Styles/Step2.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Coverflow from 'react-coverflow';
+import {StyleRoot} from 'radium';
 
 import { Button } from 'antd';
 
@@ -48,48 +50,46 @@ class Step2 extends Component {
 
         return (
             <div className='Step2-App'>
-
-                {/* <div className='Step2-Dash-Header'>
-                    <h1 className='Step2-Title'>gymPlan</h1>
-                    <button className='Step2-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div> */}
-
-                <div className='Step2-Routine-Info'>
-                    <div className='Step2-Routine-Details2' style={{ color: '#f2f2f2' }}>
-                        <span style={{color: '#333'}}><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
-                        <span style={{color: '#333'}}><strong>Routine Name:</strong> {this.state.routine.name}</span>
-                        <span style={{color: '#333'}}><strong>Routine Day:</strong> {this.state.routine.day}</span>
-                    </div>
-                </div>
-
-                <div className='Step2-Routine-Details'>
-                    <span><strong>Routine Muscle:</strong> {this.state.routine.muscle}</span>
-                    <span><strong>Routine Type:</strong> {this.state.routine.type}</span>
-                    <span><strong>Routine Difficulty:</strong> {this.state.routine.diff}</span>
-                    <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
-                </div>
-
-                <Link to={`/Step1/${this.props.match.params.routine_id}`}><Button className='Step2-Return-Btn'>Muscle Groups</Button></Link>
-                <br /><br /><br />
-                <Link to={`/Step3/${this.state.routine.routine_id}`}><Button className='Step2-Return-Btn' id='btn-2'>View Full Routine</Button></Link>
-
                 <div className='Step2-Body'>
-
+                <div className='Step2-Nav'>
+                <Link to={`/Step1/${this.props.match.params.routine_id}`}><Button className='Step2-Btn'>Muscle Groups</Button></Link>
+                <br /><br /><br />
+                <Link to={`/Step3/${this.state.routine.routine_id}`}><Button className='Step2-Btn' id='btn-2'>View Full Routine</Button></Link>
+                </div>
+                
+                <StyleRoot>
+                    <Coverflow
+                        displayQuantityOfSide={1}
+                        navigation
+                        infiniteScroll
+                        enableHeading
+                        media={{
+                            '@media (max-width: 900px)': {
+                              width: '600px',
+                              height: '300px'
+                            },
+                            '@media (min-width: 900px)': {
+                              width: '775px',
+                              height: '600px'
+                            }
+                          }}
+                    >
                     {displayExercises.map((exercises, i) => {
+                        return (
+                        <Link key={i} to={`/Step3/${this.state.routine.routine_id}/${exercises.exercise_id}`}><img src={exercises.picture} alt='Motion Pic' className='Step2-Image' /></Link>
+                    )
+                })}
+                    </Coverflow>
+                </StyleRoot>
+                
+                    {/* {displayExercises.map((exercises, i) => {
                         return (
                             <div className='Step2-Routine-List' key={i}>
                                 <Link to={`/Step3/${this.state.routine.routine_id}/${exercises.exercise_id}`}><h2>{exercises.name}</h2></Link>
                                 <img src={exercises.picture} alt='Motion Pic' />
                             </div>
                         )
-                    })}
-
-
-                    {/* <div className='Rendered-Exercise-List'>{renderExercises}</div>
-
-                <div className='Pagenumber-Container'>
-                    <ul className='PageNumbers'>{renderPageNumbers}</ul>
-                </div> */}
+                    })} */}
                 </div>
             </div>
         );

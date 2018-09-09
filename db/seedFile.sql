@@ -60,3 +60,28 @@ INSERT INTO gymplan_exercises(
     desc VARCHAR(150),
     defaultReps VARCHAR(4)
 );
+
+INSERT INTO gymplan_products(
+    product_id SERIAL primary key,
+    category varchar(80),
+    title varchar(180),
+    description varchar(250),
+    image text,
+    price INTEGER
+);
+
+INSERT INTO gymplan_cart(
+    cart_id SERIAL primary key,
+    cart_user INTEGER,
+    active boolean,
+    total INTEGER,
+    foreign key (cart_user) references gymplan_users (user_id)
+);
+
+INSERT INTO gymplan_orders(
+    cart INTEGER,
+    product INTEGER,
+    quantity INTEGER,
+    foreign key (cart) references gymplan_cart(cart_id),
+    foreign key (product) references gymplan_products(product_id)
+);

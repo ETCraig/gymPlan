@@ -59,25 +59,8 @@ class BMIcalc extends Component {
   render() {
     return (
       <div className='BMI-App'>
-
-      <div className='BMI-Dash-App'>
-                    <div className='BMI-Dash-Profile'>
-                        <div className='BMI-Profile-Img-Content'>
-                            <img src={this.state.user.profile_picture} alt='Profile' className='Profile-Img' />
-                        </div>
-                        <div className='BMI-Profile-Info-Content'>
-                            <span className='BMI-Profile-Name'>{this.state.user.first_name}</span>
-                            <span className='BMI-Profile-Name'>{this.state.user.last_name}</span>
-                            <div className='Desc-Content'>
-                                <img src={BMIIcon} alt='Goal-Icon' />
-                                <h1>BMI</h1>
-                                <h2>Manage your personal BMI information such as your name and profile picture. Here you can also completely delete your BMI.</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+      <div className='BMI-Body'>
+      <img src={require('../../Assets/BMI-Calculator.jpg')} alt='BMI Picture' className='BMI-Bkg-Picture' />
       <div className="BMI">
         <div className="Row">
           <div className="Span1">
@@ -112,6 +95,7 @@ class BMIcalc extends Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
       </div>
     );

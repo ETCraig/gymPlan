@@ -3,8 +3,6 @@ import './Styles/Routine.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import DeleteRoutine from '../Assets/icons8-delete-document-16.png';
-import DeleteIcon from '../Assets/icons8-delete-16.png';
 
 import { Button } from 'antd';
 
@@ -60,32 +58,22 @@ class Routine extends Component {
         displayRoutineExercises = this.state.exercises;
         return (
             <div className='Routine-App'>
-                {/* <div className='Routine-Dash-Header'>
-                    <h1 className='Routine-Title'>gymPlan</h1>
-                    <button className='Routine-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div> */}
-
-                <div className='Routine-Routine-Info'>
-                    <div className='Routine-Routine-Details3' style={{ color: '#ffffff' }}>
-                        <span style={{color: '#333'}}><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
-                        <span style={{color: '#333'}}><strong>Routine Name:</strong> {this.state.routine.name}</span>
-                        <span style={{color: '#333'}}><strong>Routine Day:</strong> {this.state.routine.day}</span>
+                <div className='Routine-Body'>
+                <img src={require('../Assets/Routine-Bkg.jpg')} alt='Gym Equipment' className='Routine-Bkg-Picture'/>
+                    <div className='Routine-Routine-Info'>
+                        <span><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
+                        <span><strong>Routine Name:</strong> {this.state.routine.name}</span>
+                        <span><strong>Routine Day:</strong> {this.state.routine.day}</span>
+                        <span><strong>Routine Muscle:</strong> {this.state.routine.muscle}</span>
+                        <span><strong>Routine Type:</strong> {this.state.routine.type}</span>
+                        <span><strong>Routine Difficulty:</strong> {this.state.routine.diff}</span>
+                        <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
                     </div>
-                </div>
-
-                <div className='Routine-Routine-Details'>
-                    <span><strong>Routine Muscle:</strong> {this.state.routine.muscle}</span>
-                    <span><strong>Routine Type:</strong> {this.state.routine.type}</span>
-                    <span><strong>Routine Difficulty:</strong> {this.state.routine.diff}</span>
-                    <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
-                </div>
-
-                <Link to='/Routines'><Button className='Return-Btn'>All Routines</Button></Link>
-                <br />
-                <br />
-                <Button className='Return-Btn' onClick={() => this.deleteRoutine()}>Delete Routine <img src={DeleteRoutine} alt='Delete-Routine' /></Button>
-                <br />
-                <Link to={`/Step1/${this.state.routine.routine_id}`}><Button>Add Exercises</Button></Link>
+                    <div className='Routine-Nav'>
+                        <Link to='/Routines'><Button className='Return-Btn'>All Routines</Button></Link>
+                        <Button className='Return-Btn' onClick={() => this.deleteRoutine()} type='danger'>Delete Routine </Button>
+                        <Link to={`/Step1/${this.state.routine.routine_id}`}><Button className='Return-Btn'>Add Exercises</Button></Link>
+                    </div>
                 <div id='List-Container'>
                     {displayRoutineExercises.map((exercise, i) => {
                         return (
@@ -101,12 +89,13 @@ class Routine extends Component {
                                 </div>
                                 <div className='Routine-Btn'>
                                     <Button onClick={() => this.removeExercise(exercise.exercise_id, this.state.routine.routine_id)}>
-                                        <h2>Remove {exercise.name} <img src={DeleteIcon} alt='Delete-Icon' className='Delete-Img' /></h2>
+                                        <h2>Remove {exercise.name}</h2>
                                     </Button>
                                 </div>
                             </div>
                         )
                     })}
+                </div>
                 </div>
             </div>
         );

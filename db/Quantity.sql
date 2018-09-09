@@ -1,0 +1,1 @@
+UPDATE gymplan_orders SET quantity = $1 WHERE product = $2 and cart = $3;

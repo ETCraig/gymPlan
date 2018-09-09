@@ -193,13 +193,12 @@ class Step3 extends Component {
                     <h1 className='Step3-Title'>gymPlan</h1>
                     <button className='Step3-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
                 </div> */}
-                <div className='Step3-Body' style={{ color: 'black' }}>
+                <div className='Step3-Body'>
+                <div className='Guide-Btns'>
+                        <Link to={`/Step1/${this.props.match.params.routine_id}`}><Button>Muscle Groups</Button></Link>
+                    </div>
                     <div className='Exercise-Detail'>
                         {displayExercises}
-                    </div>
-                    <div className='Guide-Btns'>
-                        {/* <Link to={`/Step2/${this.props.match.params.routine_id}/${this.state.exercise.muscle_group}`}><button>{this.state.exercise.muscle_group} : Exercises</button></Link> */}
-                        <Link to={`/Step1/${this.props.match.params.routine_id}`}><Button>Muscle Groups</Button></Link>
                     </div>
                 </div>
             </div>

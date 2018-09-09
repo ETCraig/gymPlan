@@ -1,0 +1,1 @@
+DELETE FROM gymplan_orders WHERE product = $1 and cart = $2;

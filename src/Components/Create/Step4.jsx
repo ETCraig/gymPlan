@@ -3,6 +3,8 @@ import './Styles/Step4.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Coverflow from 'react-coverflow';
+import {StyleRoot} from 'radium';
 
 import { Button, Input, select } from 'antd';
 
@@ -74,35 +76,44 @@ class Step4 extends Component {
         displayExercises = this.state.exercises;
         return (
             <div className='Step4-App'>
-
                 <div className='Step4-Body'>
-                    <div>
-                        <Input type='text' className='Search-Input' onChange={e => this.handleInputChange('searchInput', e.target.value)} value={this.state.searchInput} />
-                    </div>
-                    <div>
-                        <select className='Custom-select' id='inlineFormCustomSelect' value={this.state.searchParameter} onChange={e => this.handleChange('searchParameter', e.target.value)}>
+                <div className='Search-Nav'>
+                        <Input type='text' className='Search-Input' onChange={e => this.handleInputChange('searchInput', e.target.value)} value={this.state.searchInput} style={{color: '#181DC9'}} />
+                        <select className='Custom-select' id='inlineFormCustomSelect' value={this.state.searchParameter} onChange={e => this.handleChange('searchParameter', e.target.value)} style={{color: '#FF9000'}}>
                             <option defaultValue='...'>...</option>
                             <option value='name'>name</option>
                             <option value='equip'>equipment</option>
                             <option value='muscle_group'>muscle</option>
                         </select>
-                    </div>
-                    <div>
                         <Button className='Search-Btn' onClick={() => this.handleUserSearch()}>Search</Button>
                         <Button className='Reset-Btn' onClick={this.reset}>Reset</Button>
                     </div>
-                    <div className='All-Exercises'>
+                    <StyleRoot>
+                        <Coverflow
+                            displayQuantityOfSide={1}
+                            navigation
+                            infiniteScroll
+                            enableHeading
+                            media={{
+                                '@media (max-width: 900px)': {
+                                width: '600px',
+                                height: '300px'
+                                },
+                                '@media (min-width: 900px)': {
+                                width: '775px',
+                                height: '600px'
+                                }
+                            }}
+                        >
                         {displayExercises.map((exercise, i) => {
                             return (
-                                <div className='Both-Sidez' key={i} style={{ color: 'black' }}>
-                                    <img src={exercise.picture} alt='Motion Pic' />
-                                    <Link to={`/Step3/${this.state.routine.routine_id}/${exercise.exercise_id}`}><h2>{exercise.name}</h2></Link>
-                                    <h2>{exercise.muscle_group}</h2>
-                                    <h2>{exercise.equip}</h2>
-                                </div>
+                                <Link to={`/Step3/${this.state.routine.routine_id}/${exercise.exercise_id}`}><img src={exercise.picture} alt={exercise.name} key={i} className='Search-Image' /></Link>
+                                    // <h2>{exercise.muscle_group}</h2>
+                                    // <h2>{exercise.equip}</h2>
                             )
                         })}
-                    </div>
+                    </Coverflow>
+                </StyleRoot>
                 </div>
             </div>
         );

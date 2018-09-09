@@ -1,231 +1,55 @@
-.Step4-App {
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Nunito');
 
-}
-.Step4-Body {
-    padding-top: 80px;
-    background: #ffffff;
-}
-.Search-Input {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-left: 600px;
-    align-items: center;
-}
-.Custom-Select {
-    margin-left: 600px;
-}
-.Search-Btn {
-    margin-left: 750px;
-    margin-right: -750px;
-}
-.Reset-Btn {
-    margin-left: 750px;
-}
-.All-Exercises>.Both-Sidez {
-    margin-top: 80px;
-}
-.All-Exercises:after {
-    content: '';
-    clear: both;
-    display: table;
-}
-/* .All-Exercises>img:hover {
-    cursor: pointer;
-} */
-.Both-Sidez {
-    float: left;
-    /* width: 15.00%; */
-    padding: 5px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    margin: 5px;
-    margin-left: 125px;
-    min-height: 310px;
-    max-height: 310px;
-}
-.Both-Sidez>img {
-    /* margin-top: -75px; */
-    width: 200px;
-    height: 200px;
-}
-.Both-Sidez h2 {
-    width: 130px;
+.Step4-App {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-left: 0px;
-    margin-top: 8px;
-    padding: 0px;
+    background: #333333;
+    font-family: 'Nunito', sans-serif;
 }
-.Both-Sidez {
-    font-family: 'Changa', sans-serif;
-    background: url('http://bootstrap.sadaqatclinic.com/wp-content/uploads/2016/07/bg.jpg');
+.Step4-Body {
+    background-color: #3f3f3f;
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    padding: 6px;
+    margin-top: 0px;
+}
+.Search-Nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    margin-bottom: 35px;
+}
+.Search-Input {
+    margin-left: 5px;
+}
+.Custom-Select {
+    margin-left: 5px;
+}
+.Search-Btn {
+    margin-left: 5px;
+}
+.Reset-Btn {
+    margin-left: 5px;
+}
+.Search-Image {
+    width: 258px;
+    height: 255px;
 }
 
 
-/* Moible Small */
-@media only screen and (min-width: 320px) {
-    .Step4-App {
-        min-width: 320px;
-        min-height: 672px;
-        height: auto;
-    }
-    .Search-Input {
-        width: 300px;
-        margin-left: 10px;
-    }
-    .Custom-Select {
-        margin-left: 100px;
-    }
-    .Search-Btn {
-        margin-left: 200px;
-        margin-right: -750px;
-    }
-    .Reset-Btn {
-        margin-left: 610px;
-    }
-    .All-Exercises {
-        width: 500px;
-        margin-left: -118px;
-    }
-    .Both-Sidez {
-        width: 18.00%;
-        height: 180px;
-        float: left;
-    }
-    .Both-Sidez>img {
-        width: 80px;
-        height: 80px;
-    }
-    .Both-Sidez h2 {
-        width: 85px;
-        word-wrap: break-word;
-    }
-}
-/* Mobile Medium */
-@media only screen and (min-width: 375px) {
-    .Step4-App {
-        min-width: 375px;
-        min-height: 672px;
-        height: auto;
-    }
-    .Search-Input {
-        width: 300px;
-        margin-left: 28px;
-    }
-    .Custom-Select {
-        margin-left: 100px;
-    }
-    .Search-Btn {
-        margin-left: 200px;
-        margin-right: -750px;
-    }
-    .Reset-Btn {
-        margin-left: 750px;
-    }
-    .All-Exercises {
-        width: 500px;
-        margin-left: -112px;
-    }
-    .Both-Sidez {
-        width: 22.00%;
-        height: 180px;
-        float: left;
-    }
-    .Both-Sidez>img {
-        width: 100px;
-        height: 100px;
-    }
-}
-/* Mobile Large */
-@media only screen and (min-width: 425px) {
-    .Step4-App {
-        min-width: 425px;
-        min-height: 672px;
-        height: auto;
-    }
-    .Search-Input {
-        width: 300px;
-        margin-left: 58px;
-    }
-    .Custom-Select {
-        margin-left: 100px;
-    }
-    .Search-Btn {
-        margin-left: 200px;
-        margin-right: -750px;
-    }
-    .Reset-Btn {
-        margin-left: 750px;
-    }
-    .All-Exercises {
-        width: 500px;
-        margin-left: -85px;
-    }
-    .Both-Sidez {
-        width: 22.00%;
-        height: 180px;
-        float: left;
-    }
-    .Both-Sidez>img {
-        width: 100px;
-        height: 100px;
-    }
-}
-/* Tablet */
-@media only screen and (min-width: 375px) {
-    .Step4-App {
-        min-width: 375px;
-        min-height: 672px;
-        height: auto;
-    }
-    .Search-Input {
-        width: 300px;
-        margin-left: 28px;
-    }
-    .Custom-Select {
-        margin-left: 100px;
-    }
-    .Search-Btn {
-        margin-left: 200px;
-        margin-right: -750px;
-    }
-    .Reset-Btn {
-        margin-left: 750px;
-    }
-    .All-Exercises {
-        width: 500px;
-        margin-left: -112px;
-    }
-    .Both-Sidez {
-        width: 22.00%;
-        height: 180px;
-        float: left;
-    }
-    .Both-Sidez>img {
-        width: 100px;
-        height: 100px;
-    }
-}
-/* Dell G7 */
 @media only screen and (min-width: 1400px) {
     .Step4-App {
         min-width: 1400px;
         min-height: 672px;
         height: auto;
-    }
-    .Search-Input {
-        width: 300px;
-        margin-left: 578px;
-    }
-    .Custom-Select {
-        margin-left: 400px;
-    }
-    .Search-Btn {
-        margin-left: 645px;
-        margin-right: -750px;
-    }
-    .Reset-Btn {
-        margin-left: 610px;
     }
     .All-Exercises {
         width: 1400px;

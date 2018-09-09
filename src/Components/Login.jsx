@@ -4,6 +4,10 @@ import GymLogo from '../Assets/icons8-barbell-64.png';
 
 import { Button } from 'antd';
 
+import RoutineIcon from '../Assets/icons8-edit-property-80.png';
+import DataIcon from '../Assets/icons8-combo-chart-80.png';
+import ExIcon from '../Assets/icons8-weightlifting-80.png';
+
 export default function Login() {
     function login() {
         let { REACT_APP_DOMAIN, REACT_APP_CLIENT_ID, REACT_APP_CALLBACK_URL } = process.env;
@@ -37,7 +41,23 @@ export default function Login() {
                     <Button className='Login-Btn' onClick={login} type="primary">Login / Register</Button>
                 </div>
             </div>
-
+            <div className='Login-Intro'>
+                    <div className='Login-Intro-List'>
+                        <img src={RoutineIcon} alt='Routine-Icon' />
+                        <h2>Personalized Workout Routines</h2>
+                        <p>Create personalized workout programs tailored to your needs to keep you motivated</p>
+                    </div>
+                    <div className='Login-Intro-List'>
+                        <img src={ExIcon} alt='Routine-Icon' />
+                        <h2>Hundreds of Exercises</h2>
+                        <p>Select the exercises you want and assign them the reps and weight that fits your goals</p>
+                    </div>
+                    <div className='Login-Intro-List'>
+                        <img src={DataIcon} alt='Data-Icon' />
+                        <h2>Analyze and Improve</h2>
+                        <p>Analyze your workout data and progress to maximize results</p>
+                    </div>
+                </div>
             {/* <div className='Features-List1'>
                 <div className='Create'>
                     <h4>Create your own personalized Routines that fit your goals and lifestyle.</h4>
