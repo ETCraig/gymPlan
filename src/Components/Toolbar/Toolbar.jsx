@@ -16,7 +16,7 @@ const toolbar = props => (
             <div className='Spacer'></div>
             <div className='toolbar-nav-items'>
                 <ul>
-                    <li><a href={process.env.REACT_APP_LOGOUT}><Button type="primary">Logout</Button></a></li>
+                    <Link to='/'><li><Button type="primary">Logout</Button></li></Link>
                 </ul>
             </div>
         </nav>
