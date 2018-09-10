@@ -3,7 +3,8 @@ const express = require('express');
 const app = express();
 app.use( express.static( `${__dirname}/../build` ) );
 const cors = require('cors');
-const stripe = require('stripe')(process.env.SECRET_KEY);
+const Config = require('./Config');
+const stripe = require('stripe')(Config.secret_key);
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const massive = require('massive');
@@ -14,6 +15,8 @@ const router = express.Router();
 const {SERVER_PORT, ROUTINE, REACT_APP_CLIENT_ID, CLIENT_SECRET, REACT_APP_DOMAIN, CONNECTION_STRING, SESSION_SECRET, USER, PASS} = process.env;
 
 app.use(bodyParser.json());
+
+// app.use(cors());
 
 app.use(session({
     secret: SESSION_SECRET,
@@ -114,6 +117,24 @@ app.delete('/api/removeUserExercise/:exercise_id/:routine_id', ctrl.removeUserEx
 app.get('/api/getAllExercises', ctrl.getAllExercises);
 app.get('/api/getUserSearch/:searchParameter/:searchInput/:routine_id', ctrl.getUserSearch);
 
+app.get('/api/getProducts', ctrl.getProducts);
+app.get('/api/displayAll', ctrl.displayAll);
+app.post('/api/addToCart', ctrl.addToCart);
+app.delete('/api/product/:id', ctrl.deleteProduct);
+app.put('/api/quantity', ctrl.quantity);
+app.put('/api/clearCart', ctrl.clearCart);
+
+// Stripe
+app.post('/api/payment', ctrl.payment);
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
+
+
+
+
+//Nodemailer
 app.post('/api/send', (req, res, next) => {
     console.log('Hit /send.')
     var name = req.body.name

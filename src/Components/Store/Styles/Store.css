@@ -21,6 +21,12 @@
     padding: 6px;
     margin-top: 0px;
 }
+#Store-Intro {
+    text-align: center;
+    font-size: 45px;
+    text-decoration: underline;
+    font-family: 'Fjalla One', sans-serif;
+}
 .SH-Bkg-Img {
     margin-top: 45px;
     width: 1063px;

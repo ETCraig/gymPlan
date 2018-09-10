@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Nunito');
+
+.Products-App {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #333333;
+    font-family: 'Nunito', sans-serif;
+}
+.Products-Body {
+    background-color: #3f3f3f;
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    padding: 6px;
+    margin-top: 0px;
+}
+.display{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+.mapDiv{
+    width: 33%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.8;
+}
+.mapDiv:hover{
+    opacity: 1;
+}
+form.form-inline1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 4px;
+    /* text-align: center;
+    align-items: center;
+    align-content: center; */
+}
+
+@media screen and (max-width: 600px){
+    .display{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .mapDiv{
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        opacity: 1;
+    }
+    form.form-inline{
+    width: 70%;
+    }
+    #inlineFormCustomSelectPref1{
+        width: 40%;
+    }
+}

@@ -1,17 +1,37 @@
 import React, {Component} from 'react';
-import './Styles/StoreHome.css';
+import './Styles/Store.css';
 
+import axios from 'axios';
+import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {storeProducts, activeCart, storeCartData} from '../../ducks/reducer';
 import {Input, Menu, Icon} from 'antd';
 
 const Search = Input.Search
 
-export default class StoreHome extends Component {
+class Store extends Component {
     constructor(props) {
         super(props)
 
         this.state= {
-
+            user: []
         }
+    }
+    componentDidMount() {
+        axios.get('/api/checkLoggedIn').then().catch(res => {
+            console.log('error');
+            this.props.history.push('/');
+        });
+        this.getUserInfo();
+    }
+    getUserInfo() {
+        axios.get('/api/getUserInfo').then(res => this.setState({ user: res.data }));
+    }
+    componentDidMount() {
+        axios.get('/api/getProducts').then(res => {
+            this.props.storeProducts(res.data.products)
+            this.props.activeCart(res.data.cart)
+        })
     }
     render() {
         return(
@@ -20,11 +40,12 @@ export default class StoreHome extends Component {
             <br />
                 <div className='SH-Body'>
                 <img src={require('../../Assets/SH-Bkg.jpg')} alt='' className='SH-Bkg-Img'/> 
+                    <h3 id='Store-Intro'>Store is currently in Development</h3>
                     <div className='SH-Search'>
                         <Search placeholder='input search text' onSearch={value => console.log(value)} enterButton className='Search' />
                     </div>
                     <div className='SH-Menu'>
-                        <a><h2>Protiens</h2></a>
+                        <Link to='/Products'><a><h2>Protiens</h2></a></Link>
                         <a><h2>Pre Workouts</h2></a>
                         <a><h2>BCAA's</h2></a>
                         <a><h2>Vitamins</h2></a>
@@ -48,3 +69,5 @@ export default class StoreHome extends Component {
         );
     }
 }
+
+export default connect(null, {storeProducts, storeCartData, activeCart})(Store);

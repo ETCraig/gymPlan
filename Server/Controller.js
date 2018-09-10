@@ -1,3 +1,6 @@
+// const config = require('./Config');
+// const stripe = require('stripe')(Config.secret_key);
+
 module.exports = {
     getUserInfo: (req, res) => {
         console.log('Hit getUser Back')
@@ -285,6 +288,109 @@ module.exports = {
         }).catch(err => {
             console.log('err', err)
             res.status(500).send(err);
+        });
+    },
+    getProducts: (req, res) => {
+        console.log('Hit getProducts Hit.')
+        const db = req.app.get('db')
+        const userid = req.session.user.user_id;
+        db.Get_Products().then(products => {
+            db.Get_Cart_Id(userid).then(cart => {
+                if(cart[0]) {
+                    req.session.user.cart  = cart[0].userid
+                    res.status(200).send({cart, products});
+                } else {
+                    db.Create_Cart(userid).then(cart => {
+                        req.session.user.cart = cart[0].userid
+                        res.status(200).send({cart, products})});
+                }
+            })
+        }).catch(err => {
+            res.status(500).send(err);
+            console.log(err);
+        });
+    },
+    displayAll: (req, res) => {
+        console.log('Hit displayAll Hit.')
+        const db = req.app.get('db')
+        db.Join_All([req.session.user.cart]).then(all => {
+            res.status(200).send(all)
+        }).catch(err => {
+            res.status(500).send(err);
+            console.log(err);
+        });
+    },
+    addToCart: (req, res) => {
+        console.log('Hit addToCall Hit.')
+        const db = req.app.get('db')
+        db.Add_To_Cart([req.session.user.cart, req.body.id, req.body.quantity]).then(() => res.sendStatus(200)).catch(err => {
+            res.status(500).send(err);
+            console.log(err);
+        });
+    },
+    deleteProduct: (req, res) => {
+        console.log('Hit deleteProduct Hit.')
+        const db = req.app.get('db')
+        const {id} = req.params;
+        db.Delete_Product([id, req.session.user.cart]).then(() => {
+            db.Join_All([req.session.user.cart]).then(product => 
+                res.status(200).send(product));
+            }).catch(err => {
+                res.status(500).send(err);
+                console.log(err);
+        });
+    },
+    payment: (req, res) => {
+        console.log('Hit payment Hit.')
+        const amountArray = req.body.amount.toString().split('');
+        const pennies = [];
+        for(var i = 0; i < amountArray.length; i++) {
+            if(amountArray[i] === '.') {
+                if(typeof amountArray[i + 1] === 'string') {
+                    pennies.push(amountArray[i + 1]);
+                } else {
+                    pennies.push('0');
+                } if(typeof amountArray[i = 2] === 'string') {
+                    pennies.push(amountArray[i + 2]);
+                } else {
+                    pennies.push(amountArray[i]);
+                }
+            }
+            const convertedAmt = parseInt(pennies.join(''));
+            const charge = stripe.charges.create({
+                amount: convertedAmt,
+                currency: 'usd',
+                source: req.body.token.id,
+                description: 'Test Charge'
+            }, function(err, charge) {
+                if(err) return res.sendStatus(500)
+                return res.sendStatus
+            });
+        }
+
+    },
+    quantity: (req, res) => {
+        console.log('Hit quantity Hit.')
+        const db = req.app.get('db')
+        db.Quantity([req.body.quantity, req.body.id, req.session.user.cart]).then(() => {
+            db.Join_All([req.session.user.cart]).then(product => {
+                res.status(200).send(product);
+            }).catch(err => {
+                res.status(500).send(err);
+                console.log(err);
+            });
+        })
+    },
+    clearCart: (req, res) => {
+        console.log('Hit clearCart Hit.')
+        const db = req.app.get('db')
+        db.Clear_Cart([req.session.user.user_id, req.session.user.cart]).then(() => {
+            db.Create_Cart(req.session.user.user_id).then(cart => {
+                req.session.user.cart = cart[0].user_id;
+                res.status(200).send(cart)});
+        }).catch(err => {
+            res.status(500).send(err);
+            console.log(err);
         });
     },
 }

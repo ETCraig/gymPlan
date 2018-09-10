@@ -38,7 +38,7 @@ class sideDrawer extends Component {
           <li><Link to='/Store' style={{color: '#333'}}>Products</Link></li>
           <li><Link to='/Stats' style={{color: '#333'}}>Stats</Link></li>
           <li><Link to='/BMIcalc' style={{color: '#333'}}>BMI Calculator</Link></li>
-          <li><Link to='/Contact-us' style={{color: '#333'}}>Contact Us</Link></li>
+          <li><Link to='/Contact-Us' style={{color: '#333'}}>Contact Me</Link></li>
           <li><Link to='/Account' style={{color: '#333'}}>Account</Link></li>
           </div>
         </Drawer>
