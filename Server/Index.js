@@ -51,13 +51,13 @@ app.get('/auth/callback', async (req, res) => {
     console.log('userExists');
     if(userExists[0]) {
         req.session.user = userExists[0];
-        res.redirect(ROUTINE);
+        res.redirect('/Routines');
     } else {
         console.log('newUser');
         // let pic = picture;
         db.Create_User([sub, pic, first, last]).then(createdUser => {
             req.session.user = createdUser[0];
-            res.redirect(ROUTINE);
+            res.redirect('/Routines');
         });
     }
 });
