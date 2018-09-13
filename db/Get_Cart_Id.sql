@@ -1,1 +1,1 @@
-SELECT * FROM gymplan_cart WHERE cart_user = $1 and active = true;
+SELECT * FROM gymplan_cart WHERE user_id = $1 AND active = true;

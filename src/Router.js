@@ -16,6 +16,8 @@ import Step4 from './Components/Create/Step4';
 import BMIcalc from './Components/BMI/BMIcalc';
 import Store from './Components/Store/Store';
 import Products from './Components/Store/Products';
+import Cart from './Components/Store/Cart';
+import Purchase from './Components/Store/Purchase';
 
 export default (
     <Switch>
@@ -32,6 +34,8 @@ export default (
         <Route component={Step4} path='/Step4/:routine_id' />
         <Route component={BMIcalc} path='/BMIcalc' />
         <Route component={Store} path='/Store' />
-        <Route component={Products} path='Products' />
+        <Route component={Products} path='/Products' />
+        <Route component={Cart} path='/Cart' />
+        <Route component={Purchase} path='/Purchase' />
     </Switch>
 );

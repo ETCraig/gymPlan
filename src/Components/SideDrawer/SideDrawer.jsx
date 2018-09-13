@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './SideDrawer.css';
 
 import { Link } from 'react-router-dom';
+import ShoppingCart from '../../Assets/Shopping-Cart.png';
 
 import { Button, Drawer, Icon } from 'antd';
 
@@ -36,6 +37,7 @@ class sideDrawer extends Component {
         <div className='List'>
           <li><Link to='/Routines' style={{color: '#333'}}>Routines</Link></li>
           <li><Link to='/Store' style={{color: '#333'}}>Products</Link></li>
+          <li><Link to='/Cart' style={{color: '#333'}}>Shopping Cart <img src={ShoppingCart} /></Link></li>
           <li><Link to='/Stats' style={{color: '#333'}}>Stats</Link></li>
           <li><Link to='/BMIcalc' style={{color: '#333'}}>BMI Calculator</Link></li>
           <li><Link to='/Contact-Us' style={{color: '#333'}}>Contact Me</Link></li>

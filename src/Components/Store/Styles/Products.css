@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Nunito');
 
 .Products-App {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background: #333333;
@@ -21,25 +21,56 @@
     padding: 6px;
     margin-top: 0px;
 }
-.display{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: center;
+.Products-Display h3 {
+    color: #FF9000;
+    font-size: 25px;
 }
-.mapDiv{
-    width: 33%;
+.Products-Display{
+    display: flex;
+    flex-direction: column;
     align-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0.8;
+    float: left;
+    width: 40.00%;
+    padding: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    margin-left: 68px;
+    margin-top: 55px;
+    min-height: 450px;
+    max-height: 310px;
+    border-radius: 15px;
+    background-color: #333333;
+    color: #f2f2f2;
+}
+.Products-Display:after {
+    content: '';
+    clear: both;
+    display: table;
 }
 .mapDiv:hover{
     opacity: 1;
 }
-form.form-inline1{
+.Products-Display h3 {
+    color: #FF9000;
+    font-size: 25px;
+}
+.Products-Display img {
+    align-self: center;
+}
+.Products-Display p {
+    text-align: center;
+}
+.Products-Display h4 {
+    color: #f2f2f2;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.Products-Display select, button {
+    color: #FF9000;
+    margin-top: -35px;
+}
+form.Products-Form{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,29 +79,4 @@ form.form-inline1{
     /* text-align: center;
     align-items: center;
     align-content: center; */
-}
-
-@media screen and (max-width: 600px){
-    .display{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
-    .mapDiv{
-        width: 100%;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 10px;
-        opacity: 1;
-    }
-    form.form-inline{
-    width: 70%;
-    }
-    #inlineFormCustomSelectPref1{
-        width: 40%;
-    }
 }

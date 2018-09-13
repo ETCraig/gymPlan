@@ -83,6 +83,7 @@ class Routines extends Component {
                     <div className='Routine-List'>
                         <h2>{routineBtns}</h2>
                     </div>
+                    <Link to='/Create'><Button className='Create-Btn'>Create New Routine</Button></Link>
                 </div>
             </div>
         );

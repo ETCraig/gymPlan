@@ -4,33 +4,15 @@ import './Styles/Store.css';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {storeProducts, activeCart, storeCartData} from '../../ducks/reducer';
 import {Input, Menu, Icon} from 'antd';
-
-const Search = Input.Search
+import {storeProducts, activeCart, storeCartData} from '../../ducks/reducer';
 
 class Store extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state= {
-            user: []
-        }
-    }
-    componentDidMount() {
-        axios.get('/api/checkLoggedIn').then().catch(res => {
-            console.log('error');
-            this.props.history.push('/');
-        });
-        this.getUserInfo();
-    }
-    getUserInfo() {
-        axios.get('/api/getUserInfo').then(res => this.setState({ user: res.data }));
-    }
-    componentDidMount() {
-        axios.get('/api/getProducts').then(res => {
-            this.props.storeProducts(res.data.products)
-            this.props.activeCart(res.data.cart)
+    componentDidMount(){
+        axios.get('/api/getProducts').then(results => {
+            console.log(results)
+            this.props.storeProducts(results.data.products)
+            this.props.activeCart(results.data.cart)
         })
     }
     render() {
@@ -41,9 +23,6 @@ class Store extends Component {
                 <div className='SH-Body'>
                 <img src={require('../../Assets/SH-Bkg.jpg')} alt='' className='SH-Bkg-Img'/> 
                     <h3 id='Store-Intro'>Store is currently in Development</h3>
-                    <div className='SH-Search'>
-                        <Search placeholder='input search text' onSearch={value => console.log(value)} enterButton className='Search' />
-                    </div>
                     <div className='SH-Menu'>
                         <Link to='/Products'><a><h2>Protiens</h2></a></Link>
                         <a><h2>Pre Workouts</h2></a>
@@ -51,7 +30,7 @@ class Store extends Component {
                         <a><h2>Vitamins</h2></a>
                         <a><h2>Equipment</h2></a>
                     </div>
-                    <h1 className='SH-Features'><strong>FEATURED TITLES</strong></h1>
+                    {/* <h1 className='SH-Features'><strong>FEATURED TITLES</strong></h1>
                     <div className='SH-Featured-Imgs'>
                         <div className='SH-Left'>
                             <img src='https://s7d2.scene7.com/is/image/VitaminShoppe/1629526_01?$OP_PDPSKU$' alt='' />
@@ -63,7 +42,7 @@ class Store extends Component {
                             <img src='https://images-na.ssl-images-amazon.com/images/I/61PZN4lKxIL._SY355_.jpg' alt='' />
                             <img src='https://www.amcal.com.au/wcsstore/ExtendedSitesCatalogAssetStore/images/products/9314549902192_LL_1.jpg' alt='' />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

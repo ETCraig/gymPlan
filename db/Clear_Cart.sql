@@ -1,1 +1,1 @@
-UPDATE gymplan_cart SET active = false WHERE cart_user = $1 and cart_id = $2;
+UPDATE gymplan_cart SET active = false WHERE user_id = $1 AND id = $2;

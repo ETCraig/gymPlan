@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Nunito');
+
+.Cart-App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #333333;
+    font-family: 'Nunito', sans-serif;
+}
+.Cart-Body {
+    background-color: #3f3f3f;
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    padding: 6px;
+    margin-top: 0px;
+}
+.mapDivCart{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    float: left;
+    width: 26.39%;
+    padding: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    margin-left: 52px;
+    margin-top: 55px;
+    min-height: 400px;
+    max-height: 310px;
+    border-radius: 15px;
+    background-color: #333333;
+    color: #f2f2f2;
+}
+.mapDivCart:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+.mapDivCart img{
+    height: 250px;
+    width: 250px;
+}
+.mapDivCart img {
+    align-self: center;
+    padding: 5px;
+}
+.mapDivCart h3 {
+    align-self: center;
+    color: #FF9000;
+    font-weight: 700;
+}
+.mapDivCart h4 {
+    color: #f2f2f2;
+    text-align: center;
+}
+.mapDivCart select, button {
+    color: #FF9000;
+    font-weight: 900;
+}
+.close {
+    margin-left: 245px;
+    margin-top: -365px;
+    border-radius: 15px;
+}
+.close:hover {
+    cursor: pointer;
+}

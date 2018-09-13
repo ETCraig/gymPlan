@@ -70,9 +70,9 @@ class Routine extends Component {
                         <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
                     </div>
                     <div className='Routine-Nav'>
-                        <Link to='/Routines'><Button className='Return-Btn'>All Routines</Button></Link>
-                        <Button className='Return-Btn' onClick={() => this.deleteRoutine()} type='danger'>Delete Routine </Button>
-                        <Link to={`/Step1/${this.state.routine.routine_id}`}><Button className='Return-Btn'>Add Exercises</Button></Link>
+                        <Link to='/Routines'><Button className='Routine-Return-Btn'>All Routines</Button></Link>
+                        <Button className='Routine-Return-Btn' onClick={() => this.deleteRoutine()} type='danger'>Delete Routine </Button>
+                        <Link to={`/Step1/${this.state.routine.routine_id}`}><Button className='Routine-Return-Btn'>Add Exercises</Button></Link>
                     </div>
                 <div id='List-Container'>
                     {displayRoutineExercises.map((exercise, i) => {
@@ -87,7 +87,7 @@ class Routine extends Component {
                                     <h2><strong>Description:</strong> <br />{exercise.description}</h2>
                                     {/* <h2><strong>Exercise:</strong> <br />{exercise.defaultreps}</h2> */}
                                 </div>
-                                <div className='Routine-Btn'>
+                                <div className='Routine-Return-Btn'>
                                     <Button onClick={() => this.removeExercise(exercise.exercise_id, this.state.routine.routine_id)}>
                                         <h2>Remove {exercise.name}</h2>
                                     </Button>

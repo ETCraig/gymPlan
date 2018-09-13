@@ -26,6 +26,11 @@
     width: 1063px;
     height: 200px;
 }
+.Create-Btn {
+    margin-top: 50px;
+    width: 200px;
+    font-weight: 900;
+}
 .Routines-Body Button {
     margin-bottom: -100px;
 }

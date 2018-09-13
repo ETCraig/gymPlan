@@ -3,14 +3,12 @@ const express = require('express');
 const app = express();
 app.use( express.static( `${__dirname}/../build` ) );
 const cors = require('cors');
-const Config = require('./Config');
-const stripe = require('stripe')(Config.secret_key);
+const stripe = require('stripe')(process.env.SECRET_KEY);
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const massive = require('massive');
 const nodemailer = require('nodemailer');
 const session = require('express-session');
-const router = express.Router();
 
 const {SERVER_PORT, ROUTINE, REACT_APP_CLIENT_ID, CLIENT_SECRET, REACT_APP_DOMAIN, CONNECTION_STRING, SESSION_SECRET, USER, PASS} = process.env;
 
@@ -51,13 +49,13 @@ app.get('/auth/callback', async (req, res) => {
     console.log('userExists');
     if(userExists[0]) {
         req.session.user = userExists[0];
-        res.redirect('/Routines');
+        res.redirect(ROUTINE);
     } else {
-        console.log('newUser');
+        console.log(ROUTINE);
         // let pic = picture;
         db.Create_User([sub, pic, first, last]).then(createdUser => {
             req.session.user = createdUser[0];
-            res.redirect('/Routines');
+            res.redirect(ROUTINE);
         });
     }
 });
@@ -125,7 +123,7 @@ app.put('/api/quantity', ctrl.quantity);
 app.put('/api/clearCart', ctrl.clearCart);
 
 // Stripe
-app.post('/api/payment', ctrl.payment);
+app.post('/api/payment', ctrl.makePayment);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../build/index.html'));

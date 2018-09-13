@@ -62,26 +62,23 @@ INSERT INTO gymplan_exercises(
 );
 
 INSERT INTO gymplan_products(
-    product_id SERIAL primary key,
+    id SERIAL primary key,
     category varchar(80),
     title varchar(180),
     description varchar(250),
     image text,
-    price INTEGER
+    price integer
 );
 
 INSERT INTO gymplan_cart(
-    cart_id SERIAL primary key,
-    cart_user INTEGER,
-    active boolean,
-    total INTEGER,
-    foreign key (cart_user) references gymplan_users (user_id)
+    id SERIAL primary key,
+    user_id integer references gymplan_users(user_id),
+    active BOOLEAN,
+    total integer
 );
 
 INSERT INTO gymplan_orders(
-    cart INTEGER,
-    product INTEGER,
-    quantity INTEGER,
-    foreign key (cart) references gymplan_cart(cart_id),
-    foreign key (product) references gymplan_products(product_id)
+    cart_id integer references gymplan_cart(id),
+    product_id integer references gymplan_products(id),
+    quantity integer
 );

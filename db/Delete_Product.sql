@@ -1,1 +1,1 @@
-DELETE FROM gymplan_orders WHERE product = $1 and cart = $2;
+DELETE FROM gymplan_orders WHERE product_id = $1 AND cart_id = $2;
