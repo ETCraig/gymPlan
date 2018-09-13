@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Nunito');
+
+.Create-App {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    font-family: 'Nunito', sans-serif;
+}
+.Create-Body {
+    background-color: #3f3f3f;
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    padding: 6px;
+    margin-top: 0px;
+}
+.Create-Container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+.Routines-Name {
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.Routines-Day {
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    color: #FF9000;
+}
+.Routines-Diff {
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    color: #f2f2f2;
+}
+.Routines-Muscle {
+    width: 100px;
+    height: 30px;
+    margin-top: 70px;
+    color: #FF9000;
+}
+.Routines-Type {
+    width: 100px;
+    height: 30px;
+    margin-top: 25px;
+}
+.Routines-Desc {
+    margin-left: 0px;
+    margin-top: 95px;
+    width: 280px;
+    height: 100px;
+}
+.Create-Routine-Btn {
+    width: 150px;
+    height: 50px;;
+}

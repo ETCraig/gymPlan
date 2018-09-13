@@ -44,6 +44,7 @@
     font-weight: bold;
     max-width: 120px; 
     margin-left: 30px;
+    margin-top: 0px;
 }
 .Routine-Nav {
     display: flex;
@@ -68,7 +69,7 @@
 }
 .Routine-Exercises>img {
     max-width: 218px;
-    max-height: 200px;
+    min-height: 190px;
     margin-left: -210px;
     border-radius: 15px;
     border: 8px solid black;
@@ -82,8 +83,12 @@
 .Routine-Text>h2 {
     width: 180px;
     float: right;
+    color: #f2f2f2;
 }
 .Routine-Exercises>.Routine-Return-Btn>Button {
     float: left;
     max-width: 290px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 900;
 }

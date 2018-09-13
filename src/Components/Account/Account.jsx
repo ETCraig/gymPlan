@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './Styles/Account.css';
+import './Account.css';
 
 import axios from 'axios';
-import AccountIcon from '../Assets/icons8-customer-80.png';
 
 import { Button, Input, Radio } from 'antd';
 import RadioGroup from 'antd/lib/radio/group';
@@ -127,7 +126,7 @@ class Account extends Component {
         return (
             <div className='Account-App'>
             <div className='Account-Body'>
-            <img src={require('../Assets/Account-Bkg.jpg')} alt='BMI Picture' className='Account-Bkg-Picture' />
+            <img src={require('../../Assets/Account-Bkg.jpg')} alt='BMI Picture' className='Account-Bkg-Picture' />
                 <div className='Account-Dash-App'>
                     <div className='Account-Dash-Profile'>
                         <div className='Account-Profile-Img-Content'>

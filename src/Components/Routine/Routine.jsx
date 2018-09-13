@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Styles/Routine.css';
+import './Routine.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -59,7 +59,7 @@ class Routine extends Component {
         return (
             <div className='Routine-App'>
                 <div className='Routine-Body'>
-                <img src={require('../Assets/Routine-Bkg.jpg')} alt='Gym Equipment' className='Routine-Bkg-Picture'/>
+                <img src={require('../../Assets/Routine-Bkg.jpg')} alt='Gym Equipment' className='Routine-Bkg-Picture'/>
                     <div className='Routine-Routine-Info'>
                         <span><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
                         <span><strong>Routine Name:</strong> {this.state.routine.name}</span>
@@ -70,9 +70,9 @@ class Routine extends Component {
                         <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
                     </div>
                     <div className='Routine-Nav'>
-                        <Link to='/Routines'><Button className='Routine-Return-Btn'>All Routines</Button></Link>
-                        <Button className='Routine-Return-Btn' onClick={() => this.deleteRoutine()} type='danger'>Delete Routine </Button>
-                        <Link to={`/Step1/${this.state.routine.routine_id}`}><Button className='Routine-Return-Btn'>Add Exercises</Button></Link>
+                        <Link to='/Routines'><Button className='Return-Btn'>All Routines</Button></Link>
+                        <Button className='Return-Btn' onClick={() => this.deleteRoutine()} type='danger'>Delete Routine </Button>
+                        <Link to={`/Step1/${this.state.routine.routine_id}`}><Button className='Return-Btn'>Add Exercises</Button></Link>
                     </div>
                 <div id='List-Container'>
                     {displayRoutineExercises.map((exercise, i) => {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Styles/Step1.css';
+import './Step1.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom'
@@ -48,20 +48,6 @@ class Step1 extends Component {
         return (
             <div className='Step1-App'>
                 <div className='Step1-Body'>
-                {/* <div className='Step1-Routine-Info'>
-                    <div className='Step1-Routine-Details3' style={{ color: '#f2f2f2' }}>
-                        <span style={{color: '#333'}}><strong>Name:</strong> {this.state.user.first_name} {this.state.user.last_name}</span>
-                        <span style={{color: '#333'}}><strong>Routine Name:</strong> {this.state.routine.name}</span>
-                        <span style={{color: '#333'}}><strong>Routine Day:</strong> {this.state.routine.day}</span>
-                    </div>
-                </div>
-
-                <div className='Step1-Routine-Details'>
-                    <span><strong>Routine Muscle:</strong> {this.state.routine.muscle}</span>
-                    <span><strong>Routine Type:</strong> {this.state.routine.type}</span>
-                    <span><strong>Routine Difficulty:</strong> {this.state.routine.diff}</span>
-                    <span><strong>Routine Description:</strong> {this.state.routine.description}</span>
-                </div> */}
                 <div className='Step1-Nav'>
                 <Link to='/Routines'><Button className='Step1-Btn'>All Routines</Button></Link>
                 <br /><br />

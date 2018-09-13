@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import './Styles/Store.css';
+import './Store.css';
 
 import axios from 'axios';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {Input, Menu, Icon} from 'antd';
 import {storeProducts, activeCart, storeCartData} from '../../ducks/reducer';
 
 class Store extends Component {
@@ -30,19 +29,6 @@ class Store extends Component {
                         <a><h2>Vitamins</h2></a>
                         <a><h2>Equipment</h2></a>
                     </div>
-                    {/* <h1 className='SH-Features'><strong>FEATURED TITLES</strong></h1>
-                    <div className='SH-Featured-Imgs'>
-                        <div className='SH-Left'>
-                            <img src='https://s7d2.scene7.com/is/image/VitaminShoppe/1629526_01?$OP_PDPSKU$' alt='' />
-                            <img src='https://thesupplementreviews.org/wp-content/uploads/2016/05/mr-hyde-pre-workout-300x300.jpg' alt='' />
-                            <img src='https://www.fitnessnord.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/g/h/ghostlegend.jpg' alt='' />
-                        </div>
-                        <div className='SH-Right'>
-                            <img src='https://guideimg.alibaba.com/images/shop/75/08/29/7/golds-gym-4-leather-lumbar-weight-belt_3777737.jpg' alt='' />
-                            <img src='https://images-na.ssl-images-amazon.com/images/I/61PZN4lKxIL._SY355_.jpg' alt='' />
-                            <img src='https://www.amcal.com.au/wcsstore/ExtendedSitesCatalogAssetStore/images/products/9314549902192_LL_1.jpg' alt='' />
-                        </div>
-                    </div> */}
                 </div>
             </div>
         );

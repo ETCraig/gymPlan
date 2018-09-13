@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
-import './Styles/Stats.css';
+import './Stats.css';
 
 import axios from 'axios';
-import StatsIcon from '../Assets/icons8-bar-chart-80.png';
-import HeightIcon from '../Assets/icons8-height-16.png';
-import WeightIcon from '../Assets/icons8-scale-16.png';
-import FatIcon from '../Assets/icons8-fat-man-16.png'
-import BodyIcon from '../Assets/icons8-standing-man-16.png'
-import NeckIcon from '../Assets/icons8-neck-16.png';
-import ShouldersIcon from '../Assets/icons8-shoulders-16.png';
-import ArmsIcon from '../Assets/icons8-muscle-16.png';
-import Chesticon from '../Assets/icons8-chest-16.png';
-import WaistIcon from '../Assets/icons8-prelum-16.png';
-import LowerIcon from '../Assets/icons8-calves-48.png';
-import UpperIcon from '../Assets/icons8-hamstrings-48.png';
-import BenchIcon from '../Assets/icons8-bench-press-16.png';
-import SquatIcon from '../Assets/icons8-squats-16.png';
-import DeadLiftIcon from '../Assets/icons8-deadlift-16.png';
-import RowIcon from '../Assets/icons8-workout-16.png';
-import GoalIcon from '../Assets/icons8-survey-80.png';
-import deletex from '../Assets/delete-icon.png';
-import edit from '../Assets/icons8-edit-30.png';
+import HeightIcon from '../../Assets/icons8-height-16.png';
+import WeightIcon from '../../Assets/icons8-scale-16.png';
+import FatIcon from '../../Assets/icons8-fat-man-16.png'
+import BodyIcon from '../../Assets/icons8-standing-man-16.png'
+import NeckIcon from '../../Assets/icons8-neck-16.png';
+import ShouldersIcon from '../../Assets/icons8-shoulders-16.png';
+import ArmsIcon from '../../Assets/icons8-muscle-16.png';
+import Chesticon from '../../Assets/icons8-chest-16.png';
+import WaistIcon from '../../Assets/icons8-prelum-16.png';
+import LowerIcon from '../../Assets/icons8-calves-48.png';
+import UpperIcon from '../../Assets/icons8-hamstrings-48.png';
+import BenchIcon from '../../Assets/icons8-bench-press-16.png';
+import SquatIcon from '../../Assets/icons8-squats-16.png';
+import DeadLiftIcon from '../../Assets/icons8-deadlift-16.png';
+import RowIcon from '../../Assets/icons8-workout-16.png';
+import deletex from '../../Assets/delete-icon.png';
+import edit from '../../Assets/icons8-edit-30.png';
 
 import { Input, Button } from 'antd';
 
@@ -297,7 +295,7 @@ export default class Stats extends Component {
         return (
             <div className='Stats-App'>
                 <div className='Stats-Body' style={{ color: 'white' }}>
-                <img src={require('../Assets/Stats-Bkg.jpeg')} alt='Gym Equipment' className='Stats-Bkg-Picture'/>
+                <img src={require('../../Assets/Stats-Bkg.jpeg')} alt='Gym Equipment' className='Stats-Bkg-Picture'/>
                     <h1 className='Title'>My Goals</h1>
                     <div className='Goals-Content'>
                         <Input type='text' onChange={(e) => this.handleGoalInput(e.target.value)} placeholder='Enter New Goal' className='Goal-Input' value={this.state.goal} />

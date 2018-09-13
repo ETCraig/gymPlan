@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Styles/Step2.css';
+import './Step2.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';

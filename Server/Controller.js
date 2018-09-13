@@ -174,8 +174,10 @@ module.exports = {
         const db = req.app.get('db');
         console.log('Passed DB')
         db.Delete_Routine(req.params.routine_id).then(data => {
+            console.log(data);
             res.status(200).send(data);
         }).catch(err => {
+            console.log(err);
             res.status(500).send(err);
         });
     },

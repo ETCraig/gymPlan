@@ -1,7 +1,6 @@
 import React from 'react';
 import './Toolbar.css';
 
-import DrawerToggle from '../SideDrawer/DrawerToggle';
 import { Link } from 'react-router-dom';
 
 import { Button } from 'antd';

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Styles/Create.css';
+import './Create.css';
 
 import axios from 'axios'
 
-import { Button, Input, Radio, Select } from 'antd';
+import { Button, Input, Radio } from 'antd';
 import RadioGroup from 'antd/lib/radio/group';
 
 class Step1 extends Component {
@@ -50,7 +50,8 @@ class Step1 extends Component {
         return (
             <div className='Create-App'>
 
-                <div className='Routines-Create'>
+                <div className='Create-Body'>
+                <div className='Create-Container'>
                     <Input onChange={e => this.handleNewPropChange('newName', e.target.value)} value={this.state.newName} className='Routines-Name' type='text' placeholder='Routine Name' />
 
                     <select onChange={e => this.handleNewPropChange('newDay', e.target.value)} value={this.state.newDay} className='Routines-Day'>
@@ -64,11 +65,11 @@ class Step1 extends Component {
                         <option value='Sunday'>Sunday</option>
                     </select>
 
-                    <RadioGroup onChange={e => this.handleNewPropChange('newDiff', e.target.value)} value={this.state.newDiff} className='Routines-Diff'>
+                    <RadioGroup onChange={e => this.handleNewPropChange('newDiff', e.target.value)} value={this.state.newDiff} className='Routines-Diff' style={{color: '#f2f2f2'}}>
                         Difficulty
-                    <Radio value='Beginner'>Beginner</Radio>
-                        <Radio value='Intermediate'>Intermediate</Radio>
-                        <Radio value='Advanced'>Advanced</Radio>
+                    <Radio value='Beginner' style={{color: '#f2f2f2'}}>Beginner</Radio>
+                        <Radio value='Intermediate' style={{color: '#f2f2f2'}}>Intermediate</Radio>
+                        <Radio value='Advanced' style={{color: '#f2f2f2'}}>Advanced</Radio>
                     </RadioGroup>
 
                     <select onChange={e => this.handleNewPropChange('newMuscle', e.target.value)} value={this.state.newMuscle} className='Routines-Muscle'>
@@ -86,15 +87,16 @@ class Step1 extends Component {
                         <option value='Upper Legs'>Upper Legs</option>
                     </select>
 
-                    <RadioGroup onChange={e => this.handleNewPropChange('newType', e.target.value)} value={this.state.newType} className='Routines-Type'>
+                    <RadioGroup onChange={e => this.handleNewPropChange('newType', e.target.value)} value={this.state.newType} className='Routines-Type' style={{color: '#f2f2f2'}}>
                         Type
-                    <Radio value='Weight Loss'>Weight Loss</Radio>
-                        <Radio value='Muscle Toning'>Muscle Toning</Radio>
-                        <Radio value='Maintaining'>Maintaining</Radio>
-                        <Radio value='Mass Gaining'>Mass Gaining</Radio>
+                    <Radio value='Weight Loss' style={{color: '#f2f2f2'}}>Weight Loss</Radio>
+                        <Radio value='Muscle Toning' style={{color: '#f2f2f2'}}>Muscle Toning</Radio>
+                        <Radio value='Maintaining' style={{color: '#f2f2f2'}}>Maintaining</Radio>
+                        <Radio value='Mass Gaining' style={{color: '#f2f2f2'}}>Mass Gaining</Radio>
                     </RadioGroup>
                     <Input onChange={e => this.handleNewPropChange('newDesc', e.target.value)} value={this.state.newDesc} className='Routines-Desc' type='text' placeholder='Routine Description' />
                     <br />
+                    </div>
                     <Button onClick={this.handleCreateBtn} className='Create-Routine-Btn'>Create Routine</Button>
                 </div>
             </div>

@@ -1,12 +1,12 @@
 import React from 'react';
-import './Styles/Login.css';
-import GymLogo from '../Assets/icons8-barbell-64.png';
+import './Login.css';
+import GymLogo from '../../Assets/icons8-barbell-64.png';
 
 import { Button } from 'antd';
 
-import RoutineIcon from '../Assets/icons8-edit-property-80.png';
-import DataIcon from '../Assets/icons8-combo-chart-80.png';
-import ExIcon from '../Assets/icons8-weightlifting-80.png';
+import RoutineIcon from '../../Assets/icons8-edit-property-80.png';
+import DataIcon from '../../Assets/icons8-combo-chart-80.png';
+import ExIcon from '../../Assets/icons8-weightlifting-80.png';
 
 export default function Login() {
     function login() {
@@ -41,7 +41,7 @@ export default function Login() {
                     <Button className='Login-Btn' onClick={login} type="primary">Login / Register</Button>
                 </div>
             </div>
-            <div className='Login-Intro'>
+            {/* <div className='Login-Intro'>
                     <div className='Login-Intro-List'>
                         <img src={RoutineIcon} alt='Routine-Icon' />
                         <h2>Personalized Workout Routines</h2>
@@ -57,33 +57,7 @@ export default function Login() {
                         <h2>Analyze and Improve</h2>
                         <p>Analyze your workout data and progress to maximize results</p>
                     </div>
-                </div>
-            {/* <div className='Features-List1'>
-                <div className='Create'>
-                    <h4>Create your own personalized Routines that fit your goals and lifestyle.</h4>
-                </div>
-                <br />
-                <div className='Exercises'>
-                    <h4>Select from an expansive and detailed collection of exercises.</h4>
-                </div>
-                <br />
-                <div className='Routines'>
-                    <h4>Store multiple routines for multiple workouts, each varying according to your plan.</h4>
-                </div>
-            </div>
-            <div className='Features-List2'>
-                <div className='Goals'>
-                    <h4>Here you can store a list of your fitness goals and track, edit, and Complete! </h4>
-                </div>
-                <br />
-                <div className='Stats'>
-                    <h4>Fill in your measurements, weight, and more to see the progress you make as you go.</h4>
-                </div>
-                <br />
-                <div className='Delete'>
-                    <h4>Once you are done or ready to mix things up, you can edit or delete any routine and start again.</h4>
-                </div>
-            </div> */}
+                </div> */}
         </div>
     );
 }

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import './Styles/Contact.css';
+import './Contact.css';
 
 import axios from 'axios';
-import EmailIcon from '../Assets/icons8-new-post-80.png';
-import SendIcon from '../Assets/icons8-send-email-16.png';
-import TwitterIcon from '../Assets/icons8-twitter-30.png';
-import FacebookIcon from '../Assets/icons8-facebook-30.png';
-import InstagramIcon from '../Assets/icons8-instagram-30.png';
+import SendIcon from '../../Assets/icons8-send-email-16.png';
+import TwitterIcon from '../../Assets/icons8-twitter-30.png';
+import FacebookIcon from '../../Assets/icons8-facebook-30.png';
+import InstagramIcon from '../../Assets/icons8-instagram-30.png';
 
 import { Input, Button, Form } from 'antd';
 
@@ -60,7 +59,7 @@ export default class Contact extends Component {
         return (
             <div className='Contact-App'>
                 <div className='Contact-Body'>
-                <img src={require('../Assets/Contact-Bkg.jpg')} alt='BMI Picture' className='Contact-Bkg-Picture' />
+                <img src={require('../../Assets/Contact-Bkg.jpg')} alt='Contact' className='Contact-Bkg-Picture' />
                     <Form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>

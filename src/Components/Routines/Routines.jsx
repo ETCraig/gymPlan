@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './Styles/Routines.css';
+import './Routines.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import {RoutinesBkg} from '../Assets/Routines-Bkg.jpg'; 
 
 import {Button} from 'antd'; 
 
@@ -62,7 +61,7 @@ class Routines extends Component {
         return (
             <div className='Routines-App'>
             <div className='Routines-Body'>
-            <img src={require('../Assets/Routines-Bkg.jpg')} alt='Gym Equipment' className='Routines-Bkg-Picture'/>
+            <img src={require('../../Assets/Routines-Bkg.jpg')} alt='Gym Equipment' className='Routines-Bkg-Picture'/>
                 <div className='Routines-Dash-App'>
                     <div className='Routines-Dash-Profile'>
                         <div className='Routines-Profile-Img-Content'>

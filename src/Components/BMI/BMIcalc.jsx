@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './BMIcalc.css';
 
 import axios from 'axios';
-import BMIIcon from '../../Assets/icons8-calculator-80.png';
 
 import { Input } from 'antd';
 
@@ -60,7 +59,7 @@ class BMIcalc extends Component {
     return (
       <div className='BMI-App'>
       <div className='BMI-Body'>
-      <img src={require('../../Assets/BMI-Calculator.jpg')} alt='BMI Picture' className='BMI-Bkg-Picture' />
+      <img src={require('../../Assets/BMI-Calculator.jpg')} alt='BMI-Calc' className='BMI-Bkg-Picture' />
       <div className="BMI">
         <div className="Row">
           <div className="Span1">

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './Styles/Step4.css';
+import './Step4.css';
 
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Coverflow from 'react-coverflow';
 import {StyleRoot} from 'radium';
 
-import { Button, Input, select } from 'antd';
+import { Button, Input } from 'antd';
 
 class Step4 extends Component {
     constructor() {
