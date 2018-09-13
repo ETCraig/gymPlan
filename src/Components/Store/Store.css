@@ -21,6 +21,10 @@
     padding: 6px;
     margin-top: 0px;
 }
+.SH-Body h3 {
+    text-align: center;
+    font-size: 25px;
+}
 #Store-Intro {
     text-align: center;
     font-size: 45px;

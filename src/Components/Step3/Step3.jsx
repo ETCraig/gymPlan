@@ -75,7 +75,7 @@ class Step3 extends Component {
                     <h3><strong>Description:</strong> {exercises.description}</h3>
                     <div className='Selectors'>
                         <h2><strong>Reps:</strong> </h2>
-                        <select onChange={e => this.handleChange('reps', e.target.value)} onChange={this.handleChange} value={this.state.reps}>
+                        <select onChange={e => this.handleChange('reps', e.target.value)} value={this.state.reps}>
                             <option defaultValue='...'>...</option>
                             <option value='0'>0</option>
                             <option value='5'>5</option>
@@ -100,7 +100,7 @@ class Step3 extends Component {
                             <option value='100'>100</option>
                         </select>
                         <h2><strong>Weight:</strong> </h2>
-                        <select onChange={e => this.handleChange('weight', e.target.value)} onChange={this.handleChange} value={this.state.weight}>
+                        <select onChange={e => this.handleChange('weight', e.target.value)} value={this.state.weight}>
                             <option defaultValue='...'>...</option>
                             <option value='0'>0</option>
                             <option value='5'>5</option>
@@ -189,10 +189,6 @@ class Step3 extends Component {
         });
         return (
             <div className='Step3-App'>
-                {/* <div className='Step3-Dash-Header'>
-                    <h1 className='Step3-Title'>gymPlan</h1>
-                    <button className='Step3-Logout'><a href={process.env.REACT_APP_LOGOUT}>Logout</a></button>
-                </div> */}
                 <div className='Step3-Body'>
                 <div className='Guide-Btns'>
                         <Link to={`/Step1/${this.props.match.params.routine_id}`}><Button>Muscle Groups</Button></Link>

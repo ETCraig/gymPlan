@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Store.css';
 
 import axios from 'axios';
+import {Button} from 'antd';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {storeProducts, activeCart, storeCartData} from '../../ducks/reducer';
@@ -21,9 +22,11 @@ class Store extends Component {
             <br />
                 <div className='SH-Body'>
                 <img src={require('../../Assets/SH-Bkg.jpg')} alt='' className='SH-Bkg-Img'/> 
-                    <h3 id='Store-Intro'>Store is currently in Development</h3>
+                <Link to='/Products'><Button style={{marginTop: '25px'}}>Browse Products!</Button></Link>
+                <br />
+                <h3>Store categories and searching coming soon!</h3>
                     <div className='SH-Menu'>
-                        <Link to='/Products'><a><h2>Protiens</h2></a></Link>
+                        <a><h2>Protiens</h2></a>
                         <a><h2>Pre Workouts</h2></a>
                         <a><h2>BCAA's</h2></a>
                         <a><h2>Vitamins</h2></a>
