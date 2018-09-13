@@ -39,7 +39,7 @@ class Step1 extends Component {
             'diff': this.state.newDiff,
             'description': this.state.newDesc
         };
-        axios.post(`/api/createUserRoutine/${this.props.match.params.routine_id}`, promise).then(res => {
+        axios.post('/api/createUserRoutine', promise).then(res => {
             this.props.history.push('/Routines');
         });
     }
