@@ -141,19 +141,17 @@ module.exports = {
         const db = req.app.get('db')
         console.log('Passed DB.')
         db.Create_Routine(
-            req.body.name,
+            req.session.user.user_id,
             req.body.day,
+            req.body.name,
             req.body.type,
             req.body.muscle,
             req.body.diff,
-            req.body.description,
-            req.params.routine_id,
-            req.session.user.user_id
+            req.body.description
         ).then(data => {
             console.log('Passes DB Inplement 1.')
             res.status(200).send(data);
         }).catch(err => {
-            console.log('err', err)
             res.status(500).send(err);
         });
     },
